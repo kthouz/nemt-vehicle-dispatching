@@ -1,0 +1,13 @@
+pandas
+numpy
+scipy
+faker
+scikit-learn
+matplotlib
+seaborn
+folium
+pyqtree
+openrouteservice
+ortools
+pydantic
+python-dotenv
