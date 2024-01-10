@@ -1,0 +1,31 @@
+route_id,orig_address,dest_address,num_passengers,pickup_time
+6267d4ad-247f-4446-a13a-9a9cbbc93e3b,"425 Race Street, Lexington, KY, USA","1900 Jaggie Fox Way, Lexington, KY, USA",3,2024-01-15 12:05:00
+52dcf0e4-6c7a-457a-9439-19317a5c2511,"2298 Jimtown Lane, Lexington, KY, USA","Carolyn Lane, Jessamine County, KY, USA",2,2024-01-15 13:35:00
+5cec1348-40af-484c-8955-1bd5233c5e57,"Jouett Creek, Clark County, KY, USA","6591 Sulphur Well Road, Lexington, KY, USA",2,2024-01-15 11:10:00
+4c8324e7-61f7-462e-b76f-7c367392fdc3,"389 Meadow Valley Road, Lexington, KY, USA","Clarion Hotel Lexington, Lexington, KY, USA",3,2024-01-15 13:55:00
+c191bc10-bec8-41c4-977c-7b678b3134a7,"380 Cromwell Way, Lexington, KY, USA","WCGW-AM (Nicholasville), Jessamine County, KY, USA",3,2024-01-15 13:10:00
+28718361-dd08-4711-a6aa-b1b4f784d07e,"1995 Research Farm Road, Lexington, KY, USA","1542 Ferguson Road, Lexington, KY, USA",1,2024-01-15 14:30:00
+34de38fa-2cce-4931-844d-75578412be45,"5951 Jacks Creek Pike, Lexington, KY, USA","813 Ward Drive, Lexington, KY, USA",1,2024-01-15 15:35:00
+8e0b8e01-88fa-4777-aac0-d2b72ea1ebb1,"1430 Grissom Lane, Lexington, KY, USA","Ruffian Way, Lexington, KY, USA",2,2024-01-15 10:00:00
+1792f784-23b1-40b3-b52a-e0377b98f284,"Corrylyn Farm (historical), Jessamine County, KY, USA","684 Danby Woods Drive, Lexington, KY, USA",3,2024-01-15 09:35:00
+2bbd7afd-95b6-4d79-8f12-49e9021890ca,"Lexington, KY, USA","Clarion Hotel Lexington, Lexington, KY, USA",3,2024-01-15 10:50:00
+77639476-272f-4f6f-92e1-2c856a312d54,"Corman Cemetery, Jessamine County, KY, USA","Castleton Lyons  Farm, Lexington, KY, USA",1,2024-01-15 09:50:00
+2e73fdf6-b8ba-4895-8013-93beca27144f,"1241 Sheffield Place, Lexington, KY, USA","847 Angliana Avenue, Lexington, KY, USA",3,2024-01-15 08:35:00
+571409ad-692d-4fe1-a055-e90eade61133,"Logana Baptist Church, Jessamine County, KY, USA","3001 Raven Creek Drive, Lexington, KY, USA",2,2024-01-15 14:10:00
+e0e9fd2a-8a1d-41f4-bdc6-b2daaface185,"4144 Kenny Lane, Lexington, KY, USA","6591 Sulphur Well Road, Lexington, KY, USA",3,2024-01-15 16:25:00
+ed41aa79-7d3d-40a8-8882-d52e7750a18e,"G Street, Nicholasville, KY, USA","4617 Athens Boonesboro Road, Lexington, KY, USA",3,2024-01-15 16:40:00
+0c4cd9d1-9538-4a4e-8b26-f80f2e2caadf,"1280 Walnut Hill Road, Lexington, KY, USA","4617 Athens Boonesboro Road, Lexington, KY, USA",2,2024-01-15 13:50:00
+c9b8c1a9-463c-411a-8094-b0cfc8496000,"Natchez Trace, Nicholasville, KY, USA","Ruffian Way, Lexington, KY, USA",3,2024-01-15 14:35:00
+e816fbdb-03fa-434f-a4bf-44bc3eba655c,"Houston-Antioch Road, Bourbon County, KY, USA","Castleton Lyons  Farm, Lexington, KY, USA",2,2024-01-15 16:40:00
+05d3265b-2cd4-40de-a5f9-c02dc1eeab12,"233 Crumbaugh Road, Georgetown, KY, USA","847 Angliana Avenue, Lexington, KY, USA",3,2024-01-15 14:40:00
+617ec780-42c5-47ec-9df8-c172c8906232,"4954 Parkers Mill Road, Lexington, KY, USA","847 Angliana Avenue, Lexington, KY, USA",3,2024-01-15 13:40:00
+f99c8ee0-e713-48a2-a30c-fbce7add6077,"1160 Bridlewood Lane, Lexington, KY, USA","813 Ward Drive, Lexington, KY, USA",3,2024-01-15 10:10:00
+2c7ef637-d41c-411f-83aa-a48dce8f76da,"5751 Athens Walnut Hill Pike, Lexington, KY, USA","Castleton Lyons  Farm, Lexington, KY, USA",1,2024-01-15 12:10:00
+6a91775c-f2ba-442d-a0b4-16efc417594f,"Oak Tree Lane, Jessamine County, KY, USA","7049 Russell Cave Road, Lexington, KY, USA",3,2024-01-15 15:05:00
+0d537be1-ec7a-4b36-af07-a8936ed8eed1,"1953 Mercer Road, Lexington, KY, USA","3323 Bowman Mill Road, Lexington, KY, USA",2,2024-01-15 10:15:00
+e1d50dc1-8684-4696-85c7-7c17089f3cc0,"Combs Ferry Road, Clark County, KY, USA","Amanda Court, Lexington, KY, USA",3,2024-01-15 11:15:00
+c710db0b-d78e-45a2-b680-868c4bc28667,"1900 Pavilion Way, Lexington, KY, USA","6591 Sulphur Well Road, Lexington, KY, USA",3,2024-01-15 10:00:00
+663efca4-8a36-4bc8-9036-8d32747504a2,"Inflatable Fun, Nicholasville, KY, USA","Castleton Lyons  Farm, Lexington, KY, USA",1,2024-01-15 14:25:00
+807f8313-eaf0-42ad-8a03-7a7b42f9d151,"3928 Military Pike, Lexington, KY, USA","1341 Newtown Pike, Georgetown, KY, USA",2,2024-01-15 13:55:00
+fb04679a-fba8-49cb-89f7-10e22262787b,"4542 Newtown Pike, Lexington, KY, USA","4617 Athens Boonesboro Road, Lexington, KY, USA",1,2024-01-15 12:15:00
+5465930e-cd37-462b-be7e-f6bd9b42cdec,"Creek ridge Drive, Jessamine County, KY, USA","3323 Bowman Mill Road, Lexington, KY, USA",2,2024-01-15 12:10:00

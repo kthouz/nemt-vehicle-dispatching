@@ -1,0 +1,41 @@
+[
+    {
+        "vehicle_id": "0dacbb80-29d2-4fb8-9f63-461d6a909646",
+        "depot": {
+            "address": "335 Ridgeway Road, Lexington, KY, USA",
+            "coordinate": [
+                -84.48232084278102,
+                38.02356976414467
+            ],
+            "status": "success",
+            "error": ""
+        },
+        "capacity": 5
+    },
+    {
+        "vehicle_id": "9b360b5e-238c-4448-bc1a-1f84e67c7b6b",
+        "depot": {
+            "address": "3787 Huffman Mill Pike, Lexington, KY, USA",
+            "coordinate": [
+                -84.4601801321984,
+                38.13822624477802
+            ],
+            "status": "success",
+            "error": ""
+        },
+        "capacity": 2
+    },
+    {
+        "vehicle_id": "c0da89d7-922a-4757-b064-b68c3f33d4f9",
+        "depot": {
+            "address": "2397 Paynes Depot Road, Georgetown, KY, USA",
+            "coordinate": [
+                -84.61935517351843,
+                38.16376852120409
+            ],
+            "status": "success",
+            "error": ""
+        },
+        "capacity": 4
+    }
+]
