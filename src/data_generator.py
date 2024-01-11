@@ -6,6 +6,7 @@ except ModuleNotFoundError:
     import geo_utils as gutils
 
 import os
+import math
 import datetime
 import random
 import uuid
@@ -103,8 +104,11 @@ class RouteGenerator:
         self.time_range_start = datetime.datetime.strptime(time_range[0], '%Y-%m-%d %H:%M:%S')
         self.time_range_end = datetime.datetime.strptime(time_range[1], '%Y-%m-%d %H:%M:%S')
     
-    def _set_pickup_time(self):
-        return self.time_range_start + datetime.timedelta(seconds=random.randint(0, int((self.time_range_end - self.time_range_start).total_seconds())))
+    def _set_pickup_time(self, granularity:int=5):
+        random_time = self.time_range_start + datetime.timedelta(seconds=random.randint(0, int((self.time_range_end - self.time_range_start).total_seconds())))
+        minutes = (random_time - self.time_range_start).total_seconds() / 60
+        rounded_minutes = math.ceil(minutes / granularity) * granularity
+        return self.time_range_start + datetime.timedelta(minutes=rounded_minutes)
         
     def __iter__(self):
         return self
