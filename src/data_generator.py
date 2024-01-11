@@ -12,7 +12,6 @@ import random
 import uuid
 import json
 import pandas as pd
-from pydantic import BaseModel
 from typing import Tuple, List
 
 ors_client = gutils.ors_client
@@ -97,12 +96,13 @@ class VehicleGenerator:
             }
 
 class RouteGenerator:
-    def __init__(self, n_orig:int, n_dest:int, region:str='Lexington, KY', time_range:Tuple[str, str]=('2024-01-15 08:00:00', '2024-01-15 17:00:00')):
+    def __init__(self, n_orig:int, n_dest:int, region:str='Lexington, KY', operating_date:datetime.date=datetime.date.today()):
         self.origin = generate_addresses(get_bounding_box(region), n_orig)
         self.destination = generate_addresses(get_bounding_box(region), n_dest)
         self.index = 0
-        self.time_range_start = datetime.datetime.strptime(time_range[0], '%Y-%m-%d %H:%M:%S')
-        self.time_range_end = datetime.datetime.strptime(time_range[1], '%Y-%m-%d %H:%M:%S')
+        self.operating_date = operating_date
+        self.time_range_start = datetime.datetime.combine(self.operating_date, datetime.time(config.DAY_START_HOUR, 0, 0))
+        self.time_range_end = datetime.datetime.combine(self.operating_date, datetime.time(config.DAY_END_HOUR, 0, 0))
     
     def _set_pickup_time(self, granularity:int=5):
         random_time = self.time_range_start + datetime.timedelta(seconds=random.randint(0, int((self.time_range_end - self.time_range_start).total_seconds())))

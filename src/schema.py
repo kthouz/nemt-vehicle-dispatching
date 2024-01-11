@@ -110,7 +110,7 @@ class Vehicle(BaseModel):
             logger.info(f"Vehicle {values['vehicle_id']}.available_seats defaulted to {values['available_seats']}")
         
         if values["next_available_time"] is None and values["status"] == VehicleStatus.AVAILABLE:
-            values["next_available_time"] = datetime.datetime.combine(values["operating_date"], datetime.time(config.DAY_START_TIME))
+            values["next_available_time"] = datetime.datetime.combine(values["operating_date"], datetime.time(config.DAY_START_HOUR))
             logger.info(f"Vehicle {values['vehicle_id']}.next_available_time estimated to {values['next_available_time']}")
 
         return values
@@ -158,7 +158,7 @@ class Vehicle(BaseModel):
             return
         
         if len(self.rides) == 0 or self.status == VehicleStatus.AVAILABLE:
-            self.next_available_time = datetime.datetime.combine(self.operating_date, datetime.time(config.DAY_START_TIME))
+            self.next_available_time = datetime.datetime.combine(self.operating_date, datetime.time(config.DAY_START_HOUR))
             logger.debug(f"Vehicle {self.vehicle_id} next available time set to {self.next_available_time}")
             return
         
