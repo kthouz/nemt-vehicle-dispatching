@@ -1,11 +1,11 @@
 try:
     from src import config
     from src import utils
-    from src import geo_utils as gutils
+    from src import routing
 except ModuleNotFoundError:
     import config
     import utils
-    import geo_utils as gutils
+    import routing
 
 from pydantic import BaseModel, Field, validator, root_validator
 from typing import Tuple, List, Optional, Dict, Any, Union
@@ -51,13 +51,13 @@ class Ride(BaseModel):
         if values["pickup_location"] and values["dropoff_location"] and values["dropoff_time"]:
             return values
         if values["pickup_location"] is None:
-            values["pickup_location"] = gutils.address_to_coordinates(values["pickup_address"])
+            values["pickup_location"] = routing.get_geocode(values["pickup_address"])
             logger.info(f"Ride {values['ride_id']}.pickup_location defaulted to {values['pickup_location']}")
         if values["dropoff_location"] is None:
-            values["dropoff_location"] = gutils.address_to_coordinates(values["dropoff_address"])
+            values["dropoff_location"] = routing.get_geocode(values["dropoff_address"])
             logger.info(f"Ride {values['ride_id']}.dropoff_location defaulted to {values['dropoff_location']}")
-        duration_seconds = int(gutils.get_trip_duration(values["pickup_location"], values["dropoff_location"]))
-        values["dropoff_time"] = values["pickup_time"] + datetime.timedelta(seconds=duration_seconds)
+        _, duration_seconds = routing.get_distance_duration(values["pickup_location"], values["dropoff_location"])
+        values["dropoff_time"] = values["pickup_time"] + datetime.timedelta(seconds=int(duration_seconds))
         logger.info(f"Ride {values['ride_id']}.dropoff_time defaulted to {values['dropoff_time']}")
         return values
     

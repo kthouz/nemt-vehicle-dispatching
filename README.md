@@ -14,6 +14,9 @@ Our ask is to match vehicles to as many patients as possible. Some constraints a
 
 ## Running [OpenRouteService](https://giscience.github.io/openrouteservice/installation/Installation-and-Usage) locally
 
+## Generate PBF files
+- [bbbike.org](https://extract.bbbike.org/)
+- [geofabrik](https://download.geofabrik.de/north-america/us.html)
 ## Resources
 - [Routing Map](https://graphhopper.com/maps/)
 - [Routing APIs](https://docs.graphhopper.com/)

@@ -3,19 +3,13 @@
         "route_id": "8a0b928b-138b-4e44-94e0-56edd46e0730",
         "orig_address": {
             "address": "2205 Curtiswood Drive, Lexington, KY, USA",
-            "coordinate": [
-                -84.42379712123736,
-                38.04863907407431
-            ],
+            "coordinate": [-84.42379712123736,38.04863907407431],
             "status": "success",
             "error": ""
         },
         "dest_address": {
             "address": "Oakmont Drive, Nicholasville, KY, USA",
-            "coordinate": [
-                -84.59110791632293,
-                37.89189327661813
-            ],
+            "coordinate": [-84.59110791632293,37.89189327661813],
             "status": "success",
             "error": ""
         },

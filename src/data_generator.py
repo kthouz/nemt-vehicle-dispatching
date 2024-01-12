@@ -1,9 +1,9 @@
 try:
     from src import config
-    from src import geo_utils as gutils
+    from src import routing
 except ModuleNotFoundError:
     import config
-    import geo_utils as gutils
+    import routing
 
 import os
 import math
@@ -11,10 +11,11 @@ import datetime
 import random
 import uuid
 import json
+import openrouteservice
 import pandas as pd
 from typing import Tuple, List
 
-ors_client = gutils.ors_client
+ors_client = openrouteservice.Client(key=config.OPENROUTESERVICE_API_KEY, base_url=os.getenv('OPENROUTESERVICE_API_URL', config.OPENROUTESERVICE_BASE_URL))
 
 def get_bounding_box(address:str)->List[Tuple]:
     """
