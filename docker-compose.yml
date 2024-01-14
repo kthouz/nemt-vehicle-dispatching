@@ -1,26 +1,51 @@
-version: '2.4'
+version: '3'
 services:
-  ors-app:
-    container_name: ors-app
-    ports:
-      - "8080:8080"
-      - "9001:9001"
-    image: openrouteservice/openrouteservice:nightly
-    # For versioned images see https://giscience.github.io/openrouteservice/installation/Running-with-Docker.html
-    user: "${UID:-0}:${GID:-0}"
-#    build:
-#      context: ./
-#      args:
-#        OSM_FILE: ./ors-api/src/test/files/heidelberg.osm.gz
+  osrm:
+    image: ghcr.io/project-osrm/osrm-backend
+    command: osrm-routed --algorithm mld /data/kentucky-latest.osrm
     volumes:
-      - ./docker/openrouteservice/graphs:/home/ors/ors-core/data/graphs
-      - ./docker/openrouteservice/elevation_cache:/home/ors/ors-core/data/elevation_cache
-      - ./docker/openrouteservice/logs/ors:/home/ors/logs
-      - ./docker/openrouteservice/logs/tomcat:/home/ors/tomcat/logs
-      - ./docker/openrouteservice/conf:/home/ors/ors-conf
-      - ./docker/openrouteservice/data:/home/ors/ors-core/data
+      - ./docker/osrm/data:/data
+    ports:
+      - "5000:5000"
+  vroom-backend:
+    image: vroom-docker
+    volumes:
+      - ./docker/vroom/conf:/conf
     environment:
-      - BUILD_GRAPHS=False  # Forces the container to rebuild the graphs, e.g. when PBF is changed
-      - "JAVA_OPTS=-Djava.awt.headless=true -server -XX:TargetSurvivorRatio=75 -XX:SurvivorRatio=64 -XX:MaxTenuringThreshold=3 -XX:+UseG1GC -XX:+ScavengeBeforeFullGC -XX:ParallelGCThreads=4 -Xms1g -Xmx2g"
-      - "CATALINA_OPTS=-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9001 -Dcom.sun.management.jmxremote.rmi.port=9001 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=localhost"
-      - ORS_CONFIG=/home/ors/ors-conf/ors-config.json
+      - VROOM_ROUTER=osrm
+    ports:
+      - "3000:3000"
+    depends_on:
+      - osrm
+  vroom-frontend:
+    image: iedmrc/vroom-frontend
+    restart: always
+    ports:
+        - "9966:9966"
+    depends_on:
+        - osrm
+        - vroom-backend
+#   ors:
+#     container_name: ors
+#     ports:
+#       - "8080:8080"
+#       - "9001:9001"
+#     image: openrouteservice/openrouteservice:nightly
+#     # For versioned images see https://giscience.github.io/openrouteservice/installation/Running-with-Docker.html
+#     user: "${UID:-0}:${GID:-0}"
+# #    build:
+# #      context: ./
+# #      args:
+# #        OSM_FILE: ./ors-api/src/test/files/heidelberg.osm.gz
+#     volumes:
+#       - ./docker/openrouteservice/graphs:/home/ors/ors-core/data/graphs
+#       - ./docker/openrouteservice/elevation_cache:/home/ors/ors-core/data/elevation_cache
+#       - ./docker/openrouteservice/logs/ors:/home/ors/logs
+#       - ./docker/openrouteservice/logs/tomcat:/home/ors/tomcat/logs
+#       - ./docker/openrouteservice/conf:/home/ors/ors-conf
+#       - ./docker/openrouteservice/data:/home/ors/ors-core/data
+#     environment:
+#       - BUILD_GRAPHS=False  # Forces the container to rebuild the graphs, e.g. when PBF is changed
+#       - "JAVA_OPTS=-Djava.awt.headless=true -server -XX:TargetSurvivorRatio=75 -XX:SurvivorRatio=64 -XX:MaxTenuringThreshold=3 -XX:+UseG1GC -XX:+ScavengeBeforeFullGC -XX:ParallelGCThreads=4 -Xms1g -Xmx2g"
+#       - "CATALINA_OPTS=-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9001 -Dcom.sun.management.jmxremote.rmi.port=9001 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=localhost"
+#       - ORS_CONFIG=/home/ors/ors-conf/ors-config.json

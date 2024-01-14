@@ -1,1 +1,42 @@
-{"333 W Vine St, Lexington, KY 40507": [-84.4996004, 38.0479538]}
+{
+    "1740 Nicholasville Rd, Lexington, KY": [
+        -84.51235422426745,
+        38.01869995
+    ],
+    "2397 Paynes Depot Road, Georgetown, KY, USA": [
+        -84.581628,
+        38.204014
+    ],
+    "1000 South Limestone, Lexington, KY, USA": [
+        -84.5093899,
+        38.0310772
+    ],
+    "2101 Patchen Lake Ln, Lexington, KY 40505": [
+        -84.44046,
+        38.041965
+    ],
+    "3489 Lansdowne Dr, Lexington, KY 40517": [
+        -84.5145723,
+        37.9900907
+    ],
+    "601 E Main St, Lexington, KY 40508": [
+        -84.48712696862745,
+        38.0380452
+    ],
+    "4701 Hartland Pkwy, Lexington, KY 40515": [
+        -84.482479,
+        37.96187
+    ],
+    "900 Richmond Rd, Lexington, KY 40502": [
+        -84.4643333,
+        38.0178905
+    ],
+    "1600 Leestown Rd, Lexington, KY 40511": [
+        -84.52653555882353,
+        38.06785488235294
+    ],
+    "2173 Nicholasville Rd, Lexington, KY 40503": [
+        -84.51711965789474,
+        38.00938686842105
+    ]
+}
