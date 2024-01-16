@@ -1,6 +1,6 @@
-vehicle_id,address,capacity
-f620cbf8-e471-40d1-a529-81615620a84a,"3469 Winchester Road, Lexington, KY, USA",1
-ec3d8836-d062-46d7-bfe8-e600b8e81035,"1875 Lemons Mill Road, Georgetown, KY, USA",3
-ec8944b1-96b4-4927-b9db-b895bf8b16c3,"Hickman Lily Mill (historical), Jessamine County, KY, USA",5
-1647653e-f5c0-447a-95f1-3f2f7de4a70c,"4985 Bethel Road, Lexington, KY, USA",3
-7b2780ac-2eed-40cd-99ab-766b0f2479bd,"Acorn Court, Madison County, KY, USA",4
+vehicle_id,address,capacity,skills
+f620cbf8-e471-40d1-a529-81615620a84a,"3469 Winchester Road, Lexington, KY, USA",1,"1,2,3"
+ec3d8836-d062-46d7-bfe8-e600b8e81035,"1875 Lemons Mill Road, Georgetown, KY, USA",3,"1,3"
+ec8944b1-96b4-4927-b9db-b895bf8b16c3,"Hickman Lily Mill (historical), Jessamine County, KY, USA",5,"1,2,3"
+1647653e-f5c0-447a-95f1-3f2f7de4a70c,"4985 Bethel Road, Lexington, KY, USA",3,"2,3,5"
+7b2780ac-2eed-40cd-99ab-766b0f2479bd,"Acorn Court, Madison County, KY, USA",4,
