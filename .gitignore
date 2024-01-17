@@ -1,4 +1,6 @@
 docker/openrouteservice/*
+*.osrm.*
+*.osm.*
 notebooks/*
 # Byte-compiled / optimized / DLL files
 __pycache__/
