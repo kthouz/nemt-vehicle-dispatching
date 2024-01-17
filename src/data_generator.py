@@ -1,9 +1,7 @@
 try:
     from src import config
-    from src import routing
 except ModuleNotFoundError:
     import config
-    import routing
 
 import os
 import math
@@ -120,10 +118,10 @@ class RouteGenerator:
         else:
             self.index += 1
             return {
-                'route_id': str(uuid.uuid4()),
-                'orig_address': self.origin[self.index-1].get("address"),
-                'dest_address': random.choice(self.destination).get("address"),
-                'num_passengers': random.randint(1, 3),
+                'job_id': str(uuid.uuid4()),
+                'pickup_address': self.origin[self.index-1].get("address"),
+                'delivery_address': random.choice(self.destination).get("address"),
+                'nb_passengers': random.randint(1, 3),
                 'pickup_time': self._set_pickup_time().strftime('%Y-%m-%d %H:%M:%S'),
             }
 

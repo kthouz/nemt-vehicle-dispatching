@@ -1,3 +1,6 @@
+import sys
+sys.path.append("..")
+
 try:
     from src import config
 except ModuleNotFoundError:
