@@ -1,13 +1,9 @@
 try:
     from src import config
     from src import utils
-    from src import schema
-    from src import routing
 except ModuleNotFoundError:
     import config
     import utils
-    import schema
-    import routing
 
 import requests
 import json

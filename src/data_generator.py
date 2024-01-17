@@ -1,9 +1,7 @@
 try:
     from src import config
-    from src import routing
 except ModuleNotFoundError:
     import config
-    import routing
 
 import os
 import math

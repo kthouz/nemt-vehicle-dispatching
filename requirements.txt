@@ -12,3 +12,8 @@ ipython==7.28.0
 watchdog==2.1.6
 fastapi==0.68.1
 pydantic==1.8.2
+loguru==0.7.2
+tomark==0.1.4
+polyline==2.0.1
+colorcet==3.0.1
+webcolors==1.13.0
