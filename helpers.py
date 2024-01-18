@@ -218,14 +218,20 @@ def steps_to_geojson(steps_data:Dict[str, Any], id_mapper:Dict[str, Any], jobs:p
     points = []
     linestring = dict()
     for i, step in enumerate(steps_data["steps"]):
-        job_id = id_mapper.get(step.get("id"))
-        if job_id:
-            address = jobs[jobs.job_id==job_id].pickup_address.values[0]
-        else:
-            address = f"Start/End::{steps_data['vehicle_id']}"
         _type = step["type"]
         if _type in ('start', 'end'):
             _type = "Start/End"
+        job_id = id_mapper.get(step.get("id"))
+        if job_id:
+            if _type=="pickup":
+                address = jobs[jobs.job_id==job_id].pickup_address.values[0]
+            elif _type=="delivery":
+                address = jobs[jobs.job_id==job_id].delivery_address.values[0]
+            else:
+                address = f"No Address Provided"
+        else:
+            address = f"Start/End::{steps_data['vehicle_id']}"
+        
         points.append({
             "type": "Feature",
             "geometry": {
@@ -268,8 +274,12 @@ def steps_to_geojson(steps_data:Dict[str, Any], id_mapper:Dict[str, Any], jobs:p
     return geojson
 
 def format_step_popup(properties:Dict[str, Any])->str:
+    if properties['address'].startswith("Start/End"):
+        step = f'0,{properties["step"]}'
+    else:
+        step = properties['step']
     html = f"""
-    <p><b>Step:</b> {properties['step']}</p>
+    <p><b>Step:</b> {step}</p>
     <p><b>Address:</b> {properties['address']}</p>
     <p><b>Type:</b> {properties['type']}</p>
     <p><b>Service:</b> {properties['service']} minutes</p>
@@ -299,7 +309,8 @@ def plot_unassigned_jobs(m:leafmap.Map)->leafmap.Map:
     pass
 
 
-def generate_leafmap(routes:List[Dict[str, Any]], id_mapper:Dict[str, Any], jobs:pd.DataFrame, zoom=8, height="500px", width="500px"):
+def generate_leafmap(routes:List[Dict[str, Any]], id_mapper:Dict[str, Any], jobs:pd.DataFrame, recipe:str='cpdptw', zoom=8, height="500px", width="500px"):
+    assert recipe in ['cpdptw', 'cvrp'], f"Invalid recipe {recipe}. Valid recipes are 'cpdptw' and 'cvrp'"
     colors = cc.palette['glasbey_bw']
     m = leafmap.Map(zoom_start=zoom, height=height, width=width, tiles="OpenStreetMap")
     coordinates = []

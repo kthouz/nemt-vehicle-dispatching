@@ -1,0 +1,1303 @@
+{
+    "code": 0,
+    "summary": {
+        "cost": 72627,
+        "routes": 4,
+        "unassigned": 2,
+        "delivery": [
+            27
+        ],
+        "amount": [
+            27
+        ],
+        "pickup": [
+            27
+        ],
+        "setup": 0,
+        "service": 16200,
+        "duration": 72627,
+        "waiting_time": 25454,
+        "priority": 0,
+        "distance": 1074595,
+        "violations": [],
+        "computing_times": {
+            "loading": 313,
+            "solving": 39,
+            "routing": 70
+        }
+    },
+    "unassigned": [
+        {
+            "id": 14,
+            "location": [
+                -84.5842128,
+                38.1154876
+            ],
+            "type": "pickup"
+        },
+        {
+            "id": 14,
+            "location": [
+                -84.312582,
+                37.858578
+            ],
+            "type": "delivery"
+        }
+    ],
+    "routes": [
+        {
+            "vehicle": 0,
+            "cost": 19593,
+            "delivery": [
+                8
+            ],
+            "amount": [
+                8
+            ],
+            "pickup": [
+                8
+            ],
+            "setup": 0,
+            "service": 4800,
+            "duration": 19593,
+            "waiting_time": 6440,
+            "priority": 0,
+            "distance": 300667,
+            "steps": [
+                {
+                    "type": "start",
+                    "location": [
+                        -84.3805024,
+                        38.0380194
+                    ],
+                    "setup": 0,
+                    "service": 0,
+                    "waiting_time": 0,
+                    "load": [
+                        0
+                    ],
+                    "arrival": 1704990008,
+                    "duration": 0,
+                    "violations": [],
+                    "distance": 0
+                },
+                {
+                    "type": "pickup",
+                    "location": [
+                        -84.6426109,
+                        37.9782286
+                    ],
+                    "id": 15,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 15,
+                    "load": [
+                        1
+                    ],
+                    "arrival": 1704991800,
+                    "duration": 1792,
+                    "violations": [],
+                    "distance": 27490
+                },
+                {
+                    "type": "delivery",
+                    "location": [
+                        -84.3291028258648,
+                        38.03247645
+                    ],
+                    "id": 15,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 15,
+                    "load": [
+                        0
+                    ],
+                    "arrival": 1704994177,
+                    "duration": 3869,
+                    "violations": [],
+                    "distance": 62106
+                },
+                {
+                    "type": "pickup",
+                    "location": [
+                        -84.36990509412686,
+                        38.0963745
+                    ],
+                    "id": 12,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 812,
+                    "job": 12,
+                    "load": [
+                        1
+                    ],
+                    "arrival": 1704995188,
+                    "duration": 4580,
+                    "violations": [],
+                    "distance": 73101
+                },
+                {
+                    "type": "pickup",
+                    "location": [
+                        -84.58726,
+                        37.96748
+                    ],
+                    "id": 24,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 3940,
+                    "job": 24,
+                    "load": [
+                        2
+                    ],
+                    "arrival": 1704998060,
+                    "duration": 6340,
+                    "violations": [],
+                    "distance": 102371
+                },
+                {
+                    "type": "pickup",
+                    "location": [
+                        -84.6143775,
+                        37.9876856
+                    ],
+                    "id": 13,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 13,
+                    "load": [
+                        3
+                    ],
+                    "arrival": 1705002806,
+                    "duration": 6846,
+                    "violations": [],
+                    "distance": 106833
+                },
+                {
+                    "type": "pickup",
+                    "location": [
+                        -84.6510454,
+                        38.0878427
+                    ],
+                    "id": 3,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 3,
+                    "load": [
+                        4
+                    ],
+                    "arrival": 1705004709,
+                    "duration": 8449,
+                    "violations": [],
+                    "distance": 126018
+                },
+                {
+                    "type": "delivery",
+                    "location": [
+                        -84.662106475,
+                        37.9067667
+                    ],
+                    "id": 12,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 12,
+                    "load": [
+                        3
+                    ],
+                    "arrival": 1705007307,
+                    "duration": 10747,
+                    "violations": [],
+                    "distance": 153011
+                },
+                {
+                    "type": "pickup",
+                    "location": [
+                        -84.5568844,
+                        37.9050784
+                    ],
+                    "id": 29,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 1393,
+                    "job": 29,
+                    "load": [
+                        4
+                    ],
+                    "arrival": 1705008707,
+                    "duration": 11847,
+                    "violations": [],
+                    "distance": 166644
+                },
+                {
+                    "type": "delivery",
+                    "location": [
+                        -84.6011423,
+                        37.8739215
+                    ],
+                    "id": 3,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 3,
+                    "load": [
+                        3
+                    ],
+                    "arrival": 1705010866,
+                    "duration": 12313,
+                    "violations": [],
+                    "distance": 173137
+                },
+                {
+                    "type": "pickup",
+                    "location": [
+                        -84.6011423,
+                        37.8739215
+                    ],
+                    "id": 16,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 16,
+                    "load": [
+                        4
+                    ],
+                    "arrival": 1705011166,
+                    "duration": 12313,
+                    "violations": [],
+                    "distance": 173137
+                },
+                {
+                    "type": "delivery",
+                    "location": [
+                        -84.312582,
+                        37.858578
+                    ],
+                    "id": 16,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 16,
+                    "load": [
+                        3
+                    ],
+                    "arrival": 1705013909,
+                    "duration": 14756,
+                    "violations": [],
+                    "distance": 221039
+                },
+                {
+                    "type": "pickup",
+                    "location": [
+                        -84.4434889,
+                        38.0164291
+                    ],
+                    "id": 21,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 295,
+                    "job": 21,
+                    "load": [
+                        4
+                    ],
+                    "arrival": 1705015505,
+                    "duration": 16052,
+                    "violations": [],
+                    "distance": 247129
+                },
+                {
+                    "type": "delivery",
+                    "location": [
+                        -84.55996125434804,
+                        38.10551845
+                    ],
+                    "id": 24,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 24,
+                    "load": [
+                        3
+                    ],
+                    "arrival": 1705017456,
+                    "duration": 17408,
+                    "violations": [],
+                    "distance": 264987
+                },
+                {
+                    "type": "delivery",
+                    "location": [
+                        -84.55996125434804,
+                        38.10551845
+                    ],
+                    "id": 21,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 21,
+                    "load": [
+                        2
+                    ],
+                    "arrival": 1705017756,
+                    "duration": 17408,
+                    "violations": [],
+                    "distance": 264987
+                },
+                {
+                    "type": "delivery",
+                    "location": [
+                        -84.5284352028505,
+                        38.12258615
+                    ],
+                    "id": 13,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 13,
+                    "load": [
+                        1
+                    ],
+                    "arrival": 1705019123,
+                    "duration": 18475,
+                    "violations": [],
+                    "distance": 278679
+                },
+                {
+                    "type": "delivery",
+                    "location": [
+                        -84.48456836107098,
+                        38.118489749999995
+                    ],
+                    "id": 29,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 29,
+                    "load": [
+                        0
+                    ],
+                    "arrival": 1705019794,
+                    "duration": 18846,
+                    "violations": [],
+                    "distance": 285926
+                },
+                {
+                    "type": "end",
+                    "location": [
+                        -84.3805024,
+                        38.0380194
+                    ],
+                    "setup": 0,
+                    "service": 0,
+                    "waiting_time": 0,
+                    "load": [
+                        0
+                    ],
+                    "arrival": 1705020841,
+                    "duration": 19593,
+                    "violations": [],
+                    "distance": 300667
+                }
+            ],
+            "violations": [],
+            "geometry": "oucgF~x_bOsAjIG`@ABMpAEn@AXExACpA?b@MlLAhBIzIAr@SlTCrB?FItFCdA?ZEnACp@MxAwA`IoDxROz@_D`QSjA]jBMl@{@tEoAxGMl@i@rCOv@eAzFi@jCIj@Gh@Ov@CNMdAY~CIbAI|AA`@EdASpGM~DOjEAZUjHQvEF~@E|BKtCCpAQnFQt@C~@EvAAVGpB?JKnCCdAHdACx@I`BCh@SdGKdDElBAx@@x@@p@Bv@FjAJdBHtAJ`BBt@Dh@ZhFDz@\\lGBZ@ZBp@?b@?X?nAAj@EdAItAm@xICXSjDWlDGz@CZEt@cAbOMZm@vIGp@OxB?DCR?JS|CARItBGvBEnB?`BAj@IpDA^AZ?`@Ad@AZ?BIjDAz@?pB@lABbAF|A@n@H`BN\\VnGFxA?FNpD?BD|@DjAD`ALpCDrAD|@@FB`ABj@Bh@D|@D|@D|@@PBb@D~@Bh@@^Bh@Bn@JnCHdBBz@Z|HHbB@Z?PFzAFpB@RFvABn@J~BJzC@DHtBBf@@^FrA@RFbBBp@HzBHrBBd@@z@?x@?FCx@Ch@Eh@Gf@Kr@Ml@ERI\\O\\CFQ`@Wj@Wj@{@nBGLSb@]x@F|@@PVjEVnEFbALdB?NBTVrD\\zEPrBBTBRNzABRLlAXpCPvCAh@@d@Bf@?JAPY\\_@d@c@f@UXk@p@UVUXOPIHo@v@IJMPIJKJa@f@_@`@GFEDIJWZm@p@KLILa@b@w@~@ABIJIHm@r@[`@y@bAMLKJw@~@CBa@d@EFKJ{BfCOPKJq@v@g@j@u@z@CBONq@v@OPEFGD_@b@EFm@p@IHKLs@z@o@r@g@l@KLNTtA~BBDHNRXdBrCFJFJLRFHf@v@\\h@Xb@T\\HL|@vAHLn@`AbA`BDHJLd@v@`BjCrBdDHNLRrAvBNXVd@HLNTJTDJh@`ALXZl@LVh@vAN`@Rl@xEpMVh@`@v@NXV^LLXVRNb@\\ZVPLNJLLFFHFJLLPV^LVt@tAj@fAJN^t@^p@\\n@NVPZNV\\j@~@dBpAbCFJJPR^Zj@~AvCHNFPX|@v@tAXf@LVNXBFx@|ANVnBtD|AxChClF\\p@Vj@P\\R`@HNLTVd@Zh@~@hBP`@fAxBHRNZh@bA~A|CFJXn@\\r@Vh@Vl@Xj@tAhCLVdAbBr@hAh@z@dAbBR\\PX~AhCPXLPfA~ANVZj@NZRd@P\\R`@NZXh@\\l@BD@Bj@hA`@~@BHFLJTHPTh@HPr@jB`@dAXp@rB|EP^JVp@|AvCxGh@x@j@z@vAnB`AtAfB`CTZb@l@rAhB`CdD|AxBd@p@V\\vCbExCdEr@`Ar@fA^l@NR^l@tA`CNX|AfDXj@Tf@VVNLRH\\RLLHNL\\Rd@|@dBNT`@j@JVJ^Jn@Ff@FVJXDJNRNVb@z@JTb@v@`AlBjAtBHPVd@p@lA|G~L|DlHxHvNfAnBvCbFt@lAlA`BfAtAbA|AhAzApAbBlAzANPV^NTt@fApAbBp@t@TVVZJN|@bAl@v@\\l@x@xAj@hAf@pA`@lATr@ZdAFPH\\FVFVl@xCXnB^|BZtBBRFd@Fd@TrAJn@RtARhA\\bBVbAJ\\FNn@zAh@`Al@~@j@r@HHn@n@p@l@t@l@d@\\LJ~@t@^ZPLz@p@n@p@j@p@l@|@h@hA^dAZhATjANjATvBRfBBTPnA`@fBd@zA^hAl@jAz@nA_@f@kA~AcAxAa@t@KRUf@Oh@IZEVKv@K|@EZA\\Ar@@p@HxATlCFb@^dCbChRF`@b@jDFb@\\tCb@lDXrBJl@DNH`@XdAZhAPr@Pl@HXn@`CFRd@`BDNXfARZNLFDxNzF~B|@h@RB@\\HPDNBNDdAXB@`A^hG|BbE|APHjDpAt@ZNFrEhBfO`GdM~EzD|AHDHDbGbCxD~Az@\\RH|B~@|Ap@ZNNJVRHH`@d@BFtBbDR\\d@~@d@dAtBnFHVD\\?TAPG`@m@nCQr@cBxH]bBu@rDI^y@tDI`@e@vB}@zDi@`CmB|IEPG\\UbA[~AAD{AhHEP_AjEKd@i@hC}@fEaAxECd@?RJr@z@|C|@xDr@~BXlALp@NzA@h@CP}@zDaCtJ{A|Fm@zBKb@U|@}@tDKd@GVFWJe@|@uDT}@Jc@l@{BzA}F`CuJ|@{DBQAi@O{AMq@YmAs@_C}@yD{@}CKs@?SBe@`AyE|@gEh@iCJe@~@kEDQzAiH@EZ_BTcAF]DQlB}Ih@aC|@{Dd@wBHa@x@uDH_@t@sD\\cBbByHPs@l@oCFa@@Q?UE]IWuBoFe@eAe@_AS]uBcDCGa@e@IIWSOK[O}Aq@}B_ASI{@]yD_BcGcCIEIE{D}AeM_FgOaGsEiBOGu@[kDqAQIcE}AiG}BaA_@CAeAYOEOCQE]ICAi@S_C}@yN{FGEOMS[YgAEOe@aBGSo@aCIYQm@Qs@[iAYeAIa@EOKm@YsBc@mD]uCGc@c@kDGa@cCiR_@eCGc@UmCIyAAq@@s@@]D[J}@Jw@DWH[Ni@Tg@JS`@u@bAyAjA_B^g@X_@g@y@_@o@_@w@c@kAe@_BIYMo@Ii@Ky@Gi@W}BIy@Gk@Km@Q}@Kc@So@K[Qc@Sc@Yk@MS_@k@}@cA[]kA_A_Au@gBuAgA{@_@]e@i@i@q@a@k@S]k@iAYo@Um@K[]mAWoAi@eDa@oCIi@Ge@YoBe@sCi@oDc@kBEUK]GU[sA_@eAm@sAoAkC{@aBiBcCc@k@QWWY}@cAmCcDiAuAu@cAmGqIOS_CwD{BuDaBsC_AgB{FqK{DkHwEyIo@iAcAmBWe@Q[kA{Bs@qAoAqCKq@Ge@?GCe@Hi@@EN_@dAkA`@]\\Sd@Yb@U\\Qn@UhCu@zIaBtBe@nBi@~@[x@[pAk@lAo@f@YjAs@t@g@t@m@b@[t@q@TU^]`BiBLO`@i@n@y@z@oA\\g@v@sAXk@f@aAZq@r@gBn@gB|@uCXkApDyNnAgFlDoNdD}MnDsNp@wChGiYdAaFjCsLtBoJxFeXfEuRZyA|Go[x@qDBMbAyELq@F]FUZmBJm@VoBHo@RkBN{ABOPeCNeCHoBFeCB_A@m@@sA?mBAqACeCEqASoGUiHIaCsA{`@mB{j@E}AKoC?G?G}Aod@OmEKgBGkAKoASsBSwAOgAc@aC_@cBm@aCQ{@]mAsAaF[qAeAoE]yAa@}BAK?I?GBKPc@d@gArAeDfAwCp@gB~@_Cv@mBb@_AZq@d@_AbAkBj@_Av@oA`A}ArEeHNWSOuAkAoAiA{B}Bc@e@[_@uBkCIKwAqB}BwD_@m@U]gDkF[c@i@y@a@i@[[{@{@m@g@e@[kAu@sAk@WKqCkAmCkAc@Uy@c@c@Ye@a@[Y[Y]a@i@s@c@u@U_@qAeCQ[S_@cCwE_A_BcBoCi@y@aDqEm@y@w@kAgAcBQYg@{@Wc@Yc@s@iAkAoBo@oAUk@Si@Su@Ok@Mg@Ig@McAGk@MuBEo@Gw@{AaWI{AEo@e@uHe@aIa@_HEe@Cm@_@qGIcAKcAMu@Mq@Qu@So@Oe@c@eAc@}@s@gAu@}@g@e@YUc@]OKy@e@WMi@S]K_@Kq@Ma@Gg@Gq@Ey@Cu@EIAWAM?gDMS?MAMAmEScAIu@Is@Oi@K{@W_@MWIEA}@a@e@Sc@Wi@]c@Yc@]g@c@a@_@m@q@c@c@o@{@i@w@c@u@e@eAUg@cIeQkBcECCaAuBACCEgAaCACAE_@w@Yo@e@eAwA{Cw@gBg@gAqBkEw@_Bo@gAoAeCQ]qAsBwBkDkAeBkEmGgD_F[e@SW{@sA{CmEgKeOGIsAcBw@o@s@_@sAa@wASeA?g@B_@Fa@HYFgCv@q@RmBj@LyABq@DoA?[BeAHuF?GBsBRmT@s@H{I@iBLmL?c@BqADyA@YDo@LqA@CFa@rCgQlAqHTuAlAeHd@uCV}ANw@`@mCHc@l@uDLq@XeBXeBTuA?C\\uBPeApA{HN}@^{BBQn@yDr@mERoARmARiAj@qDbCcORiALgAFu@HiC?uB?cAE{CA_CCsHT_RXqU@gBJmHD}E@gBXe[BiADaFRkQ?ODeFHsI@qAAsA@WDmF?y@HoJDmFsEGg@Aa@DaARaHhBcAXbAY`HiB`AS`@Ef@@rEFElFInJ?x@ElFAV@rAApAIrIEdF?NSjQE`FChAYd[AfBE|EKlHAfBYpUU~Q_@Ca@CuCIwAEwN_@}@CaAEYCw@KcCYaCWOCw@KsCa@yEg@c@EKAsDc@qC_@oBU}AQs@IcAMoDa@wDc@E?wEm@gAMg@GiEe@_@Eu@Cc@CuEIkGKeCG]?GAiEEsCOe@CiCGkECsCC}BEmGMaBCcBEkJQc@AuDI[CSC[I}E{BaAe@aAc@gD{AwAo@qAk@uK_FQEIAIAYBw@Z[JkC`AMFqEbBeBp@e@R_Bl@o@V}@\\WHu@Zu@XgHpCi@TgG`CWJgBp@kDtAC@YNe@V{FtC{FvCuDnBuBtBaAlAwCtH[Vg@Nk@AK?aGe@k@Ka@KqCwBg@_@{AaAwAm@q@I{@H}@\\YVyAfBaDzD}BtCq@z@yDxD[ZsArAe@d@eCnCaBfBu@|@}@lAuAdBeGpHIHqBzB]XONYVaAr@eHrEKJWTmAdAsCdCURkFtEeA|@uAlA_@ZkAfAy@t@[XWTQNQNMLMJWTuDdDkC~BqGpFkAdAyIzHaAx@cBzAoM~K_JxHwDbDgCzB_HdGgBxAwBnB}BlBsBfBsExDcEtDiCtCq@d@N`@r@fB|B`FzAvCFHzAvBdAzAhAhB|@dBjAjB~@pBtA|CjAvBlArBxAvBvAvBlA|BR`@~@hB|@xAr@dA|@`BFJz@`B`AfCv@hB~@~Br@~@jD|CnB`B~CbDrAxAp@bAR\\~@hBVf@~AfDhB|CdEdHlB`D^p@^l@vE~HbCbE|BzDdEfHFHvA`C@B~JvPXb@~FzJjCjE~BdEzBzDFLzBzDBDLTbCfEx@vAdBzCjB`DLTbJlOPXbAbBv@pApDlGb@t@`FrIR^hAjBv@rAhApBx@xAPXvA`C?@t@pAZj@jBdD~F|JdBxCT`@xBxD`EbHVd@|FzJlBhDx@dBNXLVLVXj@v@~BbCxHrA~D\\~@r@bBHPdFzJl@jAJPr@rALTd@|@j@hAf@bAj@bAp@nA~DjHBFVb@fAnBbBbDv@xAz@bB|A~CZp@FLJVd@nATp@\\rAXfATjArAzHLz@h@vCLp@Hb@@HDTHd@Jj@Jb@j@|B^hAJZN`@\\z@h@hAR^T`@DFf@|@VPLRb@p@NTRZnFzIhCbELT|BtDrCtEJPnB`Dz@vA|@zA|BpDfCbE`A`BV`@LTx@pAl@bAT\\T^^l@d@v@\\h@R\\d@v@`A~AdBpCbAbB\\h@R\\~BxDPVVb@f@x@pAtBzDnGhBxCFHfAhBfAfB|BtDHLDFvAzBDHhAfBJPFHxA|BDHHJZh@nAnBd@t@PXt@hAZf@FJDHp@bALRPVJRHLHLb@p@@BFHXb@x@rALPJNnArBJNNTtA~BBDHNRXdBrCFJFJLRFHf@v@\\h@Xb@T\\HL|@vAHLn@`AbA`BDHJLd@v@`BjCrBdDHNLRrAvBNXVd@HLNTJTDJh@`ALXZl@LVh@vAN`@Rl@xEpMVh@`@v@NXV^LLXVRNb@\\ZVPLNJLLFFHFJLLPV^LVt@tAj@fAJN^t@^p@\\n@NVPZNV\\j@~@dBpAbCFJJPR^Zj@~AvCHNFPX|@v@tAXf@LVNXBFx@|ANVnBtD|AxChClF\\p@Vj@P\\R`@HNLTVd@Zh@~@hBP`@fAxBHRNZh@bA~A|CFJXn@\\r@Vh@Vl@Xj@tAhCLVdAbBr@hAh@z@dAbBR\\PX~AhCPXLPfA~ANVZj@NZRd@P\\R`@NZXh@\\l@BD@Bj@hA`@~@BHFLJTHPTh@HPr@jB`@dAXp@rB|EP^JVp@|AvCxGh@x@j@z@vAnB`AtAfB`CTZb@l@rAhB`CdD|AxBd@p@V\\vCbExCdEr@`Ar@fA^l@NR^l@tA`CNX|AfDXj@Tf@VVNLRH\\RLLHNL\\Rd@|@dBNT`@j@JVJ^Jn@Ff@FVJXDJNRNVb@z@JTb@v@`AlBjAtBHPVd@p@lA|G~L|DlHxHvNfAnBvCbFt@lAlA`BfAtAbA|AhAzApAbBlAzANPV^NTt@fApAbBp@t@TVVZJN|@bAl@v@\\l@x@xAj@hAf@pA`@lATr@ZdAFPH\\FVFVl@xCXnB^|BZtBBRFd@Fd@TrAJn@RtARhA\\bBVbAJ\\FNn@zAh@`Al@~@j@r@HHn@n@p@l@t@l@d@\\LJ~@t@^ZPLz@p@n@p@j@p@l@|@h@hA^dAZhATjANjATvBRfBBTPnA`@fBd@zA^hAl@jAz@nAn@t@dBjB|AdAbBbANJrA`ApCnBtBtArB|AdChBTNHHnA|@r@b@|@f@f@R`@Rb@Lf@Nl@Nv@Nl@Hh@F`@Bd@@d@?^@d@CZAD?PALAh@GZC\\Gd@Kh@M|Bo@~Ac@dBg@bAY|Bo@PEXIVG^K\\I\\GZGXE`@E^Eb@Af@Cf@?T?T@X@V@ZB^D`@FZD^Hh@Lz@TzBl@|Ab@vD`AxA\\pD`AzBl@~Ab@vElAVFJg@DY`@iBd@sBNu@BKDSJa@R_Al@uCVaA\\_BFUJg@XqAb@mBJe@No@F]Le@?GH_@XmAFUPy@@CZuAJe@h@iCH[NDB@B@RFFBNBLBNDT?xDdAD@J@JDHBTHTJHDHDHDHDFFHFHHFFNTHJFJDJFJLVBJDHRn@BHBJRr@BD?BHRDJDHFFDHEIGGEIEKIS?CCESs@CKCISo@EICKMWGKEKGKIKOUGGIIIGGGIEIEIEIEUKUIICKEKAEAyDeAOQQIOGOEQGCACASEGVIZi@hCKd@[tAABQx@GTYlAI^?FMd@G\\On@Kd@c@lBYpAKf@GT]~AW`Am@tCS~@K`@ERCJOt@e@rBa@hBEXKf@GZE\\Id@CPERGTERGTIRCDELKRKRKPKNABKLc@n@A@MNKPIRKPIRITGTGVGVGXOt@AHmCrPiGh`@gBbL_BpJk@|Cu@jDIE{D}AeM_FgOaGsEiBOGu@fDG\\Eb@kDxOUj@]zAEj@oCbMUd@_@|AEn@Tk@??\\{AFk@nCcMRe@\\yAFs@jDyOP_@J]t@cDOGu@[kDqAQIcE}AiG}BaA_@CAeAYOEOCQE]ICAi@S_C}@yN{FGEOMS[YgAEOe@aBGSo@aCIYQm@Qs@[iAYeAIa@EOKm@YsBc@mD]uCGc@c@kDGa@cCiR_@eCGc@SzAi@lFEj@Gh@EXOd@k@~AwAvDQv@YxAKb@Ih@Ot@_A~EI^sBpKOv@AFmDzQc@bCe@xBADCNUnACLcAjF]jBgAtFWvAKh@c@~B}@jEKb@CNETsAdHo@hDw@hEk@rCER_@nBADCFYpAcB|G}GrXWhAy@lDa@fByBlJoBbIsCnLi@xBYjAGR}EjSIZ}BpJc@fBSz@K\\{AjG_EfPsApFERWdA{AfGQr@q@rC_A~DsDnN_CfJmBrHaC`JyAtFw@tCs@nCe@hBWnAWvAO|@YjAQr@w@zCk@zB[nAg@pBEN[hAy@~Ca@bBkAjEIZs@pCSz@Sr@}@hD?@Qn@_@rAyBlIc@bBIZOh@Mf@CJc@OkDaBiEqBmB_Au@]eIuCgA_@iK}DaFmBqBy@wAs@gG}C}BkA}DmBg@UuHmDGC{As@QKgEqByC{AsAo@gEuBiCoAeDaBiFgCWMGCyAy@m@c@eBoA_@Uk@Sa@Iq@K[CYCYCOCm@IYEYI[K[K[MuAm@{@_@[Ok@Uk@Wi@Ww@]QK[MsB}@}@_@[MGCMGe@SmAg@GA[OcCeAo@[o@Wc@SKEWIIACAG?IAI?K@E@E?WFKBIDYHoAd@eA`@i@PYLg@PUHKDSNIFGFIH[`@ED}@fAuA`BQPOLSFO@SGOKQOQOQG[EeAMQAQCWBO@IBA?kATWDUDA?c@Fc@HQDOBSDK@MBg@He@Hs@Js@Ns@P[HkD~@[H[J]Js@XiChAi@Ti@Tg@Tq@XOFKDKDKBKBM@M@Q@q@@i@@[@]?[A{@?]@]?_@?Q@I?_@@G@SB_ALu@JcAROBk@HC@_@F]Bw@LC@a@F[FmBZkBV{@La@FI@i@Fc@Fu@Jc@DOBy@LgARc@HUF]Fq@LgB^OBeB^aAR}@T{Cp@k@PGBGBEDEBA@IFIJEHILc@t@S\\gCpEOTKNIJGFGKy@mAMS[e@MSMSy@oAMUMQOS[k@]g@MSMSMUOU]g@MWOSQWMUOUIKu@iAQWOYQUQYQYw@kAo@cA[e@KSIUMUIYKYIY[{@I]EUC]C]?]?y@Ay@Cq@AWCUAWEUEWM]AEIWEQg@eBE[GYaA{DESc@iBMg@EQESGO[mAEUi@mBMCy@YUKUM_A]QIu@]QGOISI]QQMaB{@QIOG_@QECUKMGMGOGMGo@[MGOIo@YOG[MKGQMCCIGIIQ[[o@Ue@IQa@{@Ug@IOKQKMMOOKQKe@USIQIOK_@QOGOIa@SQKe@UQIOIMIITIf@iBzMCZ?RFVN\\RV`AfALXDLDP@TEd@i@rDET?R@PDTBJHPIQCKEUAQ?SDUh@sDDe@AUEQEMMYaAgASWO]GW?SB[hB{MHg@HULHNHPHd@TPJ`@RNHNF^PNJPHRHd@TPJNJLNJLJPHNTf@`@z@HPTd@Zn@PZHHHFBBPLJFZLNFn@XNHLFn@ZLFNFLFLFTJDB^PNFPH`Bz@PL\\PRHNHPFt@\\PH~@\\TLTJx@XLBh@lBDTZlAFNDRDPLf@b@hBDR`AzDFXDZf@dBDPHV@DL\\DVDT@VBT@VBp@@x@?x@?\\B\\B\\DTH\\Zz@HXJXHXLTHTJRZd@n@bAv@jAPXPXPTNXPVt@hAHJNTLTPVNRLV\\f@NTLTLRLR\\f@Zj@NRLPLTx@nALRLRZd@LRx@lAFJFGHKJONUfCqER]b@u@HMDIHKHG@ADCDEFCFCj@QzCq@|@U`ASdB_@NCfB_@p@M\\GTGb@IfASx@MNCb@Et@Kb@Gh@GHA`@Gz@MjBWlB[ZG`@GBAv@M\\C^GBAj@INCbASt@K~@MRCFA^AH?PA^?\\?\\Az@?Z@\\?ZAh@Ap@APALALAJCJCJEJENGp@Yf@Uh@Uh@UhCiAr@Y\\KZKZIjD_AZIr@Qr@Or@Kd@If@ILCJARENCPEb@Ib@G@?TEVEjAU@?HCNAVCPBP@dALZDPFPNPNNJRFNARGNMPQtAaB|@gADEZa@HIFGHGROJETIf@QXMh@QdAa@nAe@XIHEJCVGD?DAJAH?H@F?B@H@VHJDb@Rn@Vn@ZbCdAZNF@lAf@d@RLFFBZL|@^rB|@ZLPJv@\\h@Vj@Vj@TZNz@^tAl@ZLZJZJXHXDl@HNBXBXBZBp@J`@Hj@R^TdBnAl@b@xAx@FBVLhFfCdD`BhCnAfEtBrAn@xCzAfEpBPJzAr@FBtHlDf@T|DlB|BjAfG|CvAr@pBx@`FlBhK|DfA^dItCt@\\lB~@hEpBjD`Bb@N\\FhKt@rETnEBhEBd@@fRBbAEpAMrSyBtGs@nHw@JA|D]|AC|@@zBFlEHxEHdMXpBFTHTJTNTTRRNVRXj@hAb@z@nBvDvFlKh@t@r@t@Zd@NTXn@Vz@\\bARx@Fl@Dn@A|@Kx@GX{@`CSv@EZ?l@BZDp@N~@j@lCdA~D?BDJBJdAzE\\xA@FnBjIh@`CVz@LXf@n@h@j@l@^bA`@VFbBRtBf@ZJHFLPpAyA`@]t@a@|C}@~Ag@tAa@VGh@OnA[vC_@hAEz@D|BNzBT`@D~@Jt@DT?x@@`BA`BA|@An@GfAYbBq@lGgCpCiADAfAe@l@SbBk@jA]zAWVEb@ElCOn@E\\Ch@C|@GlBIfAGXA`AAH?d@?L?p@@rBBrBE`ESx@M`@K`A[l@WxAo@zBaAx@a@pCmBlDoCrC}BrDuCtF_F|@s@b@WJGj@WhGgCp@WFGLIX[`BiCtGkL~@aBnA_CHK`AoBrBiEpAwCJW`CsF~GsO`CwFPg@Pg@Pi@f@oBb@sBZyBn@yEF_@^qCPuAn@_Fh@eEHs@LkA`@iEDa@^aERmBNqARqABOr@cE|@sDpAgFdD}L|A_GRu@vFsTj@sBj@kBNYR_@Ta@V[Z]vIiIz@u@n@g@`@YTMRGREXETAZ?T@ZBD@ZHTDVJVLNB@b@BVHj@`ApGr@~DV`C^`CTpAJl@FXHXPd@f@rAd@z@Xp@XdAnCjJl@nBr@dCtAjEHXNTLRRXTXTTVT~DxChAz@tAbANLPTNVLVHXFZLpAXzCDx@JzBFj@b@rEFd@@FFb@@JLr@@FBJBHR`ANt@\\xA@DJh@H^FXFVJf@@BDLDPZfABLFTJb@Ln@x@tEHd@Ln@VvARjAHCNCXAbAId@CRCVANABAPARAj@Gb@CHATCrAKJ?VCVCVCVAXCXCXChBMPAFAXCXChAID?ZC@?t@EXED?TAXAXCXCVAXCVCl@ETATCRAf@EPAL?D?TAT?TAVAB?R?VAV?N?VAH?fACRAB?p@Ap@AXAXAB?fAAVAVCP@NAB?PAP@B?JC^A^?\\?N?NBNBPFPDd@Pn@Tp@Tf@P^LFBDBTF\\LzAh@^L\\JLDLBLBL@B?H?J?JAJAJCJCJCTIHE`@MJEHCPGNGFCVMLGd@SDEDEDIDKDMBMFMHOJONMPMPKRIRGRGVIVIVGlBk@z@U^K`@K`AW`@K\\KhAY^I^K~@U\\I\\IXGZGf@GPCZG\\ENAjAQ^EXEBA\\Ez@K|@K~AQ`@E`@E`@Ex@IlDY~AO\\Cb@EnBOj@E\\Ex@EZCP?TCJATCTERGRGPGDAHGNINKJMLM`@e@fC~TBhAGdA[hBSPUBMLS`DRaDLMTCRQZiBFeACiAgC_UXc@PSb@k@PUjAyAhAwA`AkARWRUz@aAPUFIJKPUd@o@PSRWRW|@eARURWRUPURUPUPUf@k@tAaBl@s@VWX]X]d@i@RUPUNQTYBCr@}@j@q@VYj@q@h@q@X]DGNQFGp@w@V[V[V[T[BCX[d@m@TWTYLQTUFKTWTYBCFIHKVYFGDGFKVYl@s@TYBAf@m@f@m@NQ@ARWRUj@s@X]j@q@X]NQDGTUBCV[V[VYNSDGRUBCbAmATWRYb@g@Z_@PWRUHIHMFELQPSPUt@}@PQNQd@g@FGNOb@e@|@}@RSJMFGRSTUh@i@RURSb@c@NONONM\\c@^k@Zg@R[JQq@{@i@u@u@iAa@o@g@{@o@cAwD_GYe@cCwDyDmFk@u@q@}@}@iAcEgFqDmE}CuDoBiCsCuDkBgCm@{@kCoDe@k@]a@i@o@q@u@u@y@m@m@g@e@c@_@o@k@o@i@e@a@g@]c@[_Aq@{@k@o@_@y@e@k@[yAo@u@]kAe@mAg@g@Qo@Um@Sq@Qs@Qy@Sm@McAQiAQaDg@eHcA{Fu@uFw@cAQcAOaD_@iBU}HgAgFu@uImAuAU_AUyA_@q@SUItAeIbDsRJu@`@mCPiAJs@v@qHRgB`@_EFg@Hy@Fo@LgAJ_AD[@OHg@Hm@Jk@Fa@Lm@DUJa@Nm@V}@Ng@b@}ADKPm@f@gBFU\\iAJ]vAyERm@XcAL]BIBIFQBIBIHQFQHQHQHOJOJMJMPSFGJKLILKLITMFEVMDCVMFCTOFCZS\\YRQDERSRUDEPWJOJQHONYd@gATm@^aADIj@_BZw@HQHQHQHQJOHODGPUFKBARWPMLKLILINIDCVKPGVKPEHCb@Kl@MXGpAURCFAb@Kb@Mb@Mb@Ol@SZMPIPIb@Ub@U`@WLITOXSh@a@VUVSNOVUVWLQ\\_@|@eAx@aA^e@xAiBz@eABCbAoA\\c@PUDExAmBZc@\\a@TYBCLOh@k@Z]BAZ[TS`@[b@]DC`Au@l@c@RSHE\\[VUFGTUTUX[@CTWDE|@iAr@_At@aADGNW~AsBhA}Ab@m@JMDGHKQ[OWQ[Q]O]GMIQOa@IUWq@Qe@Qg@Oi@Oi@Mi@Ok@Kk@Mm@Km@Kk@Io@Im@Ii@AES_BIo@S_BKq@Io@UaBQcBIq@Gq@Gq@Eq@Es@Cq@Cs@Aq@As@As@?u@?s@?u@@o@@y@Bu@Bs@Ds@Dq@N}BFeADo@BYDm@Dm@Dm@JcBDi@HqALuBBe@Be@Bc@@a@?a@?_@A]A[AYAWCUASCQEa@CQEQEUEWIWIYGUOa@M]O]O[GKIQU[U[W[[Y[Y]W_@Ua@Sa@Qa@Qa@@i@Sc@OA?q@UFa@?G@E@GBIBGBEDCF?F?FBFBfAl@@@FBb@Tp@\\P_@vIeTwIdTQ^q@]c@UGCAAgAm@GCGCG?G?EBCDCFCHAFAD?FG`@p@T@?b@Nh@RX\\`@R^P^TRNDBBBZVZZXZV\\HNJLT^R`@P`@Pd@FPFRLf@Lh@Hh@Hj@Dl@Bl@Bj@?l@Al@Aj@El@Cl@En@K|AUlDC`@C`@C`@C`@E`@Gr@IjAO`CCt@Et@Ct@Ct@Al@A~@At@@v@?v@@t@@v@Bt@Dt@Bt@Fr@Dt@Ft@Fr@Hr@Hr@Jr@`@zCHr@Jr@Jr@Hr@VfBJr@@HHf@Jp@Ln@Ln@Nn@Nj@Nh@Nh@Nd@Nb@N^Rh@HPJZXl@`@z@JPHPLRJR\\j@`@j@PVPVRVTXTVVZXVVXZXXXZX\\V\\X^V`Ar@`@XZRh@^d@\\bAt@lCjBb@Zb@ZfAt@TPLHb@Xb@Xb@X`@Xb@Tb@Vb@Vd@TB@^Pn@XXLd@Rd@RhAb@d@RlAd@NFbC`AhBr@`@P`C~@\\L\\Nt@XXJVJz@\\pAf@HDf@P^Nh@VbA^TJVJVJXJpAh@z@\\LFNF^P^P^R^R`@T`An@`@V`@Z\\V^Z^\\^Z`@^fD~CdA`AbAbAf@d@^X`@^`@^`@\\`@Zb@Xd@XXNJDf@Td@Rh@Pf@Nf@Lh@HJB\\Df@Fj@Bh@Bh@BxBDbGHdVd@R?fA@b@@bCHO`AKj@U|ASnAGXKTOX_BlBCFILKTm@jBa@lA??`@mAl@kBJUHMBG~AmBNYJUFYRoAT}AJk@NaANq@yFK}Vc@_CEiCEa@Ci@Ci@AG?a@Ag@Ci@Ei@Eg@Ig@Ic@Kk@Qe@Oe@Se@Sc@Wc@Wa@Ya@[aA{@a@]_@_@QOOM_@]c@e@]YeD{C_@_@_@]a@]_@]_@[][OIOM_@Ya@W_@U_@Wa@SGEWM_@S_@Qa@Q}Aq@_@OcCaA_A_@oAc@_@OuAi@e@UeAa@c@QiAc@qCgAc@QkAe@e@Se@Qe@Se@QmAe@e@SkAe@e@Qe@Se@SKEYMc@UQIQKc@Uc@Uc@Ua@Wa@Wa@Wa@Wc@[[UaAo@_@YaCcB_@Ya@Yy@k@IGa@Yc@[[S}AiAy@m@[WYUYWUSUUSSQSOOMO_@c@MQ[a@EIIKQWKQMQYc@Q[OWQ[Q]O]GMIQOa@IUWq@Qe@Qg@Oi@Oi@Mi@Ok@Kk@Mm@Km@Kk@Io@Im@Ii@AES_BIo@S_BKq@Io@UaBQcBIq@Gq@Gq@Eq@Es@Cq@Cs@Aq@As@As@?u@?s@?u@@o@@y@Bu@Bs@Ds@Dq@N}BFeADo@BYDm@Dm@Dm@JcBDi@HqALuBBe@Be@Bc@@a@?a@?_@A]A[AYAWCUASCQEa@CQEQEUEWIWIYGUOa@M]O]O[GKIQU[U[W[[Y[Y]W_@Ua@Sa@Qa@Qa@@i@Sc@OA?q@UaBk@mAa@}CeAo@UwCaAaDgA_A]ICo@UUIi@Su@Wk@SEAiC_AYKsAe@kAa@KEqAe@gAa@{Ai@o@UYIQIm@UyAg@g@Qu@Ye@QWIOGmAa@wAi@_@M_DiAg@Oi@Q_@KGCc@MICICIA_@KUGA?KCSGE?k@MCAgAUaDq@sBa@GAGC_@IOCa@KWIOGg@OOGWMGCGCUMOGUOGC]U[UMK]W[WEGSSGEEE_@c@W[SWEEKOKOQUi@u@m@}@uByCwAiBc@e@iAeAMMgAu@aAm@kAi@a@O_@QmA]mAWq@KuC[{D[eBOoAK{D]cDYaK{@{C_@gB[yAWAAKCy@Qc@KOC}@UyBm@eA]}@YSIeA]OE]Mo@UOEUIMEkAa@UIkBm@[M[KmBq@C?s@W_@MmAa@UIKEqC_Ak@SMEkC_AOGUIOGOE}@]g@Se@Qg@S_A_@EAIEuAk@k@SqCiAwH{CEAuHyCkCeAsAi@a@QeFqBSIME[MUKk@Uq@Wo@WsCiAUKwAk@oAe@KGwCiAUKOG_C_A_@OMEWKOGkCeAuFyBMG[MoCgAYKqEiBqAg@c@OCA_@Oa@OEA_@Mw@WMEsA]yBg@a@GOEQCKAgBYg@Io@KkB_@EAa@K[MuAa@iA_@WKk@a@qAs@cB_A{CiB}A{@qAm@sB}@m@U}@[_AYqCy@eFyAcBe@oA_@gAY]KgD_AEAa@AcA]{DgAiA[}@SSGeAYcIyB}Ag@_DaA_Bg@WG_Bc@uH{BaFmA{CcAi@Qc@QuAg@c@QwAi@yAm@eAa@yAm@}D{AeBq@cBo@mAg@qGeCQGkDmAcBaAgCw@MIKGKKGKKSGKCOEg@OgBMqBImACg@?i@?s@@i@Bg@Fu@Dg@F_@Fe@t@{DfEuRZyA|Go[x@qDBMbAyELq@F]FUZmBJm@VoBHo@RkBN{ABOPeCNeCHoBFeCB_A@m@@sA?mBAqACeCEqASoGUiHIaCsA{`@mB{j@E}AKoC?G?G}Aod@OmEKgBGkAKoASsBSwAOgAc@aC_@cBm@aCQ{@]mAsAaF[qAeAoE]yAa@}BAK?I?GBKPc@d@gArAeDfAwCp@gB~@_Cv@mBb@_AZq@d@_AbAkBj@_Av@oA`A}ArEeHNWSOuAkAoAiA{B}Bc@e@[_@uBkCIKwAqB}BwD_@m@U]gDkF[c@i@y@a@i@[[{@{@m@g@e@[kAu@sAk@WKqCkAmCkAc@Uy@c@c@Ye@a@[Y[Y]a@i@s@c@u@U_@qAeCQ[Z[lBsBLMt@{@t@w@h@m@`@e@rA}AnC_DxAkBnEuFz@gALMbB{BnA_BZ]nBaCxHsJrAeB|HuJhCyCfAqA~F{GfCwCjE}EjD{DRUp@w@dCyCtAcBn@y@xBgDZe@z@{ApAgCjFmKfKwSrLcV`AsBv@}AdBmDpDqH`@s@n@qAnBcE~BoFrAmDx@yB~@gCxCcI~@wB`@_AxAyCrAqCh@kAZk@lBiEhCoF`DsGvAyClEkJlEeJtA}C|BeFv@aBbAyB|ByEv@cAhAw@t@]bAa@jDiAhBa@tDe@lA?~HEtAEtAKhDSnHcAbCe@xHaChBs@tBcAdEoBxAu@hB_A`Bw@|BiAjJuEhBaAfAg@vAw@xBeA~Ay@rHsDdQ}InIcE|C}Ap@_@hCoAvdAkh@pj@sX`Ae@lAo@l@[z@c@dOoHxBiA`B_ArBoA|AgAxBeB~DqD~DsDb@_@fA{@`CeB~AaAdCsAzBcAjCeApAc@zBq@dJuB~FsAnBi@~Ai@NCd@SZOdAi@jEuBfReJh@[z@c@jEoC`As@tBaBv@s@jCaCvCgDbPeVVe@rFuIvMsSvRkZ|CyEb@q@hAaBd@q@b@m@d@m@f@i@f@e@h@e@j@_@l@_@n@[PI\\Op@Wp@Qp@Mr@Kr@Ir@Er@Ct@@t@@t@DjBJjBLt@Dt@FdG\\r@Fr@D|@Dh@Br@Dp@Br@@r@@r@?r@?r@Ar@Cz@CrA?zFe@dHw@pCUpCWzAOvBSpBQlCWlBKjAEvBKbBEzBGbDGhDGjCG|BE~EKnBG|CExAEtAEzAGr@Ex@It@Gz@KbASp@K~@WdAYr@Yp@St@[xAo@jDaBd@Up@[`Bu@n@[p@[p@[n@Yd@UdDaAf@Qd@QjAa@b@Od@Kb@Id@Cb@Ab@A`@A^AzAEJ?HCU_C[cDYoCIy@KkAK{@G]AKG]AQEWG]EYCMG[Mg@M_@AGO_@EOCIGMQg@Ui@[s@O]Ug@CGk@qAUg@i@gAMWCGS]IOS]_@k@[c@[c@[c@EC]c@]_@]]OOIIOMOMSQEE[WmB}AGE]Wk@e@]WGEc@]_@[ECmA_A_@Y]Uu@o@gA{@m@e@wB_BiM{JECeEcDA?[WuC_Ck@e@e@a@e@g@c@k@]g@g@_AQa@kDtCgBxAMJMJKJMHKHIHKHKHIF????HGJIJIHIJILIJKLKLKfByAjDuCP`@f@~@\\f@b@j@d@f@d@`@j@d@tC~BZV@?dEbDDBhMzJvB~Al@d@fAz@t@n@\\T^XlA~@DB^Zb@\\FD\\Vj@d@\\VFDlB|AZVDDRPNLNLHHNN\\\\\\^\\b@DBZb@Zb@Zb@^j@R\\HNR\\BFLVh@fATf@j@pABFTf@N\\Zr@Th@Pf@FLBHDNN^@FL^Lf@FZBLDXF\\DV@PF\\@JF\\Jz@JjAHx@_@LSJOLONMROTOVc@v@SZU\\CDQVY\\IL[\\]Z_@Va@Vc@Tc@Re@Te@Vg@ToAl@i@VqAn@e@d@sCnAo@Xo@Vq@Vo@Tq@Tq@Tq@Rq@Pq@Pq@Ps@Ns@Ls@Js@Js@Jq@Hs@Hs@Fs@Fs@Ds@Bs@BiABqABs@Bu@@yCHs@@u@@s@@s@@s@Bs@@gBDs@@u@BcGJ}CHiBDs@Ds@Bs@Ds@DgBLgBNgBNgBNq@FgBNs@Fs@FyCZs@Fs@FgBPs@Fs@Fs@Hq@Fs@Fs@Hs@Fs@FgBNs@Fs@Ds@Ds@Bs@BY@Y@s@?s@@s@?s@Au@As@Cs@Cs@Es@EoEYs@Es@Es@EgBIs@Au@As@@s@Bs@Hs@Jq@Ns@Pq@To@Vo@\\m@\\m@`@k@b@i@d@i@h@WXONe@l@e@l@c@n@a@p@sEjHuRjZ}KvPcIbMmAjBo@`A_IvLqAdB_BlBiApAqBnBy@r@UV_@V]ZSPk@b@o@`@k@b@YRkDpB{DlByGdDsBdAk@Vm@Xk@Vc@PKDaAZWHa@La@La@Hq@P_VnF}EjA}Bt@gDrA{BfAq@\\wEtC_D`CeDxCmKvJoBdByAfAmD`C_Aj@oAp@_HfDqAp@_Ad@GBi@Vq@\\iAj@wE~B}ZpOuExByJdFwUjLuGbD{LdGyCzAiEtB{BhA}DpByNhHmKjFiDdBqHtDuAr@oCrAqAp@gAf@cB|@wJ|EmB~@eD`BeAh@aAd@aAb@uE~BgBr@eBn@i@PkBf@}Bj@k@HqEr@iCTcCNiAD}BD_BM}GYkBK_AMaAQg@OaBe@e@OWDYRk@jAsArCi@bAQ^k@vAwBpEcAtBo@pAgBvDsD~HKNwErJeEzI_EjIaEnIsC|FoDxH_AtBm@|AaDfIeCzGgClGoBlEiBrDQ\\cCbFyCfGsCzFEJiD|GmCpFuBdE{@xBoB`EUb@yDfHS^gFhKy@|AiB`Dm@bAQTsAlBqAbB{AhBeBnBKJSVmAvAsB`CqBbCyDnEyEpFMNMNwA`BKLKJm@t@{AfBiH`J}LnO_AjAY^qL|Ni@p@OP_AlAmC~CsGxGuC|CcCwE_A_BcBoCi@y@aDqEm@y@w@kAgAcBQYg@{@Wc@Yc@s@iAkAoBo@oAUk@Si@Su@Ok@Mg@Ig@McAGk@MuBEo@WBy@H{@JgAJSBO@iAJOBs@HgAPsATQDcCf@C@{@TC@u@PWHGBC@UHUHg@RsAr@i@Zc@Zk@d@k@f@a@`@CBg@j@q@z@g@t@e@r@[f@ABGHa@l@KPCBm@`AQVOTg@t@Yd@s@fAW`@e@r@OTOTa@l@U^q@bA[d@ILU\\_@j@QXu@fAMTkAfBcA|Ai@z@y@nAGHc@p@o@`AeDbFEHEFEF_AxAuAtB]f@o@`Ae@r@GJi@x@OTYb@]h@SZMVKRO^MXIZKd@I\\G^m@hEU|AABSxAAFIh@StAG\\Gd@SGuFyAOE_Bc@q@Sy@SwDaAkA]_@Ke@M_Ba@_Ba@{@SSEsAQIAi@Ge@Cm@CYAY?s@AG@oABk@Bi@DSBk@FC?WBg@HsAXg@JWFUDi@LUDwBb@QDc@HeB^SDy@PsAXG@]HSDoAV[HG@a@FOBE@e@HI@e@DO@MBI@wAJ{@HoAFO@a@BcABcA@Q?Q?{@Ae@AqCGg_@eASAwCIQ?WAQAS?W?UAK@k@?M?W@Y@S@YB]BOBm@Hi@HSFUDgAXIBMD[Li@Rg@Vi@Zw@h@UNYRw@l@]XiAdA_@\\IJKJiCbCuBpBu@r@q@n@eGzF}@x@qEhE[ZEDMLMLk@f@uArACBgAbA[ZMJkAhAeC~BEDCB_BxAONKJGFwAtAKHgC`CONWVg@f@STKJYVuBtBsArAWVOPm@j@y@x@m@l@qCpC{AzAw@v@GFWXEBQPy@|@YXeAhAUVqC~CmFdGQRsA|AORYZORo@v@Y\\yAdBaAjAUXk@r@cAlAABKNu@hAMTOV_@n@IP_@r@_@r@QZO\\c@fAa@bAKXSj@AD]fA?@Oh@Md@e@hBCHI^ET_@lBObAKl@K|@AJGb@WjCCXKdAC\\k@vGC\\O`BOxBo@pIGj@oA~Om@fHc@tEk@fISdCAREd@Eh@uA~PIdBEt@GjBCj@E~D@n@BzCBrAFzAFr@HpALnBt@bIt@xHJzAP~CFbC@lB?~AEhCErACr@qBrh@MhCWhHQlEUzGAfA@xAFtAJtALlA\\rBPv@f@jB`@hAnAlCZj@Zd@j@v@`@f@~@hAZ^nB`DN\\Lb@t@xCfAjEPt@?N?N?j@{B~D{BzDeBzCU`@Ub@U`@wAjCaAfBuBpDsA|Bu@pAyAlC{DtGsBjDe@v@qCrEoBfDg@t@e@v@sArBsDlF[d@oCzD]h@aD~E}BfDgCtD_FhHEFqHtKmEpGMR_EjGgEfGOROPMNiHtI}@|@Kh@uQfQONcCbC{H|HiAlA]\\aAbAaD{FGKe@cAQe@Mi@YoAi@iCeA{Cq@sAwAuBaCyBe@u@s@{AYc@]a@[Y]UiFuCYQ]Sc@Uk@]]M_@Ky@MQIuAiADhEFD??????GEEiEkGkFaCqBgDsCe@]c@Y[Oa@Oa@MaAQ{A]WAQGKaACQUqBW}@i@y@e@Yq@Ga@EGGII[wAc@e@BQD_@VyBp@uG@GPqA??Lo@Jc@p@iCHc@DW?S?OAUQ_B{AsMQyA[oCUqBKeAA[@O@O^uAp@oBtAyEFUl@qBt@aDz@}DBMLi@lAsFH_@H[TcAHc@tCsMbAsENu@tBmJJs@p@qCHSHOb@cAJYNq@b@oBHc@DQHa@xAqHP_A~@wEFe@?a@CiAEy@Bi@?GLo@v@aE|A_I~@_FF[@]C]GSCGg@_@USOSG_@CW@UBSF]`@aCD[JcA@_@@SEu@K}@[}AoBp@_FlBcHpD[PiB`A{DtBwBjAeB~@IF[NwAv@oFpC_Ah@{BnAiCjAo@TiAPuCf@qALaAHyD^cCf@wAj@EBa@TeEdC}A~@gBdAaDhByI`FyAp@qCrA}@d@_GlCMDgF~By@^eBz@aAb@[JMDSDc@DeGX{@HcA\\m@Zq@j@m@f@a@h@W`@Wd@Ul@k@|Ae@hAeAnCQ\\U`@Y`@c@`@]V[Re@Ns@N}ATiBN_ALI@QBUBa@Fo@PC?c@RaAd@kAr@_BbAoFbDiGtDOHe@X}BtAEBeAn@sCdB{CfByA|@eGpDo@^YRiBjAkCbBs@^gCbBkBlAc@XcF`DISy@iCeAgDIYy@}C_@}BOoBGsB?_CJwBBWZ{BVmAxA{Fz@gBn@i@v@U~ACbC@v@Ir@OzFkDbIuEp@_@n@WvA_@l@Mr@IlCIhDCpBCtBKjGCrF?tAArHSvBMpCUpCW`MsAdOcBx_@oD|Go@xD_@fAK`LgAxBUlAOpAShA[vAi@`B_Ax@k@r@m@pAsAz@iAt@kAn@iAZs@Rg@b@oAn@iCZcBRaBHeAHwADsBA}AMkEQkCUuDMoCKiBEmB@wBDsALiBLkARoAfAeGlDiLt@}BTq@t@oBNc@Xq@Vk@~BgGlSch@JWxQ{d@lE_LnDuIdDsGrAqBb@i@Z[b@]^[tAaA`@SZSFIDMBQ?YBc@wG}@gEk@{@K{@KiDa@e@Io@McADKE_B]iBi@ME[M_EoAs@UeDmAuKsDaCq@y@Kc@Gk@CY?S?{@B{@FsARkEhAwCz@gB^m@Ji@J{D`@iDl@g@Fi@HI@iFp@cCT_BJ~AKbCUhFq@HAh@If@GhDm@zDa@h@Kl@KfB_@vC{@jEiArASz@Gz@CR?X?j@Bb@Fx@J`Cp@tKrDdDlAr@T~DnAZLLDhBh@~A\\JD~@^h@JxDj@|Cd@tMzABc@HaDF{@Ba@FeAJy@Jq@pBiHnDaJ`HoQvAsDHSbE}JvDuIjDkGnEgHrD{F`CgDzBuCzDsEzBkCx@aA~C_Dj@k@hIgHtCaClCiBbCcBxHyEnIiF~D{BbC{Ab@Yd@[`E_DrEkDfEuDz@_ApBoBvFkGpBeC`DeEdD{EhAgBnGmJfMaR~NyT~AkCdAgBjAmBZg@jAiBBG`BwBxD_EFGzK_MTWhAmAbDqDbDiDLQtD_Ep@k@v@o@bAu@zAeAvA_A~A}@rBgAtDmB`B}@nAw@`Au@|@}@z@cAp@aAt@sAt@_Bz@uB`BiEnAaDj@oAh@aAd@s@f@s@h@q@p@u@r@m@t@k@dAq@|Au@b@GnC]`AIp@Et@@f@Hj@Nf@PpBdBp@t@d@^^NVu@XuJNyC^aLFeCB_@FcBFqBDaAD_B@_@HuBTyCFi@Hk@h@kCdA{FNw@h@sCLm@nAyGz@uELm@\\kBRkA~CaQN{@nDyRvAaILyABq@DoA?[BeAHuF?GBsBRmT@s@H{I@iBLmL?c@BqADyA@YDo@LqA@CFa@rAkI"
+        },
+        {
+            "vehicle": 1,
+            "cost": 22243,
+            "delivery": [
+                9
+            ],
+            "amount": [
+                9
+            ],
+            "pickup": [
+                9
+            ],
+            "setup": 0,
+            "service": 5400,
+            "duration": 22243,
+            "waiting_time": 12164,
+            "priority": 0,
+            "distance": 321242,
+            "steps": [
+                {
+                    "type": "start",
+                    "location": [
+                        -84.5331237,
+                        38.1963592
+                    ],
+                    "setup": 0,
+                    "service": 0,
+                    "waiting_time": 0,
+                    "load": [
+                        0
+                    ],
+                    "arrival": 1704988543,
+                    "duration": 0,
+                    "violations": [],
+                    "distance": 0
+                },
+                {
+                    "type": "pickup",
+                    "location": [
+                        -84.43808366732071,
+                        38.157850922301066
+                    ],
+                    "id": 18,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 18,
+                    "load": [
+                        1
+                    ],
+                    "arrival": 1704989400,
+                    "duration": 857,
+                    "violations": [],
+                    "distance": 10623
+                },
+                {
+                    "type": "pickup",
+                    "location": [
+                        -84.45300683674851,
+                        38.0707546
+                    ],
+                    "id": 25,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 25,
+                    "load": [
+                        2
+                    ],
+                    "arrival": 1704990660,
+                    "duration": 1817,
+                    "violations": [],
+                    "distance": 23187
+                },
+                {
+                    "type": "pickup",
+                    "location": [
+                        -84.60893006679184,
+                        38.08801105
+                    ],
+                    "id": 5,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 7986,
+                    "job": 5,
+                    "load": [
+                        3
+                    ],
+                    "arrival": 1704992214,
+                    "duration": 3071,
+                    "violations": [],
+                    "distance": 39915
+                },
+                {
+                    "type": "pickup",
+                    "location": [
+                        -84.55186184982517,
+                        38.0769901
+                    ],
+                    "id": 2,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 1060,
+                    "job": 2,
+                    "load": [
+                        4
+                    ],
+                    "arrival": 1705001240,
+                    "duration": 3811,
+                    "violations": [],
+                    "distance": 47661
+                },
+                {
+                    "type": "delivery",
+                    "location": [
+                        -84.2046611,
+                        38.1944867
+                    ],
+                    "id": 25,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 25,
+                    "load": [
+                        3
+                    ],
+                    "arrival": 1705005404,
+                    "duration": 6615,
+                    "violations": [],
+                    "distance": 88125
+                },
+                {
+                    "type": "delivery",
+                    "location": [
+                        -84.2046611,
+                        38.1944867
+                    ],
+                    "id": 2,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 2,
+                    "load": [
+                        2
+                    ],
+                    "arrival": 1705005704,
+                    "duration": 6615,
+                    "violations": [],
+                    "distance": 88125
+                },
+                {
+                    "type": "pickup",
+                    "location": [
+                        -84.35526275535489,
+                        38.0732628
+                    ],
+                    "id": 22,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 22,
+                    "load": [
+                        3
+                    ],
+                    "arrival": 1705008201,
+                    "duration": 8812,
+                    "violations": [],
+                    "distance": 117139
+                },
+                {
+                    "type": "pickup",
+                    "location": [
+                        -84.55762212054672,
+                        38.0467583
+                    ],
+                    "id": 8,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 8,
+                    "load": [
+                        4
+                    ],
+                    "arrival": 1705009967,
+                    "duration": 10278,
+                    "violations": [],
+                    "distance": 143726
+                },
+                {
+                    "type": "delivery",
+                    "location": [
+                        -84.48456836107098,
+                        38.118489749999995
+                    ],
+                    "id": 5,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 5,
+                    "load": [
+                        3
+                    ],
+                    "arrival": 1705011011,
+                    "duration": 11022,
+                    "violations": [],
+                    "distance": 157033
+                },
+                {
+                    "type": "pickup",
+                    "location": [
+                        -84.58118643573695,
+                        38.12368015
+                    ],
+                    "id": 4,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 2552,
+                    "job": 4,
+                    "load": [
+                        4
+                    ],
+                    "arrival": 1705012348,
+                    "duration": 12059,
+                    "violations": [],
+                    "distance": 173007
+                },
+                {
+                    "type": "pickup",
+                    "location": [
+                        -84.35127020585598,
+                        37.9963589
+                    ],
+                    "id": 7,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 429,
+                    "job": 7,
+                    "load": [
+                        5
+                    ],
+                    "arrival": 1705017171,
+                    "duration": 14030,
+                    "violations": [],
+                    "distance": 202249
+                },
+                {
+                    "type": "delivery",
+                    "location": [
+                        -84.34225516607516,
+                        37.97578105
+                    ],
+                    "id": 8,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 8,
+                    "load": [
+                        4
+                    ],
+                    "arrival": 1705018268,
+                    "duration": 14398,
+                    "violations": [],
+                    "distance": 206731
+                },
+                {
+                    "type": "pickup",
+                    "location": [
+                        -84.4780917,
+                        38.0946722
+                    ],
+                    "id": 19,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 137,
+                    "job": 19,
+                    "load": [
+                        5
+                    ],
+                    "arrival": 1705020163,
+                    "duration": 15993,
+                    "violations": [],
+                    "distance": 229930
+                },
+                {
+                    "type": "delivery",
+                    "location": [
+                        -84.6549808,
+                        37.9255355
+                    ],
+                    "id": 22,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 22,
+                    "load": [
+                        4
+                    ],
+                    "arrival": 1705022666,
+                    "duration": 18059,
+                    "violations": [],
+                    "distance": 262052
+                },
+                {
+                    "type": "delivery",
+                    "location": [
+                        -84.662106475,
+                        37.9067667
+                    ],
+                    "id": 18,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 18,
+                    "load": [
+                        3
+                    ],
+                    "arrival": 1705023496,
+                    "duration": 18589,
+                    "violations": [],
+                    "distance": 265385
+                },
+                {
+                    "type": "delivery",
+                    "location": [
+                        -84.662106475,
+                        37.9067667
+                    ],
+                    "id": 7,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 7,
+                    "load": [
+                        2
+                    ],
+                    "arrival": 1705023796,
+                    "duration": 18589,
+                    "violations": [],
+                    "distance": 265385
+                },
+                {
+                    "type": "delivery",
+                    "location": [
+                        -84.6011423,
+                        37.8739215
+                    ],
+                    "id": 19,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 19,
+                    "load": [
+                        1
+                    ],
+                    "arrival": 1705024992,
+                    "duration": 19485,
+                    "violations": [],
+                    "distance": 274295
+                },
+                {
+                    "type": "delivery",
+                    "location": [
+                        -84.48836690221805,
+                        38.02116135
+                    ],
+                    "id": 4,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 4,
+                    "load": [
+                        0
+                    ],
+                    "arrival": 1705026612,
+                    "duration": 20805,
+                    "violations": [],
+                    "distance": 297483
+                },
+                {
+                    "type": "end",
+                    "location": [
+                        -84.5331237,
+                        38.1963592
+                    ],
+                    "setup": 0,
+                    "service": 0,
+                    "waiting_time": 0,
+                    "load": [
+                        0
+                    ],
+                    "arrival": 1705028350,
+                    "duration": 22243,
+                    "violations": [],
+                    "distance": 321242
+                }
+            ],
+            "violations": [],
+            "geometry": "gfchF~j}bOrBoIVeAPs@FYn@iCNm@h@qBXiANu@Ro@FW?C@ENk@@GP{@XgAPo@F]b@gBLe@FQr@wCx@sDJc@\\yAhAsEbEoPb@eBnAcF\\uAnLwe@bDeN`@_BLa@Xy@Xq@nAyCd@kA@CJ]Ja@?AvBeI`CeJDa@FaBDc@Dk@nBiShA}L`AoKNwATkAJ[JS@Ed@cA`@{@Zi@JONOPMLGBCFEBCFGJKBEBGDE@EP]BIFSJ[F]Fa@B_@?W?a@?q@?aA?_@Ag@?]Aa@?a@}BZm@FI@a@FYB]DOs@K]Ia@Ke@CQCQCWKmACMIg@Mu@?CKe@SoAKe@CQAEAG?IAQ@W@KBQF_@@Q@O@O?I?Q?MAI?GAQ?U?O?M@_@Dg@?W@Y@I@GDa@@M?CDa@Bm@BOFc@BIDSDODIHUZs@FOLYJSR_@\\q@FMJUFODIFOFIHKFGLKLIVORMNKTQ^YNIJIFCFCPETEXCTCl@Gj@Et@GNANARCTCXATCD?B?J?JAB?D@B?ZBH@D@PDRFl@V`@Pr@v@PVVZb@d@NBL?HEHKlA{ET_AfC{JBKPc@VcAxAiFbAwDp@aCJ]lEcP|@eDdJm\\Nk@f@gBbDgMPu@HMLKRCTAN@xERlAwF|AiHjAeFR}@VcAnAcG^eBDMJg@`DgOTcAfCyLFWdA{Ex@yD`Ie_@`C_LfBqIjGuYvWjKrAh@fDrARHxAn@vBz@bH~C|Ap@NFtB~@hAd@bUlJbFbCb@R|DlB~At@bIxDPHtAl@~HlCHDHFHJDJ@L@LALERQr@I`@CL@L@JBFFHLF`@PjHzCpAj@\\L`Bp@fAd@LDpCjAzD`Br@XrElBhGfCdCdApKlEjEhB`Bp@`@N`@NrAb@nA`@b@NN@NGFIDMTw@FU`AwD^_Bp@qCr@uCf@qBR_Ax@kDv@mDf@yBp@}C|@iDPw@ZkAf@kBfHkTjC~BtKzJ|CrCxArAnBfBfFvEl@l@fBzAbGpEtCvBxC|BvB~AxA`A|R|MfI`GTP|CpB~@l@bF|Cv@d@nGpD`DhBfCzAb@XlBhAB@vEvCfJ|FxExCtJtE`Qqi@Vw@xCkJxCnBzCdBnAwDVg@d@c@bAg@|EmCf@YfKcGzC_BhCwAlGoDHEJGd@WtAw@`Ai@bBaApEgCXQrC}A|FzJlBhDx@dBNXLVLVXj@v@~BXEPGZG\\FRD`@Lf@ZTTHNP`@Pn@Df@@f@Bb@Dd@Jb@BHHTLXt@nAT^bBtCRZ~ElInIsKtDuElCkDpBhD`@n@j@dAvAbCrArBZf@Vd@}CzDoFvGiG|Hh@z@b@t@BBtA|BXb@|BvDZh@`@p@vA|BFJpF~If@x@nB`DDFrAxBt@lA~DrGb@p@d@t@bA|ANVfBvCLRqC~CmFdGQRsA|AORYZORo@v@Y\\yAdBaAjAUXk@r@cAlAABKNu@hAMTOV_@n@IP_@r@_@r@QZO\\c@fAa@bAKXSj@AD]fA?@Oh@Md@e@hBCHI^ET_@lBObAKl@K|@AJGb@WjCCXKdAC\\k@vGC\\O`BOxBo@pIGj@oA~Om@fHc@tEk@fISdCAREd@Eh@uA~PIdBEt@GjBCj@E~D@n@BzCBrAFzAFr@HpALnBt@bIt@xHJzAP~CFbC@lB?~AEhCErACr@qBrh@MhCWhHQlEUzGAfA@xAFtAJtALlA\\rBPv@f@jB`@hAnAlCZj@Zd@j@v@`@f@~@hAZ^dBrBxHfJ~@hAvHhJxRvUdAlAbArAFHZ^t@dAn@z@V|@j@rAj@nAXr@Nh@V|@VdAnBbKd@dCb@vB@RHb@FT@PBVCZO`@g@pAi@|AqCbKGT{DtMc@pAo@dBIT[v@e@~@_@j@kHtLU\\wBpDYd@}@xAm@bAo@~@y@lAOLOTSVMLIFOHGAE?E@E@EBGJENAN@NKZWb@W`@S`@kDdF}A|Bq@z@i@l@KJ]\\QPqGbGgAjAkAtAo@z@i@t@OX_BhCwD~G_CbEgAnBi@`AsBxDuAbCe@dAIPa@bAaEfLw@vB{@rBqB`F{CfHMZi@lA]|@m@rBs@vBuDbKKVaAdCcCjGYr@Md@GVi@bD[lBkAvHiAzHYjBKr@{@hFq@|D{@dFsBvLMv@AD}AbJADMl@W`AKZk@~Ae@tA_BvEy@bCs@lBMXo@`ByBxFmC~GyAbE}@lCiAdDj@f@JR@d@Ql@Q`@Ap@FnAM`AG`@BPTVrA`AhE~ChAv@`@Hf@E~@]t@i@n@cAr@mAf@aANQL@VXVj@Jj@?n@Gl@NZRHL?\\YDCEB]XM?SIO[Fm@?o@Kk@Wk@WYMAOPg@`As@lAo@bAu@h@_A\\g@Da@IiAw@iE_DsAaAUWCQFa@LaAGoA@q@Pa@Pm@Ae@KSk@g@hAeD|@mCxAcElC_HxByFn@aBLYr@mBx@cC~AwEd@uAj@_BJ[VaALm@@E|AcJ@ELw@rBwLz@eFp@}Dz@iFJs@XkBhA{HjAwHZmBh@cDFWLe@Xs@bCkG`AeCJWtDcKr@wBl@sB\\}@h@mAL[zCgHpBaFz@sBv@wB`EgL`@cAHQd@eAtAcCrByDh@aAfAoB~BcEvD_H~AiCNYh@u@n@{@jAuAfAkApGcGPQ\\]JKh@m@p@{@|A}BjDeFZUJOZa@RYLGHBH?FCJGDIDO?MAOEKIIIEGAE?E@E@EBICWQ[OMGQG]Cg@Mw@]_@QUSuBqBoLaL{BwBu@sAu@_BSc@i@gA_@m@Y]e@o@kEuFw@{@q@q@USa@[uBsAOVMRkAnB{BxCj@p@PVLZJXLf@D^jHwAd@EN@RDZPVd@o@|@GDKAJ@FEn@}@We@[QSEOAe@DkHvAE_@Mg@KYM[QWk@q@zByCjAoBLSNWgC_B_@a@WU}@w@}AcB[]QWcCaExByCvC{E\\i@pDiGrBkD~CmF`BiC~AgCxAoCp@sAzAqC`BwCdAkBrAiCVc@DIjCsEzB_E|AmCXg@b@u@~F_JSWOYKIsC{@kDgAWKg@UOKeC}Bq@w@}@kAi@q@[c@i@_Ac@{@_@}@a@gAYcAWeAScAOaAK_AKiAE_AE}AAq@F_DHkBVyGXuHJgCv@qS@K`AkWBa@@qA@oAEaFGkBGwAQwByAqOWwCKiAKeBMyDE}F@w@@kAFyBB{@?ODs@FeAF_A^oEx@oKzA}Px@{K?E@E\\kEj@{Gx@eKVeD?CFu@PqCHcATaCB]VyCRgBFm@He@Fg@VyA@IRgAFWVgAH]ZmAH[Nk@HW^eAPe@HQv@oBN_@N]Zm@\\o@h@}@h@}@f@y@BCPWPUp@}@zAiBl@s@HIvAcBTWv@aA^c@Ge@s@qAKOYi@i@kAYq@O_@M_@Y}@Sw@[iAIc@Ig@Ki@EQaA{FcByJUiAQs@Qs@Sq@Yy@Og@Wo@Yo@kAaCe@}@_B_DoAcCg@}@ACyAoCEEyDeHEIiBiDgAwBs@sAs@uAIOyDsHwAqCKSqAaDe@yAi@eBsBkGMc@GQa@kAUi@}@sBg@cAYi@y@{AOWuAcCe@_As@gAu@uAy@qA{@gBiA}BIOg@gAwAqCqAeCQ[q@sAaAuBKS{AwCuA}BaCoDQU{B}CoByCw@sAyAoCgAqBm@mAaByCOWsAcCwA{BaAkBmCmEwBeDeBcC{A}BqAuBKSmBwDaBkDy@cB}@aB{@yAUc@u@oA}AcCeBgCqCoEw@uAoAkCwB}DaByCy@sA{@eBs@eAuBcD}BaDkB}CsAwBuAmCgAcCmAgCiBkDqAwBkAqBiBgCgAuAwA_CQ]cAsBsBaDm@wAy@{A_AeB[m@sAwBkAeBs@_AkAuA_AgAeBoBsA{AoAkBu@mAcAyAkAsB{AeCsEkHcCeEoLkSmDeGoKuQ}@iBkAsCaBwD_A_CcBsDsAiCMUaBsC_BcC}AeCyAaCS[mAyBsBgDiBiDeDiGSa@c@_AeAyBoCwEiCcEqA_BGIqBmC}A}BiAaBkCmDwAqB{FcIcCwDiAcBk@cAOWgDuF_@s@oAyBm@eAiFwJoOa\\gAsBu@oAYg@[k@o@gAYc@]o@Ya@k@aAMSKMs@eAYc@Ya@W_@uAoBcAyAs@eAYc@o@cA]g@q@iAs@iAKQMQq@kAq@kAWe@k@cACEWe@Ye@Ue@We@gAqBWe@MWEKACUc@We@Ue@iBqDw@}Ak@cA_@s@Yg@Ye@s@oACEUa@Yg@We@Yg@We@Yg@Wg@m@oAUg@Si@Ui@Qc@CESi@gBoESg@Ui@Sg@Ug@Ug@Ue@c@}@CIEIk@iAWe@We@Yg@S[CEWc@Wc@SYEIWa@Ya@Yc@Ya@[a@Ya@[a@Ya@[_@[_@[_@w@}@[][]y@}@aAgAq@u@]]]_@[_@oAwAEC[_@Y_@[a@[c@Yc@Yg@Wg@Yi@Ui@Wk@Uk@Sk@Si@kAcDIOg@yAUk@Si@Uk@Ui@Wi@Ug@Yi@Wg@Wg@{@{Ai@_A_@o@[k@CCMUWe@Yg@e@y@c@w@We@Ye@QYEKWe@m@{@]m@GKi@eAyB_EcAiBuAcCYg@q@kA[g@Wg@Ye@k@cACEi@_AEIm@cAWg@o@iAUa@We@Wc@GMIMCGUc@We@Ue@Ue@Se@k@oASg@Sg@ACQe@Si@Si@e@sAc@uAGQ[cAs@_C_A}Ce@}AMa@u@{BQm@M_@_@gAQe@Oc@Se@Qc@Ua@Ua@Wa@Y_@Y][[][]Y_@WcAo@uA{@QM}@k@i@_@eAq@a@WcAs@_@YaAs@a@YMKQM_@Wc@_@y@m@yAkA]YMMOKwBmB{@w@e@c@US][[]]][]]]y@}@y@_A]_@[a@[a@[a@Yc@Yc@IOOSUc@AAWg@Wi@Wi@Se@ACSk@Sk@Sk@Qk@c@wAc@wAa@uASi@Qg@Si@Sg@Ug@IOKUUe@We@m@iAWe@m@gAUe@We@EIM[O[EKSe@Si@Qg@c@sAQi@Qi@Qi@Sg@Si@Sg@Ug@Ug@Ue@Wc@Wc@Yc@Ya@[a@OUIK[c@Ya@Yc@Ye@We@Wg@Ui@Ug@Si@i@qASi@Ui@Wo@GOWm@CI_AwBSg@Ug@Ue@Ue@Ue@Ua@Ye@Yc@Wa@Y_@o@aAm@}@CAWa@[c@U]W_@W_@CEeA{AYa@Wa@Wa@Ua@Wc@Ua@k@eASa@}@cBAAQ_@}@aBSa@EGMWk@eACEy@}AGMa@u@g@cAi@aAUa@i@cAKS]o@MWO[KSUc@Se@Ue@Se@Se@Qe@c@kASe@Qe@GOISSc@Sc@i@gAGOKS}@eBq@uAUe@EIS_@g@aAS_@g@q@[i@IKIQ_@s@O_@[g@IMOYAAu@kAk@gAUc@O[u@uAYi@Ug@Yg@KUMUIQKQEKMWOW]q@MSU[O[GOIQy@_BAACEIQSa@GMAA_@w@GMyBkEqAkCiA{BoBwDEKi@eA_@u@c@}@uBcEe@_AEKk@iAQ]Wg@Ug@]o@Ue@Ue@_@s@CEKQ]q@Q_@iBqDs@uAw@_Ba@s@i@gAKUS_@EGs@yAuC}FCCg@cAEK]o@kCoFo@aAsAiAeCqBcCqBTg@x@sBP_@d@_ADGPKXGnBLr@CHATEzB_@fDi@f@IpI{ANE|@O^Gd@IVGl@MbASLEVGFAh@MJC|@QZIjAWdAWh@ODAfAY`AYDAbBe@pA_@XIb@Kf@O@?f@OVGDCREbBe@PEf@MbAYfAY`@K`@I`@GF?VCFAX?^@^BF@VDf@LXH^LNFD@JB^L|@Z^JF@VFF@VDF@V@F@V?F?VCTANAXI^KJEPG\\Q\\QjAs@|@k@t@c@`@W^Uv@e@XS`@UDCVQXQ^Wn@a@RMDCDCPKJGNMnAy@TOXQd@Yj@_@LKFCXQ\\W^UDCXSDCVS`@UXS`@Ud@[ROh@_@TOLGPMLIPMJIVSVQROp@k@NQJKZYZ]\\YNOVUNM\\W\\U^Wf@[XQb@Wb@UdAo@TOJGvD}BfBeAZUdBeARMa@oBgA_DuAyCCaAEYUY]SYWk@aAa@i@][UMYIkBo@gBaFeCeIaAyBsA}DCGOc@eFoOmA_DwBiICM_DyMs@cAq@kBEuAAQFmAvAiBb@cAxHs^@a@@IeEuDwAuAw@cA_AaBiAaByB}CiBqCi@m@yAmBi@c@ES@YLWd@m@Lc@Bu@OqBUeAUa@wCsB_EuCy@Uk@c@m@c@k@CSN??ROj@Bl@b@j@b@x@T~DtCvCrBT`@TdANpBCt@Mb@e@l@MVAXDRh@b@xAlBh@l@hBpCxB|ChA`B~@`Bv@bAvAtAdEtDAHA`@yHr^c@bAwAhBGlA@PDtAp@jBr@bA~CxMBLvBhIlA~CdFnONb@BFrA|D`AxBdCdIfB`FjBn@XHTL\\Z`@h@j@`AXV\\RTXDXB`AtAxCfA~C`@nBSLeBdA[TgBdAwD|BKFUNeAn@c@Tc@VYPg@Z_@V]T]VOLWTON]X[\\[XKJOPq@j@SNWPWRKHQLMHQLMFUNi@^SNe@Za@TYRa@TWREBYREB_@T]VYPGBMJk@^e@XYPUNoAx@OLKFQJEBEBSLo@`@_@VYPWPEBa@TYRw@d@_@Ta@Vu@b@}@j@kAr@]P]PQFKD_@JYHO@U@WBG?W?GAWAGAWEGAWGGA_@K}@[_@MKCEAOG_@MYIg@MWEGA_@C_@AY?G@WBG?a@Fa@Ha@JgAXcAXg@LQDcBd@SDEBWFg@NA?g@Nc@JYHqA^cBd@E@aAXgAXE@i@NeAVkAV[H}@PKBi@LG@WFMDcARm@LWFe@H_@F}@NODqIzAg@HgDh@{B^UDI@s@BoBMYFQJEFe@~@Q^y@rBUf@Sb@aAnBB@hB|ATRtAhAPNd@`@|BlBxBtBJJJLLJLFJDL@JAHA^IDJf@bABBtC|Fr@xADFR^JTh@fA`@r@v@~Ar@tAhBpDP^\\p@JPBD^r@Td@Td@\\n@Tf@Vf@P\\j@hADJd@~@tBbEb@|@^t@h@dADJnBvDhAzBpAjCxBjEFL^v@@@FLR`@HPBD@@x@~AHPFNNZJ\\Z|@N^N^JNDJDHTn@LTp@tAJNLXZl@b@v@Zl@T^PZT\\PZXb@BF\\h@f@|@T\\@BDHHL@BR\\h@`APZBBh@dAVf@Td@d@~@pAlCVh@Td@Tb@Rd@JXDJRd@Pd@Pd@Rf@d@lAPf@d@lARf@FPHRRf@Xr@LXBFN^l@nAVf@Tf@Xf@Vf@FLNXXf@n@lAn@lAn@lAVd@Xj@T`@n@jATd@Xd@n@hAVb@p@fAX`@Vb@X`@T\\BBjAbBFJPTV^V`@X^V^X`@V`@V`@V`@T`@Vb@Vd@Tb@Td@Td@Tf@Rf@Td@l@tAP`@Td@DJLZTf@h@lATf@Tf@j@lAXf@Vd@Xd@Vf@Xd@PZ`@r@Xd@Tf@Xd@Xf@R`@BDTf@Tf@Th@Rf@Rh@Rh@L^Tt@Ph@Nh@?@\\hAd@bBPj@Pj@Rh@Rh@l@nAVd@p@hAdAdB`@p@Vd@Vd@Td@Vd@Th@Rh@Th@z@~BRh@Rh@Th@JRHRVh@Vf@HPNVLTJPVd@Zf@Zd@Zd@Zd@\\d@\\^\\`@\\`@\\`@\\^|@~@\\^^\\NPLJ\\^^\\^\\b@`@ZX^ZJJr@l@^Zb@^x@p@^X~@r@~AjA\\X^X\\X\\Xz@t@\\\\x@x@Z`@Z`@\\f@r@bAp@jAXf@p@nAXf@`ChEXf@Xf@Xf@HNNVVf@Xf@Xd@Vf@Xf@Vf@Vf@Vh@FJN\\Vh@Tf@Tj@Th@Th@Rh@Xt@BDJXRj@f@pARh@Rf@Rf@JX\\t@Td@n@hAZb@X`@Z^RTTXNNv@|@Z`@X^dAfBDDl@lATf@Vf@dAtBVh@l@jAXh@b@|@HPn@lAVf@fAvBf@|@HNZf@Xd@Zf@Zd@\\f@x@jAx@nAZf@Zf@Xf@HLPXp@nALVHNVd@Vf@DHd@fAVf@Tf@Rf@Tf@Rh@Rf@Rh@f@tAL\\Xx@Rh@Rj@Rj@BHP`@Rh@Th@l@nAVh@r@lAZd@Xd@Zb@Z`@Z`@Z^v@~@lBtBRRFFXZZZX\\X\\Z\\X\\V\\X\\Z^X`@nAdBr@bAZb@V`@r@hAHLf@z@Xb@n@hAVb@Td@Tb@T`@FJLV??j@jAj@lAl@pADLNZTh@Th@Rh@|@~BDJN\\Rh@Th@Vh@Vh@Vf@Xf@Xf@Xd@r@hAZd@r@lAV`@BBVf@Xf@Vf@R^BHVf@Vf@b@bAZt@Tf@Rf@Td@Tf@Rf@DJLXVd@Rh@l@pAVf@l@lAp@rAXf@Xf@Xf@Xf@Xf@Xf@Xd@Xd@Zd@t@hAXb@Zd@t@dAt@fAv@dAZ^@@rAdBZ`@Z`@t@bAZ`@v@bAZb@Xb@Zb@t@fAt@jAXd@Xf@R^\\l@BFlCnFbA`Ct@fBnBvEpDrHj@nAtBxDbDrFJNNVHLDHb@r@z@tAHNbBrCfAdBrAvBvEjH^h@xB|CvB|CPVjCrDJLvAtB~A`C@@d@r@JLjBpCtBjDxC~EvD~GxAlCpB~DpDjGbJvOb@t@lAtBjArBfAxBTn@p@e@hCuCbEuDrEyDrBgB|BmBvBoBfByA~GeGfC{BvDcD~IyHnM_LbB{A`Ay@xI{HjAeApGqFjC_CtDeDVULKLMPOPOVUZYx@u@jAgA^[tAmAdA}@jFuETS`FkEVUJKdHsE`As@XWNO\\YpB{BHIdGqHtAeB|@mAt@}@`BgBdCoCd@e@rAsAZ[xDyDp@{@|BuC`D{DxAgBXW|@]z@Ip@HvAl@zA`Af@^pCvB`@Jj@J`Gd@J?j@@f@OZWvCuH`AmAtBuBtDoBzFwCzFuCd@WXOBAjDuAfBq@VKhAc@iAb@WJgBp@kDtAC@YNe@V{FtC{FvCuDnBuBtBaAlAwCtH[Vg@Nk@AK?aGe@k@Ka@KqCwBg@_@{AaAwAm@q@I{@H}@\\YVyAfBaDzD}BtCq@z@yDxD[ZsArAe@d@eCnCaBfBu@|@}@lAuAdBeGpHIHqBzB]XONYVaAr@eHrEKJWTaFjEURkFtEeA|@uAlA_@ZkAfAy@t@[XWTQNQNMLMJWTuDdDkC~BqGpFkAdAyIzHaAx@cBzAoM~K_JxHwDbDgCzB_HdGgBxAwBnB}BlBsBfBsExDcEtDiCtCq@d@N`@r@fB|B`FzAvCFHzAvBdAzAhAhB|@dBjAjB~@pBtA|CjAvBlArBxAvBvAvBlA|BR`@~@hB|@xAr@dA|@`BFJz@`B`AfCv@hB~@~Br@~@jD|CnB`B~CbDrAxAp@bAR\\~@hBVf@~AfDhB|CdEdHlB`D^p@^l@vE~HbCbE|BzDdEfHFHvA`C@B~JvPXb@~FzJjCjE~BdEzBzDFLzBzDBDLTbCfEx@vAdBzCjB`DLTbJlOPXbAbBv@pApDlGb@t@`FrIR^hAjBv@rAhApBx@xAPXvA`C?@t@pAZj@jBdD~F|JdBxCT`@xBxD`EbHVd@|FzJlBhDx@dBNXLVLVXj@v@~BbCxHrA~D\\~@r@bBHPdFzJl@jAJPr@rALTd@|@j@hAf@bAj@bAp@nA~DjHBFVb@fAnBbBbDv@xAz@bB|A~CZp@FLJVd@nATp@\\rAXfATjArAzHLz@h@vCLp@Hb@@HDTHd@Jj@Jb@j@|B^hAJZN`@\\z@h@hAR^T`@DFf@|@YZORo@v@Y\\yAdBaAjAUXk@r@cAlAABKNu@hAMTOV_@n@IP_@r@_@r@QZO\\c@fAa@bAKXSj@AD]fA?@Oh@Md@e@hBCHI^ET_@lBObAKl@K|@AJGb@WjCCXKdAC\\k@vGC\\O`BOxBo@pIGj@oA~Om@fHc@tEk@fISdCAREd@Eh@uA~PIdBEt@GjBCj@E~D@n@BzCBrAFzAFr@HpALnBt@bIt@xHJzAP~CFbC@lB?~AEhCErACr@qBrh@MhCWhHQlEUzGAfA@xAFtAJtALlA\\rBPv@f@jB`@hAnAlCZj@Zd@j@v@`@f@~@hAZ^dBrBxHfJ~@hAvHhJxRvUdAlAbArAFHZ^t@dAn@z@fBzCR`@Vl@b@|@b@`A^bAh@|Ab@xAd@`B`@tA`CjJjAtE|@fDb@xAnCnKd@hBbAfD|AxEnAhD`@dAr@bBj@pAlBhEl@jAlA~BfBbDFJ|@xAr@fAT^nBtC|ArBpAdBtChDz@`AzA~AhCbC~@x@jB`B|BhBrCrBtDdCx@r@jA|@`FdDzE|CRNNJFFFJFLDNBVHvBVbD@t@@B?HZ`@Co@IuB]iKKkCSkFWkH?OQuEAWI}AAQSoA?MGiBCw@Cq@YoIoAHnAIXnIBp@Bv@FhB?LBpADhCD`DAj@Kb@K\\ORSNyDzBi@\\a@T]R[JWBW@a@C]ISGq@Wg@YeAq@oBmAuB{Aa@KwAmA_CqBkCgCyEeFqCgDuCyDiAgBu@iAq@gA}@sAo@gAeBaD{A}C}@oBcA}BiAqC{@{Bk@_Bk@aBg@{AsAqEg@qBIYi@mBq@iCaDaMyEsQk@qB_@mAm@gBm@wAaAuBs@uAo@gA}@sAeAsAe@m@a@e@m@s@iAsAmI_K{HiJ_HiI}@iAgLaNq@w@}@kAi@q@[c@i@_Ac@{@_@}@a@gAYcAWeAScAOaAK_AKiAE_AE}AAq@F_DHkBVyGXuHJgCv@qS@K`AkWBa@@qA@oAEaFGkBGwAQwByAqOWwCKiAKeBMyDE}F@w@@kAFyBB{@?ODs@FeAV_BN}@No@Ro@Re@P]Za@j@o@t@y@VSb@]^JNENIHI{Ae@cBi@_@MgCw@wAe@w@YwDmAuC_AgJuC_F_BYIy@[eEuA{Ag@KCiEyAc@Ou@UeKiDSI_@MqEwA{G{B}S_HUGsFgB]MiA[aBc@gDq@_C_@KC_BSuFw@}G}@wG}@gEk@{@K{@KiDa@e@Io@McADKE_B]iBi@ME[M_EoAs@UeDmAuKsDaCq@y@Kc@Gk@CY?S?{@B{@FsARkEhAwCz@gB^m@Ji@J{D`@iDl@g@Fi@HI@iFp@cCT_BJ~AKbCUhFq@HAh@If@GhDm@zDa@h@Kl@KfB_@vC{@jEiArASz@Gz@CR?X?j@Bb@Fx@J`Cp@tKrDdDlAr@T~DnAZLLDhBh@~A\\JD~@^h@JxDj@|Cd@tMzAr@JfInArCZ~B\\jBV|Cj@tDz@\\JtEzAhA^r@TzItCxFfB~FrBZJnEvAQ|@Sz@WdAc@lAq@nA_AbBi@lA]p@k@rAa@jAY`AGXy@lDmAnFS`AMf@KZM`@a@bAs@zA[h@W\\SV[`@QV{BjCsAxA{DpEORi@h@QRIHyCdDoArAEBeDtD[\\SXW^_AtAk@`AQ^Q`@Q^O`@O`@O`@Mb@_@rA[xAYzAU~AMrAEf@InAAd@A`@AZ?lCBtAPfDFdBF|@N~DDjAj@nMRhFHpBHtAfAtWNhDvA`[`@dEVbBXzAx@nDx@hCt@pB|D~HjOnZn@hAjBtCj@t@TXbAfAbBrA`BnAbC`BdDrBdEdClIpFx@l@lAfAv@`A`AtAjAjBzCxEoCzD]h@aD~E}BfDgCtD_FhHEFqHtKmEpGMR_EjGgEfGOROPMNiHtI}@|@Kh@uQfQONcCbC{H|HiAlA]\\aAbAqApAm@n@MNeDtDaDpDwFnGk@p@m@t@iAzAgA~As@dAe@x@OTyAfC]n@iAnBeBzCw@vAkArBOZk@fAOXgApBg@z@OViAjBA@{@xAq@dAm@bAo@`A{AfC{@tA}@~Ae@z@yA|Cc@~@cAxBaTyOeFwDUQg@]CCqCqBcCcBiNfJgErCe@Z}CrBiAt@eDvBs@kBIM_@W^VHLr@jBdDwBhAu@|CsBd@[fEsChNgJbCbBpCpBBBf@\\TPdFvD`TxObAyBb@_AxA}Cd@{@|@_Bz@uAzAgCn@aAl@cAp@eAz@yA@AhAkBNWf@{@fAqBNYj@gAN[jAsBv@wAdB{ChAoB\\o@xAgCNUd@y@r@eAfA_BhA{Al@u@j@q@vFoG`DqDdDuDLOl@o@pAqA`AcA\\]hAmAzH}HbCcCNOtQgQdAcAXWlAqAhAuAFIhC}CHONSJQ~CeEhCyDfBmCNUDI~BoD|BiDvB}C~BsDbCiDDGvAsBfCqD~BgDhFgHhByCXa@xByCvC{E\\i@pDiGrBkD~CmF`BiC~AgCxAoCp@sAzAqC`BwCdAkBrAiCVc@DIjCsEzB_E|AmCXg@b@u@~F_JSWOYKIsC{@kDgAWKg@UOKeC}Bq@w@}@kAi@q@[c@i@_Ac@{@_@}@a@gAYcAWeAScAOaAK_AKiAE_AE}AAq@F_DHkBVyGXuHJgCv@qS@K`AkWBa@@qA@oAEaFGkBGwAQwByAqOWwCKiAKeBMyDE}F@w@@kAFyBB{@?ODs@FeAF_A^oEx@oKzA}Px@{K?E@E\\kEj@{Gx@eKVeD?CFu@PqCHcATaCB]VyCRgBFm@He@Fg@VyA@IRgAFWVgAH]ZmAH[Nk@HW^eAPe@HQv@oBN_@N]Zm@\\o@h@}@h@}@f@y@BCPWPUp@}@zAiBl@s@HIvAcBTWv@aA^c@^c@h@o@dCuCrA_B`AiALOr@w@dAkATWfBkBBCf@g@NOn@q@h@i@RUNO\\]v@w@TUn@o@fBaBdDiDZ]d@e@Z[dAeAZ[FGd@c@Z]BA@AVWNOp@o@POp@q@v@s@fAeAxAwAnDgDd@c@rAqA`@_@d@c@f@g@NOTSBCj@k@NMNMFGDEHG`A_AtCoCrDmDtCoCbC}BxAwA`C{BJKbA_AVY~@w@FGn@g@^W^WXMl@]RKBAjAe@r@ULEPETGZGv@OLANCFALAr@I`BGhA@P?h@BV?NBn@DdABbM^nDJnDJzGTrBBZ?B?Z?dA?P?PAb@?~@AbAEFAjAIj@G`AKnAMJC`AKj@KfASHAHCPEl@MVEVIr@Or@Oj@MnBa@TEx@QpAYLCNE`@Ip@Oz@QdAUfAOFAHAr@IdAGbACD?d@Ar@BH?X@D_@NkANgAH{@^cD|AiMBKn@kFJm@Jg@nBiIRs@JWJ]Xo@JWBC\\s@fA{ANSpAcBvAmBnDaF\\g@~B{CbB{B~B}Ct@cArAgBd@g@RSVSXUZSVM\\Yp@a@j@a@ZYLOBEHMTYV_@b@{@b@_Ad@_AdAyBZSdAuBn@sAtBkEZm@pAqCh@eAh@aAj@y@\\c@d@m@fCaCBCv@q@nDcDVk@j@i@lCcCdB}Al@g@p@o@h@i@b@e@^c@`@k@z@qAtBgDzA{BhA_BPSPUTYLSXa@rAmBPUTWd@o@VYDGb@e@~BaB\\UXONK^UTOp@a@t@k@d@_@d@_@d@c@z@aA\\e@V_@f@u@~AqCf@_Al@kAZm@pCgF?ADI\\w@L]Ru@XeALg@Ru@H]HY^yAVaAHWJ]HYL[\\u@LUXe@nA}ANQLOjFsGJMRWz@_AdCwCf@q@d@m@NW@E\\s@hAyC~@eCFOBGXaAXuAN_ANgABYFo@d@eIBYb@oH\\{DHq@BU@SfAoJd@wEFk@t@yGBQD]^iDPsBXkED_A^qH`@iHBk@TcDFo@b@cCVuAjBeJxB_Jp@kBNa@bFeIFMFMDMH]He@j@gDHm@Dc@@m@Ci@AYIy@K{@G[G[O_Ac@cCQ_AMo@E[[eBC[?UD]HWfA_C\\y@HSDSLcAToCNqB@Qr@eIF_AHeA^wEJ_@Ne@h@{@~@sANc@H]Fc@Do@Au@i@sCcAqEqBmIy@iCu@wBe@uASs@EWGYMu@Ou@YmAWoAi@sEQoDWyEa@kHKu@O]QUa@[iFyCc@a@We@_@gAGOEMwB{Ga@mA`@lAvBzGDLFN^fAVd@b@`@hFxC`@ZPTN\\Jt@`@jHVxEPnDh@rEVnAXlANt@Lt@xFtBfGdC|B~@dAb@tAj@FBRH~CnAlBp@vD`AjAsK~CuYr@{G|@sIXmCDk@@GDaAByAD}ADiBH}DDyBFkFBiDHeDD_@Ni@Vq@Vq@Xe@RWPO@A^UREL?D?n@HxHxAD@\\Fh@Dj@@|@AbBCnAAb@?TCh@WRQRUHSP[Pc@Xw@D[BW@_@DoHDkGxFEVL@@LX@HAIMYAAWMyFDEjGEnHA^CVEZYv@Qb@QZIRSTSPi@VUBc@?oA@cBB}@@k@Ai@E]GEAyHyAo@IE?M?SD_@TA@QNSVYd@Wp@Wp@Oh@E^IdDChDGjFExBI|DEhBE|ACxAE`AAFEj@YlC}@rIs@zG_DtYkArKwDaAmBq@_DoASIGCuAk@eAc@}B_AgGeCyFuBoKmCmA[e@I]Ac@@mHLyFBmBG{@GiAIIA}D[mHk@uFe@UCwE[k@Ea@Ao@@oBH_Kx@}LbAe@@u@Ak@CsACO?_CE_ACk@EiBMmFa@}BQiBOeCWu@KeBWcDg@e@GoF}@_AQ]Ga@Gs@KoASyDu@o@GuAMu@G_AImEg@q@Gu@IcAIoBYg@Ku@KYGwFaAyBa@yAOg@?kK?uCMBrH@~BDzC?bA?tBIhCGt@MfAShAcCbOk@pDShASlASnAs@lEo@xDCP_@zBO|@qAzHQdA]tB?BUtAYdBYdBMp@m@tDIb@a@lCOv@W|Ae@tCmAdHUtAmApHsCfQG`@ABMpAEn@AXExACpA?b@MlLAhBIzIAr@SlTCrB?FItFCdA?ZEnACp@MxAwA`IoDxROz@_D`QSjA]jBMl@{@tEoAxGMl@i@rCOv@eAzFi@jCIj@Gh@Ov@CNMdAY~CIbAI|AA`@EdASpGM~DIx@G`@GXOXQVoA|@g@P{B~@qDxAmEbBgAd@_Ad@y@j@{@v@i@^c@^m@j@_@`@g@f@uAvBc@v@g@fAs@bBIL]`As@rBgAlCm@rAk@dAgAhBw@`As@p@{@v@y@n@mAn@uAj@qAd@_Cr@cErAUH{EtBu@`@qBtAi@^}AtAyBbCuBnCoCdE_ApAgA~AsInL{@lAwB`DmAfB[j@u@pAU^}CjFmB~C}BlDaUt\\yDxFkDhFgDbFsBtCsAhBqAbBo@t@q@x@_AbAeAlAeBlBoAnAqBjBaEtDoEjDg@\\_A`@{C`BgB|@c@Jg@BU?OCOCOEMIOMMQKSESAU@YDUHSJOXY|BiBhCoBvBaBdFzJl@jAJPr@rALTd@|@j@hAf@bAj@bAp@nAa@b@]Pi@l@GFCBu@z@oAvAy@|@_AfAUV_AfAy@z@kArAGFqBxBCBGHJPFLDHRf@Pd@Lr@Fr@@T?XAVAZCTI`@GXKXMZQXUZ[\\_A|@k@j@UVW^eC`EoApBQ`@M^IVG\\EVGf@k@jF_AQuA]_@M]OgEmB_Bu@wEoBo@SuKkDKEyBq@cA_@K^K`@QVSR]D]AoAe@Y?YHc@j@e@l@Sn@Kr@e@lA{BdECAECE?EBEBCFAF@F@FBBsBtCgEdGQTKRKXsGvQkAjDqAnDmAnD_Ak@~@j@lAoDpAoDjAkDrGwQJYJSPUfEeGrBuC@@DBD@DADCBE@G@GAGCGAAzBeEd@mAJs@Ro@d@m@b@k@XIX?nAd@\\@\\ERSPWJa@J_@bA^xBp@JDtKjDn@RvEnB~At@fElB\\N^LtA\\~@PnATr@P^LRHj@ZvA`AZRx@l@^VNH^Xz@p@@@vAjADBz@v@lAx@v@f@^TdB~@vD`BrAl@fBt@PF|@^f@RjAj@\\T`@\\|@t@LLf@f@BBNP^d@NPHNNRn@`AHJO\\c@fAa@bAKXSj@AD]fA?@Oh@Md@e@hBCHI^ET_@lBObAKl@K|@AJGb@WjCCXKdAC\\k@vGC\\O`BOxBo@pIGj@oA~Om@fHc@tEk@fISdCAREd@Eh@uA~PIdBEt@GjBCj@E~D@n@BzCBrAFzAFr@HpALnBt@bIt@xHJzAP~CFbC@lB?~AEhCErACr@qBrh@MhCWhHQlEUzGAfA@xAFtAJtALlA\\rBPv@f@jB`@hAnAlCZj@Zd@j@v@`@f@~@hAZ^dBrBxHfJ~@hAvHhJxRvUdAlAbArAFHZ^t@dAn@z@fBzCR`@Vl@b@|@b@`A^bAh@|Ab@xAd@`B`@tA`CjJjAtE|@fDb@xAnCnKd@hBbAfD|AxEnAhD`@dAr@bBj@pAlBhEl@jAlA~BfBbDFJ|@xAr@fAT^nBtC|ArBpAdBtChDz@`AzA~AhCbC~@x@jB`B|BhBrCrBtDdCjDpBtAr@|CxAzAp@hBt@n@Xn@TRFj@PhVfInAb@jAXl@N|@NfAL`@Dn@DdADtA@jAAZCh@C`AIzAQ~@Q`AWhC}@~@_@VKl@[nBqAfAy@rGiF|BiBz@s@vAgAxMoKxAmAzAsAhBkBFIlB{BHKPWp@{@dAyArEaHl@_AxAwBxCsEb@m@^i@Va@l@s@z@eAn@q@LMv@q@v@o@r@i@fAq@^Un@]|@a@|@_@z@[PEbAYh@M`@KpCWv@Gh@Ab@?z@Dx@Hj@J`@JHBxAb@JDr@NPBPAJCRM`@I\\APD`@\\DJNRNVb@z@JTb@v@`AlBjAtBHPVd@p@lA|G~L|DlHxHvNfAnBvCbFt@lAlA`BfAtAbA|AhAzApAbBlAzANPV^NTt@fApAbBp@t@TVVZJN|@bAl@v@\\l@x@xAj@hAf@pA`@lATr@ZdAFPH\\FVFVl@xCXnB^|BZtBBRFd@Fd@TrAJn@RtARhA\\bBVbAJ\\FNn@zAh@`Al@~@j@r@HHn@n@p@l@t@l@d@\\LJ~@t@^ZPLz@p@n@p@j@p@l@|@h@hA^dAZhATjANjATvBRfBBTPnA`@fBd@zA^hAl@jAz@nA_@f@kA~AcAxAa@t@KRUf@Oh@IZEVKv@K|@EZA\\Ar@@p@HxATlCFb@^dCbChRF`@b@jDFb@\\tCb@lDXrBJl@DNH`@XdAZhAPr@Pl@HXn@`CFRd@`BDNXfARZNLFDxNzF~B|@h@RB@\\HPDNBNDdAXB@`A^hG|BbE|APHjDpAt@ZNFrEhBfO`GdM~EzD|AHDHDbGbCxD~Az@\\RH|B~@|Ap@ZNNJVRHH`@d@BFtBbDR\\d@~@d@dAtBnFHVD\\?TAPG`@m@nCbJbEnO~G~At@lCjAdH|CNFHD~MfG~@f@lAt@|@r@fB|Af@^~Az@hB~@vAv@xAt@TJjHnDHDbAb@|@\\FD`KpE~BhAJDRJjB|@`GpCPHbBz@vGhD~Av@~@h@l@^ZXh@l@lBbCTXt@v@hBjBtRjRTTJTNb@Jx@FhA@t@B|C@b@BVHj@`ApGr@~DV`C^`CTpAJl@FXHXPd@f@rAd@z@Xp@XdAnCjJl@nBr@dCtAjEHXNTLRRXTXTTVT~DxChAz@tAbANLPTNVLVHXFZLpAXzCDx@JzBFj@b@rEFd@@FFb@@JLr@@FBJBHR`ANt@\\xA@DJh@H^FXFVJf@@BDLDPZfABLFTJb@Ln@x@tEHd@Ln@VvARjAHCNCXAbAId@CRCVANABAPARAj@Gb@CHATCrAKJ?VCVCVCVAXCXCXChBMPAFAXCXChAID?ZC@?t@EXED?TAXAXCXCVAXCVCl@ETATCRAf@EPAL?D?TAT?TAVAB?R?VAV?N?VAC_@ASAwAAq@Ca@Ea@EsALATARCd@CXGXOBCNQRWN]No@No@J_@FWT}@DSHYNm@T_APo@FUNo@????On@GTQn@U~@Ol@IXERU|@GVK^On@On@O\\SVOPCBYNYFe@BSBU@M@DrAC^Ah@?v@@h@?b@?R?^VAH?fACRAB?p@Ap@AXAXAB?fAAVAVCP@NAB?PAP@B?JC^A^?\\?N?NBNBPFPDd@Pn@Tp@Tf@P^LFBDBTF\\LzAh@^L\\JLDLBLBL@B?H?J?JAJAJCJCJCTIHE`@MJEHCPGNGFCVMLGd@SDEDEDIDKDMBMFMHOJONMPMPKRIRGRGVIVIVGlBk@z@U^K`@K`AW`@K\\KhAY^I^K~@U\\I\\IXGZGf@GPCZG\\ENAjAQ^EXEBA\\Ez@K|@K~AQ`@E`@E`@Ex@IlDY~AO\\Cb@EnBOj@E\\Ex@EZCP?TCJATCTERGRGPGDAHGNINKJMLM`@e@fC~TBhAGdA[hBSPUBMLS`D??RaDLMTCRQZiBFeACiAgC_UXc@PSb@k@PUjAyAhAwA`AkARWRUz@aAPUFIJKPUd@o@PSRWRW|@eARURWRUPURUPUPUf@k@tAaBl@s@VWX]X]d@i@RUPUNQTYBCr@}@j@q@VYj@q@h@q@X]DGNQFGp@w@V[V[V[T[BCX[d@m@TWTYLQTUFKTWTYBCFIHKVYFGDGFKVYl@s@TYBAf@m@f@m@NQ@ARWRUj@s@X]j@q@X]NQDGTUBCV[V[VYNSDGRUBCbAmATWRYb@g@Z_@PWRUHIHMFELQPSPUt@}@PQNQd@g@FGNOb@e@|@}@RSJMFGRSTUh@i@RURSb@c@NONONM\\c@^k@Zg@R[JQq@{@i@u@u@iAa@o@g@{@o@cAwD_GYe@cCwDyDmFNMBAnDsC|@s@vBoCdAuAHIRY|C}DbBaCrBuANI~IoG\\UbB}Aj@yATkA~@cF^oBH_@h@yBBIvA_E@C~AqD^y@fAaC|@mBLc@Ro@F_@Fg@LwDAg@CcCMkH?MAaA?QCaC?o@AeA?A?EAsAAK?KC_D?e@Ag@?c@C_CA}AAaAEqFAcBA{AEcFAi@?I@cB@qB?Q@iCDeN?Y?K@IBgA@OBk@Dc@NaB^cB~@}CTk@LMPc@dA_Cr@aBf@iABG^o@PURQRKVGTCJ?V@R?R?TCj@FzAJ`@HfAVpBl@lAZf@Jn@@\\Df@Fj@Bh@Bh@BxBDbGHdVd@R?fA@b@@bCHO`AKj@U|ASnAGXKTOX_BlBCFILKTm@jBa@lA`@mAl@kBJUHMBG~AmBNYJUFYRoAT}AJk@NaANq@yFK}Vc@_CEiCEa@Ci@Ci@AG?a@Ag@Ci@Ei@Eg@Ig@Ic@Kk@Qe@Oe@Se@Sc@Wc@Wa@Ya@[aA{@a@]_@_@QOOM_@]c@e@]YeD{C_@_@_@]a@]_@]_@[][OIOM_@Ya@W_@U_@Wa@SGEWM_@S_@Qa@Q}Aq@_@OcCaA_A_@oAc@_@OuAi@e@UeAa@c@QiAc@qCgAc@QkAe@e@Se@Qe@Se@QmAe@e@SkAe@e@Qe@Se@SKEYMc@UQIQKc@Uc@Uc@Ua@Wa@Wa@Wa@Wc@[[UaAo@_@YaCcB_@Ya@Yy@k@IGa@Yc@[[S}AiAy@m@[WYUYWUSUUSSQSOOMO_@c@MQ[a@EIIKQWKQMQYc@Q[OWQ[Q]O]GMIQOa@IUWq@Qe@Qg@Oi@Oi@Mi@Ok@Kk@Mm@Km@Kk@Io@Im@Ii@AES_BIo@S_BKq@Io@UaBQcBIq@Gq@Gq@Eq@Es@Cq@Cs@Aq@As@As@?u@?s@?u@@o@@y@Bu@Bs@Ds@Dq@N}BFeADo@BYDm@Dm@Dm@JcBDi@HqALuBBe@Be@Bc@@a@?a@?_@A]A[AYAWCUASCQEa@CQEQEUEWIWIYGUOa@M]O]O[GKIQU[U[W[[Y[Y]W_@Ua@Sa@Qa@Qa@@i@Sc@OA?q@UaBk@mAa@}CeAo@UwCaAaDgA_A]ICo@UUIi@Su@Wk@SEAiC_AYKsAe@kAa@KEqAe@gAa@{Ai@o@UYIQIm@UyAg@g@Qu@Ye@QWIOGmAa@wAi@_@M_DiAg@Oi@Q_@KGCc@MICICIA_@KUGA?KCSGE?k@MCAgAUaDq@sBa@GAGC_@IOCa@KWIOGg@OOGWMGCGCUMOGUOGC]U[UMK]W[WEGSSGEEE_@c@W[SWEEKOKOQUi@u@m@}@uByCwAiBc@e@iAeAMMgAu@aAm@kAi@a@O_@QmA]mAWq@KuC[{D[eBOoAK{D]cDYaK{@{C_@gB[yAWAAKCy@Qc@KOC}@UyBm@eA]}@YSIeA]OE]Mo@UOEUIMEkAa@UIkBm@[M[KmBq@C?s@W_@MmAa@UIKEqC_Ak@SMEkC_AOGUIOGOE}@]g@Se@Qg@S_A_@EAIEuAk@k@SqCiAwH{CEAuHyCkCeAsAi@a@QeFqBSIME[MUKk@Uq@Wo@WsCiAUKwAk@oAe@KGwCiAUKOG_C_A_@OMEWKOGkCeAuFyBMG[MoCgAYKqEiBqAg@c@OCA_@Oa@OEA_@Mw@WMEsA]yBg@a@GOEQCKAgBYg@Io@KkB_@EAa@K[MuAa@iA_@WKk@a@qAs@cB_A{CiB}A{@qAm@sB}@m@U}@[_AYqCy@eFyAcBe@oA_@gAY]KgD_AEAa@AcA]{DgAiA[}@SSGeAYcIyB}Ag@_DaA_Bg@WG_Bc@uH{BaFmA{CcAi@Qc@QuAg@c@QwAi@yAm@eAa@yAm@}D{AeBq@cBo@mAg@qGeCQGkDmAcBaAgCw@MIKGKKGKKSGKCOEg@OgBMqBImACg@?i@?s@@i@Bg@Fu@Dg@F_@Fe@t@{DfEuRZyA|Go[x@qDBMbAyELq@F]FUZmBJm@VoBHo@RkBN{ABOPeCNeCHoBFeCB_A@m@@sA?mBAqAXkNPaHBm@?S?c@gFZc@@kDPqBPa@ByGj@UBw@Fo@FUBoAFiBHoAFu@B_@Bs@B}AHmADs@@qA@K@_@?K?m@@Q?[?O?iDBwHDwEBS?W?kC@wB?qA@_I@u@?uA?W?qA?Y?WAg@AWCQCoCe@cASsAWsBS{BWaCUgCOi@CYAO?YAUAcHSeIWaA?aCHaAJ_BLc@Aa@ESCEAWGi@OwA{@IGGCkKwGOIKGmD{BkBmABSLgBH{@Du@BS?EVaE@UFOr@mBr@kBND|DjA}DkAOEs@jBs@lBGNATW`E?DCREt@Iz@MfBCRs@a@q@[_@KGCUGeAS]Go@GWE}B_@MCKAIA_BUgAQ{Dq@KAQC_BU_@GKAKCWCcB[q@MKCOCAV??EPGNINqBzBi@n@KJKLMNQRORe@h@EDMNGHUVe@h@GHMLm@t@IHEDe@j@IJGDCFu@x@q@v@GHEFGFGH_@`@u@z@CBGHIHGHGFMNgArAGJIHGFIJA@_@b@QRc@f@WVGJIHKJORaDrDGF[`@GFmAvAq@v@IHIJeBnB[^IHGJOPo@t@IHk@r@GFIJKJ]`@SVYZi@p@_AdAUVUVm@r@m@p@QRQRaBjBIHMNiFvFQRIJoAxA]`@m@n@GH~@xANT@DKJuA~AuAzA_AdAON_@b@e@f@QPe@Rq@n@W\\u@t@]\\a@Z]T]Pq@ZcA\\GBkA`@mAf@c@N]JeA\\_Bl@g@Rk@Nw@Fi@B{@?s@Ao@A}@C]A]Ec@Ge@K]M_@Qc@Um@c@c@[e@e@o@aA{@wAYa@QWy@iAoAcBsAcBwBoCU[SSOQ_@c@a@c@_@]eB_BYWe@k@m@}@wA{BaBgCOWOUQWIIIIWU[UCAc@Ua@O]MsA]c@M_AYcBc@{A]u@OSEETGPMPEDGDGBaAVc@Hs@NeATaB^yAZcAVyA^YFcB^{Cr@KB_E~@aCh@y@RcE|@KBWFsCl@gATOFYHMDMB{Bf@aDt@cATe@Lg@Jq@P{@RkAXYHQDOBMDYFc@J}Bl@[F}AZeCj@sAZcBl@E@YJE@gAZs@Tq@TQF_@LaBf@iFjBuBv@e@Na@Nu@TsC~@OD]LkGnBKDKBuDnAeDfA{DlAuCx@_B^{A^}@Rw@Nw@NQDkAPgEt@cARc@J_CXeC`@c@HsAXgHhAmC`@G?kBViIx@c@D_LdAgEf@uALsD^qBR_CTG@mANcBTsAToATmAXa@JkAZoBp@_FlBcHpD[PiB`A{DtBwBjAeB~@IF[NwAv@oFpC_Ah@{BnAiCjAo@TiAPuCf@qALaAHyD^cCf@wAj@EBa@TeEdC}A~@gBdAaDhByI`FyAp@qCrA}@d@_GlCMDgF~By@^eBz@aAb@[JMDSDc@DeGX{@HcA\\m@Zq@j@m@f@a@h@W`@Wd@Ul@k@|Ae@hAeAnCQ\\U`@Y`@c@`@]V[Re@Ns@N}ATiBN_ALI@QBUBa@Fo@PC?c@RaAd@kAr@_BbAoFbDiGtDOHe@X}BtAEBeAn@sCdB{CfByA|@eGpDo@^YRiBjAkCbBs@^gCbBkBlAc@XcF`D[RwG~DC@iLbHqDzBaCxAA@kCtAkEtBsBz@}DhB?@oHhDoCnAaB~@}@l@sAhAwAtAkAhAq@l@eA|@{AfAgCzAyC`BgAn@{Az@uEtCuCpBw@h@qA~@iC~AeBz@yAn@sAd@{ErAiA\\kIxBkMjDuBn@gJjCw@VMDaCbAk@Ng@Pq@Vc@Nu@Vm@Ty@XcA\\q@TEBeA\\i@Rm@T[Jm@PEBe@NUHa@NMDgA\\k@RE@iBn@]JAICISeBUeBQ}AKy@AKAMCOIq@OkAc@uDE_@Ks@Q{AEWQ{AOoA[_CM{@SqAQcA[cBKc@Qy@S}@YoAQy@CO{@yDa@gBOs@UcAGWUeAaAiEWgAOs@IW[kAQm@[aAk@yASc@]u@c@{@a@w@g@w@i@w@g@q@e@k@MMq@w@YYSQOOKIWS[WWSUOSOu@e@k@[WMgAi@kAi@_@QOG]Og@WQG_@QKESKMGUKYMm@Ua@Sc@Qi@WmB{@[Oa@O{@a@}@_@YOYMYKk@YYMm@Wg@Uc@Q]O]Mg@Qc@Oc@Me@MWIKAOCMEKCSEUEWEUEYEKCx@wCp@{CnB}H`@eBv@_DLk@z@_E"
+        },
+        {
+            "vehicle": 3,
+            "cost": 16262,
+            "delivery": [
+                5
+            ],
+            "amount": [
+                5
+            ],
+            "pickup": [
+                5
+            ],
+            "setup": 0,
+            "service": 3000,
+            "duration": 16262,
+            "waiting_time": 1735,
+            "priority": 0,
+            "distance": 238694,
+            "steps": [
+                {
+                    "type": "start",
+                    "location": [
+                        -84.5848191,
+                        38.1422896
+                    ],
+                    "setup": 0,
+                    "service": 0,
+                    "waiting_time": 0,
+                    "load": [
+                        0
+                    ],
+                    "arrival": 1704998569,
+                    "duration": 0,
+                    "violations": [],
+                    "distance": 0
+                },
+                {
+                    "type": "pickup",
+                    "location": [
+                        -84.59908526518223,
+                        38.01660615
+                    ],
+                    "id": 28,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 28,
+                    "load": [
+                        1
+                    ],
+                    "arrival": 1705000500,
+                    "duration": 1931,
+                    "violations": [],
+                    "distance": 22635
+                },
+                {
+                    "type": "delivery",
+                    "location": [
+                        -84.4560311,
+                        37.9415554
+                    ],
+                    "id": 28,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 28,
+                    "load": [
+                        0
+                    ],
+                    "arrival": 1705002400,
+                    "duration": 3531,
+                    "violations": [],
+                    "distance": 44672
+                },
+                {
+                    "type": "pickup",
+                    "location": [
+                        -84.3299336,
+                        38.1297991
+                    ],
+                    "id": 6,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 268,
+                    "job": 6,
+                    "load": [
+                        1
+                    ],
+                    "arrival": 1705004732,
+                    "duration": 5563,
+                    "violations": [],
+                    "distance": 78047
+                },
+                {
+                    "type": "delivery",
+                    "location": [
+                        -84.54361431475903,
+                        38.125000400000005
+                    ],
+                    "id": 6,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 6,
+                    "load": [
+                        0
+                    ],
+                    "arrival": 1705006899,
+                    "duration": 7162,
+                    "violations": [],
+                    "distance": 102731
+                },
+                {
+                    "type": "pickup",
+                    "location": [
+                        -84.42610950123661,
+                        38.07034005
+                    ],
+                    "id": 10,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 10,
+                    "load": [
+                        1
+                    ],
+                    "arrival": 1705008462,
+                    "duration": 8425,
+                    "violations": [],
+                    "distance": 118946
+                },
+                {
+                    "type": "delivery",
+                    "location": [
+                        -84.48836690221805,
+                        38.02116135
+                    ],
+                    "id": 10,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 10,
+                    "load": [
+                        0
+                    ],
+                    "arrival": 1705009754,
+                    "duration": 9417,
+                    "violations": [],
+                    "distance": 129901
+                },
+                {
+                    "type": "pickup",
+                    "location": [
+                        -84.36814919654094,
+                        37.9372647
+                    ],
+                    "id": 23,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 333,
+                    "job": 23,
+                    "load": [
+                        1
+                    ],
+                    "arrival": 1705011267,
+                    "duration": 10630,
+                    "violations": [],
+                    "distance": 147026
+                },
+                {
+                    "type": "delivery",
+                    "location": [
+                        -84.6011423,
+                        37.8739215
+                    ],
+                    "id": 23,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 23,
+                    "load": [
+                        0
+                    ],
+                    "arrival": 1705014057,
+                    "duration": 12787,
+                    "violations": [],
+                    "distance": 182845
+                },
+                {
+                    "type": "pickup",
+                    "location": [
+                        -84.612993,
+                        37.884314
+                    ],
+                    "id": 26,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 1134,
+                    "job": 26,
+                    "load": [
+                        1
+                    ],
+                    "arrival": 1705014666,
+                    "duration": 13096,
+                    "violations": [],
+                    "distance": 186414
+                },
+                {
+                    "type": "delivery",
+                    "location": [
+                        -84.48456836107098,
+                        38.118489749999995
+                    ],
+                    "id": 26,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 26,
+                    "load": [
+                        0
+                    ],
+                    "arrival": 1705017890,
+                    "duration": 14886,
+                    "violations": [],
+                    "distance": 219024
+                },
+                {
+                    "type": "end",
+                    "location": [
+                        -84.5848191,
+                        38.1422896
+                    ],
+                    "setup": 0,
+                    "service": 0,
+                    "waiting_time": 0,
+                    "load": [
+                        0
+                    ],
+                    "arrival": 1705019566,
+                    "duration": 16262,
+                    "violations": [],
+                    "distance": 238694
+                }
+            ],
+            "violations": [],
+            "geometry": "grxgF|ogcOMVa@|@s@~ASd@WRLBxSrP`DlCxCfCtD`DRN@CdGyMdOlLl@d@`C~A~FnDfBfAzH~ENH|AnAPLVRzRvPd[`Xr@_B\\w@fFkLv@eBt@_B`@y@Xk@dEgIjBqDDIdAwB`BiEp@oBl@cBXu@HSb@sAVq@l@cBv@wBvAmDnAqC@EZq@d@gA~AoDrFqLfDaHbAyBb@_AxA}Cd@{@|@_Bz@uAzAgCn@aAl@cAp@eAz@yA@AhAkBNWf@{@fAqBNYj@gAN[jAsBv@wAdB{ChAoB\\o@xAgCNUd@y@r@eAfA_BhA{Al@u@j@q@vFoG`DqDdDuDLOl@o@pAqA`AcA\\]hAmAzH}HbCcCNOtQgQdAcAXWlAqAhAuAFIhC}CHONSJQ~CeEhCyDfBmCNUDI~BoD|BiDvB}C~BsDbCiDDGvAsBfCqD~BgDhFgHhByCXa@xByCvC{E\\i@pDiGrBkD~CmF`BiC~AgCxAoCp@sAzAqC`BwCdAkBrAiCVc@DIjCsEzB_E|AmCXg@ZKTEXA~Cl@z@Nb@LTHTJXRxAhAxRvUdAlAbArAFHZ^t@dAn@z@fBzCR`@Vl@b@|@b@`A^bAh@|Ab@xAd@`B`@tA`CjJjAtE|@fDb@xAnCnKd@hBbAfD|AxEnAhD`@dAr@bBj@pAlBhEl@jAlA~BfBbDFJ|@xAr@fAT^nBtC|ArBpAdBtChDz@`AzA~AhCbC~@x@jB`B|BhBrCrBtDdCx@r@jA|@`FdDzE|CRNNJFFFJFLDNBVHvBVbD@t@@B?HLfDFpBNzDLlBPhBh@dDd@nCj@~CJf@F`@XhBRzAH~@J`C@xAA~AKdKKpNMjLE|CCvDKrMA`E?vA?pBFjGBdBJtCH`C@Z@b@^?\\?jPDlC?\\@~C?bA?t@A|@Gx@IpB_@d@OvBy@XQ`Aq@x@m@vAqAd[s^`@c@nAyAhD{DlGkHnAfF`B~GlGhSHXpBnGvJhEB@tD`BFDbDvAr@\\jAh@hAh@RH~HnDv@ZrClAp@\\bAl@tDlCnF|DpBvApDjCw@p@}@v@qDxCZl@HV@T@VIP_@d@QVKNw@n@????v@o@JOPW^e@HQAWAUIW[m@pDyC|@w@v@q@qDkCqBwAoF}DuDmCcAm@q@]sCmAw@[_IoDSIiAi@kAi@s@]cDwAGEuDaBCAwJiEqBoGIYmGiSaB_HoAgFhN}OjAuANO~AkBtBcC^a@lGkH^c@zAcBd@g@b@a@RS^Y\\YTQPKXQtAw@dAc@pCw@l@Mp@Kr@G`AG|@AbA?`@BL?hAHH@TBZBNBxEb@xAN~BRl@Dz@D\\@`@@F@tB?jAEh@Av@EfAKzAQtHcAPCpAQhBYlBUjC_@p@MfEi@RETENE`AWj@Oj@Sv@Yv@]l@[PIVONIpLmHBANK^UK]GU[sA_@eAm@sAoAkC{@aBiBcCc@k@QWWY}@cAmCcDiAuAu@cAmGqIOS_CwD{BuDaBsC_AgB{FqK{DkHwEyIo@iAcAmBWe@Q[kA{Bs@qAoAqCKq@Ge@?GCe@Hi@@EN_@dAkA`@]\\Sd@Yb@U\\Qn@UhCu@zIaBtBe@nBi@~@[x@[pAk@lAo@f@YjAs@t@g@t@m@b@[t@q@TU^]`BiBLO`@i@n@y@z@oA\\g@v@sAXk@f@aAZq@r@gBn@gB|@uCXkApDyNnAgFlDoNdD}MnDsNp@wChGiYdAaFjCsLtBoJxFeXfEuRZyA|Go[x@qDBMbAyELq@F]FUZmBJm@VoBHo@RkBN{ABOPeCNeCHoBFeCB_A@m@@sA?mBAqAXkNPaHBm@?SpBMhCSbAGjBMn@G|AMz@Kd@G~ASB?FARCbCUVCZANAbA?f@@VBR@l@Hh@Hh@JZFlA^j@V\\NTLFY|@_CVo@`@cADOL[\\_AhB}Eb@kAl@_BDKFQ`@eAXy@Pc@DIb@kArCwHtA{Dt@wB^}@L_@^_ARg@FQjA_DpBmF|AcEbCaH|AiELY|B{FjAsCHUDOf@uADMNi@tAwDvD_K`@cALSJOHKtB_CRWf@k@^a@NKLIRIPI^ITE`@CZ?\\@p@HbAFhACXCVE\\In@Sl@[RMZUTQTWr@aAJSnDiGTe@bA}BPa@hBiE^y@r@cBpAkCt@cBj@uAr@aBvAgDDKt@aBTi@lDeIpEcKjD_InD}HpAwCj@oAnF{Ll@wAh@TnBdAzAx@nBbArDtBpDjBl@ZxBjAbGvCZP^PLBT?n@C`AARCNGRKdAw@xB_BZU~GiFHEr@i@n@i@lAgA`E{EfDsD^_@d@a@|@k@XINEb@A\\?L?^?^EZOtAu@TMz@[f@C`@?ZBTBHDFDhDzCj@`@B@NHd@VXP^Zb@b@b@p@Xn@FPFNLRj@r@hAtAiAuAk@s@MSGOGQYo@c@q@c@c@_@[YQe@WOICAk@a@iD{CGEIEUC[Ca@?g@B{@ZULuAt@[N_@D_@?M?]?c@@ODYH}@j@e@`@_@^gDrDaEzEmAfAo@h@s@h@ID_HhF[TyB~AeAv@SJOFSBaA@o@BU?MC_@Q[QcGwCyBkAm@[qDkBsDuBoBcA{Ay@oBeAi@Um@vAoFzLk@nAqAvCoD|HkD~HqEbKmDdIUh@u@`BEJwAfDs@`Bk@tAu@bBqAjCs@bB_@x@iBhEQ`@cA|BUd@oDhGKRs@`AUVUP[TSLm@Zo@R]HWDYBiABcAGq@I]A[?a@BUD_@HQHSHMHOJ_@`@g@j@u@oAs@{AWk@g@uAaDgJeE_M}@cCO_@_@{@Ym@k@aAy@gA]c@q@u@{@q@aAs@]UkAm@k@W}BaAsLeFcKmEiBu@yB_AcL}EgEgBGCiDwAoB}@m@YWOYMgAm@i@]oAy@eBoA_@YSOQTWd@}DdGMTm@`Ae@t@eAdBu@tAiAzB{AnDyAvDWr@Ul@}AvD}@`BUTUP??UJYF[BW@WCc@G{@QYGe@Qa@Q]QmEgCmAm@aA]]Qw@]_Bm@oBm@k@KoAYWE{@QqHmAuFaAkCc@eEw@_Cg@yCu@wCw@_@KQEw@S[IaW_HsBi@qA[}FyAiKoCa@Kq@SoA[aAWSGSG}GkBaAWyA]q@SmCu@_Dy@wA_@}@USGSGuFyAOE_Bc@q@Sy@SwDaAkA]_@Ke@M_Ba@_Ba@{@SSEsAQIAi@Ge@Cm@CYAY?s@AG@oABk@Bi@DSBk@FC?WBg@HsAXg@JWFUDi@LUDwBb@QDc@HeB^SDy@PsAXG@]HSDoAV[HG@a@FOBE@e@HI@e@DO@MBI@wAJ{@HoAFO@a@BcABcA@Q?Q?{@Ae@AqCGg_@eASAwCIQ?WAQAS?W?UAK@k@?M?W@Y@S@YB]BOBm@Hi@HSFUDgAXIBMD[Li@Rg@Vi@Zw@h@UNYRw@l@]XiAdA_@\\IJKJiCbCuBpBu@r@q@n@eGzF}@x@qEhE[ZEDMLMLk@f@uArACBgAbA[ZMJkAhAeC~BEDCB_BxAONKJGFwAtAKHgC`CONWVg@f@STKJYVuBtBsArAWVOPm@j@y@x@m@l@qCpC{AzAw@v@GFWXEBQPy@|@YXeAhAUVqC~CmFdGQRsA|As@qAKOYi@i@kAYq@O_@M_@Y}@Sw@[iAIc@Ig@Ki@EQaA{FcByJUiAQs@Qs@Sq@Yy@Og@Wo@Yo@kAaCe@}@_B_DoAcCg@}@ACyAoCEEyDeHEIiBiDgAwBs@sAs@uAIOyDsHwAqCKSqAaDe@yAi@eBsBkGMc@GQa@kAUi@}@sBg@cAYi@y@{AOWuAcCe@_As@gAu@uAy@qA{@gBiA}BIOg@gAwAqCqAeCQ[q@sAaAuBKS{AwCuA}BaCoDQU{B}CoByCw@sAyAoCgAqBm@mAaByCOWsAcCwA{BaAkBmCmEwBeDeBcC{A}BqAuBKSmBwDaBkDy@cB}@aB{@yAUc@u@oA}AcCeBgCqCoEw@uAoAkCwB}DaByCy@sA{@eBs@eAuBcD}BaDkB}CsAwBuAmCgAcCmAgCiBkDqAwBkAqBiBgCgAuAwA_CQ]cAsBsBaDm@wAy@{A_AeB[m@sAwBkAeBs@_AkAuA_AgAeBoBsA{AoAkBu@mAcAyAkAsB{AeCsEkHcCeEoLkSmDeGoKuQ}@iBkAsCaBwD_A_CcBsDsAiCMUaBsC_BcC}AeCyAaCS[mAyBsBgDiBiDeDiGSa@c@_AeAyBoCwEiCcEqA_BGIqBmC}A}BiAaBkCmDwAqB{FcIcCwDiAcBk@cAOWgDuF_@s@oAyBm@eAiFwJoOa\\gAsBu@oAYg@[k@o@gAYc@]o@Ya@k@aAMSKMs@eAYc@Ya@W_@uAoBcAyAs@eAYc@o@cA]g@q@iAs@iAKQMQq@kAq@kAWe@k@cACEWe@Ye@DGDGHKXg@BETi@z@iBHQJWXq@n@cB^_A@ADMVu@@CL]Tk@j@aB@Ch@{ABE?CFM@C?Af@sAHWDIFSrAsDFMNc@Na@b@iA@CLY?A^_ANa@|@cCHSZ{@HS@CNa@DOHSFUT_ABIRu@?CJ_@H]d@oBLi@@ADSDQFWFUDO@CFW@EJe@n@kCBINo@@CH[H]BI@ERu@HYPm@No@\\oAJe@DIDQZuADQ@C@EBK@KBWBW@M?K@O?O?K?C?W?q@@kA?aA?C?_A@E?iA?aAZBH?L@j@DlAFR@\\@B?|@CN?LAf@A@?VAZA@?`@AR?X?\\ABAjACB?XAZ?B?X?@?XBXDB?\\Fz@NRDx@NH@LBD@V{@|@}Ch@wAH[BKT_@FUl@yCNu@F]^wAFi@?i@Ey@Dx@?h@Gh@_@vAG\\Ot@m@xCGTU^CJIZi@vA}@|CWz@EAMCIAy@OSE{@O]GC?YEYCA?Y?C?[?Y@C?kABC@]@Y?S?a@@A?[@W@A?g@@M@O?}@BC?]ASAmAGk@EMAI?[C?`A?hAAD?~@?B?`AAjA?p@?V?B?J?NAN?JALCVCVAJCJADABEP[tAEPEHKd@]nAOn@Ql@IXSt@ADCHI\\IZABOn@CHo@jCKd@ADGVABENGTGVEPERA@Mh@e@nBI\\K^?BSt@CHU~@GTIRENO`@ABIR[z@IR}@bCO`@_@~@?@MXABc@hAO`@Ob@GLsArDGREHIVg@rA?@ABGL?BCDi@zAABk@`BUj@M\\ABWt@ELA@_@~@o@bBYp@KVIP{@hBUh@CDYf@IJEFEFCBo@l@A@QNp@rAXf@Xf@Xf@Xf@Xf@Xf@Xd@Xd@Zd@t@hAXb@Zd@t@dAt@fAv@dAZ^@@rAdBZ`@Z`@t@bAZ`@v@bAZb@Xb@Zb@t@fAt@jAXd@Xf@R^\\l@BFlCnFbA`Ct@fBnBvEpDrHj@nAtBxDbDrFJNNVHLDHb@r@z@tAHNbBrCfAdBrAvBvEjH^h@xB|CvB|CPVjCrDJLvAtB~A`C@@d@r@JLjBpCtBjDxC~EvD~GxAlCpB~DpDjGbJvOb@t@lAtBjArBfAxBTn@N`@r@fB|B`FzAvCFHzAvBdAzAhAhB|@dBjAjB~@pBtA|CjAvBlArBxAvBvAvBlA|BR`@~@hB|@xAr@dA|@`BFJz@`B`AfCv@hB~@~Br@~@jD|CnB`B~CbDrAxAp@bAR\\~@hBVf@~AfDhB|CdEdHINKRITMb@wAjEcMfb@_HlUiBdGELyErOa@pAu@`CuE|NuEnO}BvHY`Ag@rB{EjTm@jCq@vCqAjGeGnYyBjKyBvIaCtJwArF}A`GkGnVABOl@_@~A{BbKoCfMkAnFMn@u@bDi@dCS~@sCtMeDlOADkFbVWjAiBhIqB~IkAlFmB~I_BlHyBpJqFlU_AvEm@fDi@jCcAtEOp@mElReBrHcAnE{@tDkB~Hw@fDYpAiB~HGX[nAa@dBw@nC]`B{@rD{@jDw@bDuA~Fq@fCMh@qBrGyB|GyB|GWt@K\\Od@uBpGTLVRXLx@\\b@T`@PNHPHrFzBpBdAvAj@rErBjJhEdAd@PJPPJN@@P^~AzDrAnDt@fBrGnP`AfC|@pBlF~MTd@l@[bA]z@IdGYb@ERELEZK`Ac@dB{@x@_@fF_CLE~FmC|@e@pCsAxAq@xIaF`DiBa@nEk@hGAz@D`AFf@Hf@Lb@`@lAl@|@FFNN|@j@lAf@hBv@LJFDZd@HRPb@Jf@Fh@@h@?`@Gf@Kn@Qz@qBhHo@dC}@vCiB|Fc@lA{F~QiCzHcBvEm@xAOXOPSLIDYZMNKNKTMb@uD`KGPFQtDaKLc@JUJOLOX[HERMNQNYl@yAbBwEhC{HzF_Rb@mAhB}F|@wCn@eCpBiHP{@Jo@Fg@?a@Ai@Gi@Kg@Qc@IS[e@GEMKiBw@mAg@}@k@OOGGm@}@a@mAMc@Ig@Gg@EaA@{@j@iG`@oEfBeA|A_AdEeC`@UDCvAk@bCg@xD_@`AIpAMtCg@hAQn@UhCkAzBoA~@i@nFqCvAw@ZOHGdB_AvBkAzDuBhBaAZQbHqD~EmBnBq@jA[`@KlAYnAUrAUbBUlAOFA~BUpBSrD_@tAMfEg@~KeAb@EKgCMqCUiGCsA?u@@aBFiAF_ARwB@S\\wBRaARy@Po@f@_BZ{@\\u@Vm@Ve@p@iAr@aAh@s@nD}DzFqG\\_@z@_A|AgBxBgCbDqDRSp@y@l@eATa@f@gATk@Rk@Rq@ZsAF[jAoFd@{BNm@FW^uAj@yARe@hBoD`@s@\\q@\\u@Vo@V{@RcAXwAPFhMfE~CdAt@T~JjDxE~A^LxBr@zEbB~@Xb@NhEtAnDjAD@B@~Bt@B@D@tC|@^JNENIHIHODM@Q?UUyDGWIYKWMSsAkBQ]ISMk@Ec@A_@?g@A{@x@{K?E@E\\kEj@{Gx@eKVeD?CFu@PqCHcATaCB]VyCRgBFm@He@Fg@VyA@IRgAFWVgAH]ZmAH[Nk@HW^eAPe@HQv@oBN_@N]Zm@\\o@h@}@h@}@f@y@BCPWPUp@}@zAiBl@s@HIvAcBTWv@aA^c@^c@h@o@dCuCrA_B`AiALOr@w@dAkATWfBkBBCf@g@NOn@q@h@i@RUNO\\]v@w@TUn@o@fBaBdDiDZ]d@e@Z[dAeAZ[FGd@c@Z]BA@AVWI]Kc@Ia@I[CKeA}EEQm@yCCUMm@}@oEgBaIo@qCKc@iAeFMk@CKy@oDES_@aBGY[oAm@gCc@gBU}@I[YkAqAaFOi@q@uCyAeGGUGWy@qDSaAgDcO_AyEcBsHGUuCmMK_@w@oD{@uDQu@Qu@EKg@uBkBkHK]gBsGgFuQaAkDw@sC{AmFQm@r@k@b@]Xc@ZOx@Il@Gh@Gd@Iv@OZWf@_@d@Oh@It@WRQMu@k@sAWs@Vr@j@rALt@SPu@Vi@He@Ng@^[Vw@Ne@Hi@Fm@Fy@H[NYb@c@\\s@j@Pl@zAlFv@rC`AjDfFtQfBrGJ\\jBjHf@tBDJPt@Pt@z@tDv@nDJ^tClMFTbBrH~@xEfDbOR`Ax@pDFVFTxAdGp@tCNh@pA`FXjAHZT|@b@fBl@fCZnAFX^`BDRx@nDBJLj@hAdFJb@n@pCfB`I|@nELl@BTl@xCDPdA|EBJHZH`@Jb@H\\NOp@o@POp@q@v@s@fAeAxAwAnDgDd@c@rAqA`@_@d@c@f@g@NOTSBCj@k@NMNMFGDEHG`A_AtCoCrDmDtCoCbC}BxAwANd@zAlEf@|AJXPf@DL\\bAFPRj@FTFN^hABDr@zBPf@ZbAPf@^jAHVHXPl@Ph@Pl@b@tAFVVz@Xz@BFb@jAZ|@BFHVXv@@D`@nABDRn@HXDLJh@Fb@@DJp@FZJ^LZJP\\f@PNPPLQ`@e@`@_@j@a@ZQTM\\M|@UREr@Il@CF?~@?F?r@ArAAb@CvCOlAIrBQBh@Bn@JnCHdBBz@Z|HHbB@Z?PFzAFpB@RFvABn@J~BJzC@DHtBBf@@^FrA@RFbBBp@HzBHrBBd@@z@?x@?FCx@Ch@Eh@Gf@Kr@Ml@ERI\\LNDDFD`@^~@~@NP\\ZZZZZ`A~@tAnANPPP\\j@BFfAjBxBjDDHHLHN`BpCFHFJlB`DfAhBFLpAyALRdExGJNHN\\f@jAjBHLDHv@lAvDdGVb@Xb@j@|@b@t@FJLGpBy@z@]b@SBAXKNGvB{@DAJ?XBNDNBbCb@^FNBJBp@LbBZVBJBJ@^F~ATPBJ@zDp@fAP~ATH@J@LB|B^VDn@F\\FdARTFFB^Jp@Zr@`@BSLgBH{@Du@BS?EVaE@UFOr@mBr@kBND|DjAnGjB`Bl@PFPe@Vw@Po@`@uAnBoGFQ`@uA~@qCXs@\\{@DQBQBa@@o@@[@UBUHa@Jo@Hc@N}@gGyDwBqAg@[m@]YM]MqA]_ASq@UQIo@[_EeCcDqBgCwAKGIMAAKSGSqEaLAEy@mBYk@o@gAc@q@Sk@iBwCOSFIjCaDZa@|@gAx@eA|J}Lz@cATY`D{Dh@q@tCqD`@g@PShLoNLQRUjB}BdAuAHIt@}@|CuDz@cAhD_EhAwA`AiAb@i@r@s@d@i@RUtBeC@AnEmF~@iAl@s@`DyDtCiDhC}CxF_HxAeBpAyAx@_ARUfBkBxA}AFGNQXY^_@xAuA`@k@`ImIrCyCTU`FiF@A@ATWZ[lBsBLMt@{@t@w@h@m@`@e@rA}AnC_DxAkBnEuFz@gALMbB{BnA_BZ]nBaCxHsJrAeB|HuJhCyCfAqA~F{GfCwCjE}EjD{DRUp@w@dCyCtAcBn@y@xBgDZe@z@{ApAgCjFmKfKwSrLcV`AsBv@}AdBmDpDqH`@s@n@qAnBcE~BoFrAmDx@yB~@gCxCcI~@wB`@_AxAyCrAqCh@kAZk@lBiEhCoF`DsGvAyClEkJlEeJtA}C|BeFv@aBbAyB|ByEnBaEXi@j@kA@C@AlAiC@A?CR_@d@eAN]j@oA`AuB`DwHrD_JrB_FTo@r@uBxCqIBGfAcDbA_C|@_CpAqChA{BlVqf@bAsB|FuLr@wA`@_A|AmDzB}EtAdAHFL@J?NCLIb@MNCjAEx@CrAC`FM~AE|BGjBEFAzBGtC?b@@^Bv@N^F^FXDX@\\A~BWJA`BKzAGrAKrAS~@GdACA^GHWF_@BQLGR@f@Dx@Cv@Af@Ip@Gd@C|@A`ACnBE|AGjAEdBC`B?d@NHv@WXCL@JTR~@Fl@Db@FJJB~@PfATf@HDCFSNSORGREBg@IgAU_AQKCGKEc@Gm@S_AKUMAYBw@VOI?e@BaBDeBFkAD}ABoB@aAB}@Fe@Hq@@g@Bw@Ey@Ag@FSPM^CVGFI@_@eAB_AFsARsAJ{AFaBJK@_CV]@YAYE_@G_@Gw@O_@Cc@AuC?{BFG@kBD}BF_BDaFLsABy@BkADOBc@LMHOBK?MAIGuAeA{B|E}AlDa@~@s@vA}FtLcArBmVpf@iAzBqApC}@~BcA~BgAbDCFyCpI{@nBoCjGsD~IoBpEs@`B}@dB}@fBc@|@k@jAsArCi@bAQ^k@vAwBpEcAtBo@pAgBvDsD~HKNwErJeEzI_EjIaEnIsC|FoDxH_AtBm@|AaDfIeCzGgClGoBlEiBrDQ\\cCbFyCfGsCzFEJiD|GmCpFuBdE{@xBoB`EUb@yDfHS^gFhKy@|AiB`Dm@bAQTsAlBqAbB{AhBeBnBKJSVmAvAsB`CqBbCyDnEyEpFMNMNwA`BKLKJm@t@{AfBiH`J}LnO_AjAY^qL|Ni@p@OP_AlAmC~CsGxGuC|CUVA@R^LVzApCLTLTd@p@l@v@r@t@h@b@`An@bAf@rH|CXLb@Pj@Xx@b@p@d@XTTRl@h@TVp@v@TZbA|AnEfHf@t@jBtCh@x@\\b@FJxAjBrAzAdCjCl@h@nBbBWd@}DdGMTm@`Ae@t@eAdBu@tAiAzB{AnDyAvDWr@Ul@}AvD_CrFs@~AaAzBo@xA\\F@FBFFHHHfAt@VNd@\\^^nAxA^h@HPLVh@lANb@v@`Ch@nB~@lD^|BXvBHx@RdCHrAd@vMjAz]?BJdDF~A`@fLzAnd@`@zL`@bLFbCLdDZdJDlBBpABlC?xBCvBGlCCt@Cv@KjBKjBQlBKpAShBOfAQrAc@hCWvACLu@rDUdA_AhE}Gf[[tAWlAeDhOeAzD]|@Uh@Wd@i@v@cApAmC`D_AdA_@d@OTKPOd@Kf@K~@v@NnARhARn@LJ@v@NtEz@PDtB^nAVd@Lt@TjDlAPFpGdClAf@bBn@dBp@|DzAxAl@dA`@xAl@vAh@b@PtAf@b@Ph@PzCbA`FlAtHzB~Ab@VF~Af@~C`A|Af@bIxBdAXRF|@RhAZzDfAbA\\V\\B@jD~@dBf@lAZjBh@|IfCNFl@PpAd@nAd@rAl@nAj@`B|@hH`Ef@RPD^FVJhA^tA`@ZL`@JD@jB^n@Jf@HfBXJ@PBND`@FxBf@rA\\LDv@V^LD@`@N^NB@b@NpAf@pEhBXJnCfAZLLFtFxBjCdANFVJLD^N~B~@NFTJvChAJFnAd@vAj@TJrChAn@Vp@Vj@TTJZLLDRHdFpB`@PrAh@jCdAtHxCD@vHzCpChAj@RtAj@HDD@~@^f@Rd@Pf@R|@\\NDNFTHNFjC~@LDj@RpC~@JDTHlA`@^Lr@VB?lBp@ZJZLjBl@THjA`@LDTHNDn@T\\LNDdA\\RH|@XdA\\xBl@|@TNBb@Jx@PJB@@xAVfBZzC^`Kz@bDXzD\\nAJdBNzDZtCZp@JlAVlA\\^P`@NjAh@`Al@fAt@LLhAdAb@d@vAhBtBxCl@|@h@t@PTJNJNDDRVVZ^b@DDFDRRDFZV\\VLJZT\\TFBTNNFTLFBFBVLNFf@NNFVH`@JNB^HFBF@rB`@`Dp@fATB@j@LD?RFJB@?TF^JH@HBHBb@LFB^Jh@Pf@N~ChA^LvAh@lA`@NFVHd@Pt@Xf@PxAf@l@TPHXHn@TzAh@fA`@pAd@JDjA`@rAd@XJhC~@D@j@Rt@Vh@RTHn@THB~@\\`DfAvC`An@T|CdAlA`@`Bj@p@T@?b@Nh@RX\\`@R^P^TRNDBBBZVZZXZV\\HNJLT^R`@P`@Pd@FPFRLf@Lh@Hh@Hj@Dl@Bl@Bj@?l@Al@Aj@El@Cl@En@K|AUlDC`@C`@C`@C`@E`@Gr@IjAO`CCt@Et@Ct@Ct@Al@A~@At@@v@?v@@t@@v@Bt@Dt@Bt@Fr@Dt@Ft@Fr@Hr@Hr@Jr@`@zCHr@Jr@Jr@Hr@VfBJr@@HHf@Jp@Ln@Ln@Nn@Nj@Nh@Nh@Nd@Nb@N^Rh@HPJZXl@`@z@JPHPLRJR\\j@`@j@PVPVRVTXTVVZXVVXZXXXZX\\V\\X^V`Ar@`@XZRh@^d@\\bAt@lCjBb@Zb@ZfAt@TPLHb@Xb@Xb@X`@Xb@Tb@Vb@Vd@TB@^Pn@XXLd@Rd@RhAb@d@RlAd@NFbC`AhBr@`@P`C~@\\L\\Nt@XXJVJz@\\pAf@HDf@P^Nh@VbA^TJVJVJXJpAh@z@\\LFNF^P^P^R^R`@T`An@`@V`@Z\\V^Z^\\^Z`@^fD~CdA`AbAbAf@d@^X`@^`@^`@\\`@Zb@Xd@XXNJDf@Td@Rh@Pf@Nf@Lh@HJB\\Df@Fj@Bh@Bh@BxBDbGHdVd@R?fA@b@@bCHO`AKj@U|ASnAGXKTOX_BlBCFILKTm@jBa@lA`@mAl@kBJUHMBG~AmBNYJUFYRoAT}AJk@NaANq@yFK}Vc@_CEiCEa@Ci@Ci@AG?w@IYEKAe@Kg@Kg@Oe@Og@Oc@Qc@S_@U[YY]U]Ua@g@cASa@mA_CO][k@IMIOKIOGUfBSfAKh@YbAOj@Ob@Q`@Ob@GJITSb@w@jBg@jAg@jAELMXQd@g@lASd@CPUj@_A|C_@bBO`BEb@Cj@ANCfAAH?J?XEdNAhC?PApBAbB?H@h@DbF@zA@bBDpF@`A@|AB~B?b@@f@X@rBL|CpAg@tB@\\Vb@????Wc@A]f@uB}CqAsBMYA?d@B~C?J@J@rA?D?@@dA?n@B`C?P@`A?LLjHBbC@f@MvDGf@G^Sn@Mb@}@lBgA`C_@x@_BpDABwA~DCHi@xBI^_@nB_AbFUjAk@xAcB|A]T_JnGOHsBtAcB`C}C|DSXIHeAtAwBnC}@r@oDrCC@OLk@u@q@}@}@iAcEgFqDmE}CuDoBiCsCuDkBgCm@{@kCoDe@k@]a@i@o@q@u@u@y@m@m@g@e@c@_@o@k@o@i@e@a@g@]c@[_Aq@{@k@o@_@y@e@k@[yAo@u@]kAe@mAg@g@Qo@Um@Sq@Qs@Qy@Sm@McAQiAQaDg@eHcA{Fu@uFw@cAQcAOaD_@iBU}HgAgFu@uImAuAU_AUyA_@q@SUIq@U}@[w@]m@WaAg@y@a@w@c@mAw@m@a@w@m@u@k@g@c@c@a@g@c@m@m@k@o@s@w@g@q@Y[i@u@[e@e@q@i@{@a@s@m@gASa@eAoBoBuDkC{EiAyBw@wAc@s@_@m@w@gAa@e@o@u@g@k@{@w@{@s@_@[e@_@e@[s@e@e@Wk@[a@Qc@Uy@]cAa@kFsBwCmAuDwAmEeBmAg@}@_@gFqByMiFaC_AcCaA_FoB}GoCcBo@g@Qi@Q}@Wi@Oi@Ok@Kk@K{@Ms@G}@Ic@Cm@Ce@Ao@?i@?o@@a@Bs@Bi@Dg@Fk@Fy@J}ARaC\\]DQ@Q@e@Do@Bw@@s@@q@A_AEeAG_BOcE]mAKiD[aHm@eGi@{Gm@oD]aHk@iFg@e@Em@Ik@I{@SaAWkDaAoGiB{FcBwEsAuF}ASGgEiAgCq@yBk@wA_@wDcAuA]_EeAcEgAg@K_@I]G[C[Eg@Eg@CYAo@?g@@g@Ba@B_@Dc@D]Fc@H_@Jq@Pu@R_EfAkDbAeBd@q@Pm@N_@FYFm@HO@A?c@@OBi@@o@?k@?m@Cs@Gi@Im@Ky@Sq@Sq@Ww@a@cCwAk@c@MKUOoEcDkEwCwDkC_EuCaCaC]a@g@y@_@o@_@w@c@kAe@_BIYMo@Ii@Ky@Gi@W}BIy@Gk@Km@Q}@Kc@So@K[Qc@Sc@Yk@MS_@k@}@cA[]kA_A_Au@gBuAgA{@_@]e@i@i@q@a@k@S]k@iAYo@Um@K[]mAWoAi@eDa@oCIi@Ge@YoBe@sCi@oDc@kBEUK]GU[sA_@eAm@sAoAkC{@aBiBcCc@k@QWWY}@cAmCcDiAuAu@cAmGqIOS_CwD{BuDaBsC_AgB{FqK{DkHwEyIo@iAcAmBWe@Q[kA{Bs@qAoAqCWm@KQOQu@g@YUQQQYKUSg@Q_@s@uAKSKQUWKYIYC]Ec@EWKYS]g@aA_@o@{@aBOWWc@m@cA{@{ACE[c@aAuAm@{@uCeEaDgEy@gA[a@aAsAcCgDuFwHaAsAeAyAi@q@eAcBy@gBs@iB]w@w@kBi@mAaB{DWm@s@iBGMCGMW_@}@MYISIUKUACe@aAi@gACG[k@o@qAO[Uc@Q_@i@eAQYcA_BMSQW_BkCS[S]c@s@a@q@i@w@s@gAg@}@Ye@GMy@}AUe@Sc@aBcDKQMYWi@g@aAUe@OWCGe@}@MYOWcAsBmByDWi@Se@IQKOUa@GMMS]s@Q]Ym@IOa@w@e@cAMUq@qAk@eAeAkB]o@OYMUQ[Q]Wc@AA_@s@S_@Q[S]We@g@q@IMIO_BwC[k@S_@KQGKqAcC_AeB]k@OWQ[OW]o@_@q@_@u@KOk@gAu@uAMWW_@MQKMIGGGMMOKQM[Wc@]SOYWMMW_@OYa@w@Wi@yEqMSm@Oa@i@wAMW[m@MYi@aAEKKUe@Rq@n@W\\u@t@]\\a@Z]T]Pq@ZcA\\GBkA`@mAf@c@N]JeA\\_Bl@g@Rk@Nw@Fi@B{@?s@Ao@A}@C]A]Ec@Ge@K]M_@Qc@Um@c@c@[e@e@o@aA{@wAYa@QWy@iAoAcBsAcBwBoCU[SSOQ_@c@a@c@_@]eB_BYWe@k@m@}@wA{BaBgCOWOUQWIIIIWU[UCAc@Ua@O]MsA]c@M_AYcBc@{A]u@OSEWG]GqFkA{@SsBc@i@OyA_@iEwAOGkEuAmDaA_Bg@gA]IC{Bs@ICGCGAeA]aCy@m@SyAc@eBk@c@Oy@Y{@WICwAc@YKgCy@g@Q]Km@W}@Y]M{Ae@cBi@_@MgCw@wAe@w@YwDmAuC_AgJuC_F_BYIy@[eEuA{Ag@KCiEyAc@Ou@UeKiDSI_@MqEwA{G{B}S_HUGsFgB]MiA[aBc@gDq@_C_@KC_BSuFw@}G}@wG}@gEk@{@K{@KiDa@e@Io@McADKE_B]iBi@ME[M_EoAs@UeDmAuKsDaCq@y@Kc@Gk@CY?S?{@B{@FsARkEhAwCz@gB^m@Ji@J{D`@iDl@g@Fi@HI@iFp@cCT_BJ~AKbCUhFq@HAh@If@GhDm@zDa@h@Kl@KfB_@vC{@jEiArASz@Gz@CR?X?j@Bb@Fx@J`Cp@tKrDdDlAr@T~DnAZLLDhBh@~A\\JD~@^h@JxDj@|Cd@JlBFrA@t@Az@Er@Gf@Il@S`AuBvG_JhUg@pAgQ~c@KTgArC{Tnj@[z@uCzHoDnLKZ}BpJsCvNkBrLaB|MOnAc@tDQpAo@dFi@pDo@vDuBnKu@hDq@jCMh@g@dBu@tCcCjI}DnNaB|FqN`g@kChIs@vBo@`BcBfEwAjDeC|FuK|VwFpMeEfJyBhEmBfDmB`DwBfDqDnFoZjc@_NzRqCfE{B`DwE~Gu@hAoB`Dk@bAS`@a@r@s@xAwAzCq@|AkArCg@pAwAfEMb@Up@Ur@Ur@k@fBUt@Ut@Wv@m@lBUr@Uv@Ut@Wv@Wv@Wx@Wv@Wv@Ux@Wv@Wt@eAfDUv@Wt@Wx@Ut@{A|EWv@Ut@Wv@Wt@m@lBUv@cAdDWr@m@lBUv@Wt@{A|EWt@Uv@Wv@Uv@Wv@m@nBm@nBm@nBm@nBWv@aAfDUx@Uv@St@Uv@Sv@Sv@Uv@y@`DQv@y@bD[nAaA`EQt@Sv@Sv@St@Qx@St@Sv@Qx@{@jDSx@{@lDOl@k@fBSn@Ql@Sl@Ql@Wt@M^Qh@Qf@Sd@Sb@U^S\\U\\UXUVUXWTcAz@UNe@XKHKFIDGLCHEHAH?F?F?@@ZHBrCtAjClAvBbAb@Tb@T|BfArAn@THnAh@THTF@?|@`@h@V`Ab@f@VPHd@Tp@Zp@Zp@Zl@Xn@Zp@Zp@Zl@Xl@Xj@XhAh@r@Zj@X`@RVLDBAO@M@QBQBSBS@WDUHWJYJWNYL]N[N_@b@_A|IwSd@gARa@f@iARe@Rc@Re@Rc@Rg@Re@h@kARe@d@gAf@iAPc@Rc@Ra@d@iAPc@Re@Pa@Re@Pe@Rc@DILYRe@Re@Re@Rc@Pc@Te@l@wAvC{GRc@Rc@Rg@Pc@d@gAL[DIPc@Rc@Rc@Pa@Pc@Rc@N_@P_@BEL[Pc@N]Re@Pc@hAmCTg@x@kBN_@HOHUPa@Pa@Pa@b@cAN_@\\u@DK~@qBJU?AJWRc@@AfBgEjHmPSOuDaDyCgCaDmCySsPMCVSRe@r@_B`@}@LW"
+        },
+        {
+            "vehicle": 4,
+            "cost": 14529,
+            "delivery": [
+                5
+            ],
+            "amount": [
+                5
+            ],
+            "pickup": [
+                5
+            ],
+            "setup": 0,
+            "service": 3000,
+            "duration": 14529,
+            "waiting_time": 5115,
+            "priority": 0,
+            "distance": 213992,
+            "steps": [
+                {
+                    "type": "start",
+                    "location": [
+                        -84.3457194,
+                        37.8506902
+                    ],
+                    "setup": 0,
+                    "service": 0,
+                    "waiting_time": 0,
+                    "load": [
+                        0
+                    ],
+                    "arrival": 1704995877,
+                    "duration": 0,
+                    "violations": [],
+                    "distance": 0
+                },
+                {
+                    "type": "pickup",
+                    "location": [
+                        -84.464392,
+                        37.882911
+                    ],
+                    "id": 11,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 11,
+                    "load": [
+                        1
+                    ],
+                    "arrival": 1704997604,
+                    "duration": 1727,
+                    "violations": [],
+                    "distance": 26383
+                },
+                {
+                    "type": "delivery",
+                    "location": [
+                        -84.662106475,
+                        37.9067667
+                    ],
+                    "id": 11,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 11,
+                    "load": [
+                        0
+                    ],
+                    "arrival": 1704999554,
+                    "duration": 3377,
+                    "violations": [],
+                    "distance": 46952
+                },
+                {
+                    "type": "pickup",
+                    "location": [
+                        -84.62332264605956,
+                        38.10068025
+                    ],
+                    "id": 1,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 1,
+                    "load": [
+                        1
+                    ],
+                    "arrival": 1705002000,
+                    "duration": 5523,
+                    "violations": [],
+                    "distance": 81839
+                },
+                {
+                    "type": "delivery",
+                    "location": [
+                        -84.50470318966808,
+                        38.12232485
+                    ],
+                    "id": 1,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 1,
+                    "load": [
+                        0
+                    ],
+                    "arrival": 1705003980,
+                    "duration": 7203,
+                    "violations": [],
+                    "distance": 103170
+                },
+                {
+                    "type": "pickup",
+                    "location": [
+                        -84.5037768888889,
+                        38.04134077777778
+                    ],
+                    "id": 9,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 9,
+                    "load": [
+                        1
+                    ],
+                    "arrival": 1705005459,
+                    "duration": 8382,
+                    "violations": [],
+                    "distance": 115148
+                },
+                {
+                    "type": "delivery",
+                    "location": [
+                        -84.4891706,
+                        38.1435539
+                    ],
+                    "id": 9,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 9,
+                    "load": [
+                        0
+                    ],
+                    "arrival": 1705006503,
+                    "duration": 9126,
+                    "violations": [],
+                    "distance": 127364
+                },
+                {
+                    "type": "pickup",
+                    "location": [
+                        -84.41133859719335,
+                        38.11950015
+                    ],
+                    "id": 20,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 4315,
+                    "job": 20,
+                    "load": [
+                        1
+                    ],
+                    "arrival": 1705007585,
+                    "duration": 9908,
+                    "violations": [],
+                    "distance": 136371
+                },
+                {
+                    "type": "delivery",
+                    "location": [
+                        -84.2963517,
+                        38.07985335
+                    ],
+                    "id": 20,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 20,
+                    "load": [
+                        0
+                    ],
+                    "arrival": 1705013666,
+                    "duration": 11374,
+                    "violations": [],
+                    "distance": 154479
+                },
+                {
+                    "type": "pickup",
+                    "location": [
+                        -84.4167695,
+                        38.1061615
+                    ],
+                    "id": 17,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 800,
+                    "job": 17,
+                    "load": [
+                        1
+                    ],
+                    "arrival": 1705015000,
+                    "duration": 12408,
+                    "violations": [],
+                    "distance": 170340
+                },
+                {
+                    "type": "delivery",
+                    "location": [
+                        -84.312582,
+                        37.858578
+                    ],
+                    "id": 17,
+                    "setup": 0,
+                    "service": 300,
+                    "waiting_time": 0,
+                    "job": 17,
+                    "load": [
+                        0
+                    ],
+                    "arrival": 1705017787,
+                    "duration": 14095,
+                    "violations": [],
+                    "distance": 208851
+                },
+                {
+                    "type": "end",
+                    "location": [
+                        -84.3457194,
+                        37.8506902
+                    ],
+                    "setup": 0,
+                    "service": 0,
+                    "waiting_time": 0,
+                    "load": [
+                        0
+                    ],
+                    "arrival": 1705018521,
+                    "duration": 14529,
+                    "violations": [],
+                    "distance": 213992
+                }
+            ],
+            "violations": [],
+            "geometry": "yu_fFvwxaOFEHCFCFCNGREJECQEYE]CSAIAOAQAOC]AW?SAc@AMCc@Ac@Ca@?MAY?KAKCIEIIWKYM[Qk@EMGOOc@CIEIGSCGCGHEJKHGJMHIFKFIDM@K?K?KCGAESu@[gA[gAEOIUOg@GSQe@GQOc@GOGOGMGMCGCEYe@IKQY]g@IKGKU_@MWO]IOGMCCGKCCGEKIOIA?KEOEMEMCMCMCKAMCIAIEIEEIAI?K@IDKDKBMDQBMBOBQFs@Di@@O@QAQAOCQESCOGUAMAECUCUCw@?CAcACgC@aAB[@I?C@KDa@]IOCUE_@GGAWCOAOAa@A_@?O?E?U?E@qABm@@e@B}@Be@@g@BS?G?W@G?E@e@@_@@q@BO?{@BE@G?M?G?[@G@c@@U@a@@I?c@@G@M?i@@G?y@BY@a@@G?g@@kADG?G?a@Ba@@i@Di@Fk@FC?sARk@Hg@HC?G@_@FC?c@HG@k@HiARw@Lg@Hm@J]FC@e@Hg@JC?G@_@HC?C@mATg@Jm@Nc@LA@g@NsBp@A@C@a@NA@C?a@NA@e@Ng@RC@C?iA`@A@GBYJe@LEBa@Le@JC@E@i@N]FG@C@WDe@HC@YDMBkB\\YDWDC@c@HC@I@WFi@Je@La@LODC@_@LEBQFA@c@PA?sAl@c@Rc@PUJKB[JGBC@YFc@HC@E@[BOBUBM?YBQ?s@@C?G@a@?_A@G@C?Y?G?[@_@@_@?K?A?S?M?UAKAOAIAWEICQGEAIEKEECCAOKIGOMEEMQUa@O[Mc@Ie@G_@AKA[?I?C?]@[@GB[BMF]Lc@Lc@Ni@Pi@FMTu@j@iBbAaDd@wABKAMEGEIEECEGCKBSFWHWJ[J]L]NaA^c@NmBt@e@Pg@Pe@Pe@Rg@Re@Te@Te@Xe@Zc@Za@\\a@`@_@`@]p@ONe@l@e@l@c@n@a@p@sEjHuRjZ}KvPcIbMmAjBo@`A_IvLqAdB_BlBo@b@UPWP[NSHk@NW?O?SCWM]UMQEIMa@COCWA_@@w@o@@e@B_HTe@Dm@LoA\\o@RgCv@iDvAu@ZqDxAu@XA?mB|@eAj@C@QJcAj@CBWLqAt@KHqF|CaCrAuDvBy@d@_Ah@aBbA[TSNgCjB_@X}@r@w@j@uAfAkBvAmA~@SLuDpCiAz@iA~@e@`@mMdMmAlA_@^}CxCoAbAuAfAgBpAi@Xk@RgA^{@Vu@Pg@NeB`@iAVaE`Ag@L}KnC{ElAc@N_@Pa@T[Te@^WXc@j@o@hAg@rASv@Qx@g@jCG^Kb@y@lEQ~@a@rBYfAUv@]z@Qf@oJnREHy@`BQ^KRsAnCa@z@}BtEcA|ByAdDoBrE_BpDwB~E_@|@UfAmDjRGX[fBkClNcArFMp@i@vC}AdIe@~BMr@q@vDEPgA~FkAlGa@pB_@hB]rAUf@O\\cCjEuIxOo@bA^RjBt@n@TFBpZxLHBhBv@rB|@pB~@jEvBf@VnCrAnBz@pJhEVLzExBRJrFdCz@`@\\NlD|A|BbAdDzAtHpDn@XLFjB|@~@d@hAl@j@XdGvC|@b@lExBXLxE|BfEpB~BhAj@XdIbEfBbAbAl@|DvBtBlAp@TTBRDVJFD~AhA~@n@XRhAx@~AjAnA|@b@aAxBeGFQnA_DP_@PY`@q@P_@bAkCr@iB`@cAVGVElCUvBSnBQPCrAOD?`AKv@Id@G~BS|AQz@If@E`BQ`@CZ?f@?F?`@?F@bFRH?dEHv@BPDF@ZXFLb@~A`@vAFLFJHHLFNDR@dA@j@@X?`C@j@?`CDtA?hA@lC?TlJ@b@BPBZNz@FZBFFRLTPR`@XnFdDpAt@`Al@`Al@v@f@bC|AxBrA^TzA`AdEjCvD|Br@`@VVHLfAzBjHlNf@hA|@tB|@xBR\\JJx@n@vAfAtBzAxFfEFDlCtBXRrLxI~FpEVT`@M|@Wd@UMLKPIPyA`Du@fBqAtCUf@?@Sh@GHMXSh@MXELOj@Oj@CNG\\E\\CNEn@ALA^ClB?v@AzB?r@Ar@AvB?r@AfBChB?bA@pABfBBt@DdBBtADhBHvC?P@`@DbB@p@Bn@@NB^@HBb@Dj@Ff@Ff@BRPfAFb@@NDb@@P@P@b@?R?RCf@?DE`@Gh@AHI\\EPGRM\\CFOb@Sb@Q`@S\\WZWVWTYTYRUPOJMHMH[Rk@XYL[Ni@RMFWJkAb@C@UJMFODMFMHKFYRKJKJSXOVCBe@z@S\\S^}@|AS\\IJILIHKJIJCBEDKHKHWPMFKFEBGBMF[N[N]NMFMFMHMHMJKHMJMJML]^c@d@QPGHYZKLg@j@qAxAIHkArAy@~@e@d@UVWZNXBDHLJNPZT\\U]Q[KOIMCEOY{@~@[\\YZ_AdAYZ]^m@p@aAfAYZUXKLILIJILILCHCDGLO\\GPELENCNEPCPCPCPEd@Cd@?RAd@?R?nA?V@pA?~@@fA?zA@h@AR?R?RAT?@CPARGf@CRERa@tCCNEXALWbBStAQnAIf@ABABAJEPERGPEPELCDGNGNIPININ}@~AS`@MTEJGJEJEJQd@]~@Yv@[|@o@hBUp@Yz@A@Oh@ENQh@Oh@IVEROh@Oh@_@rAW|@i@tBW|@Qn@k@xBo@|Be@dBW|@kAnECHABOf@Oh@KXOf@MXKXMXUd@]p@y@~AUb@U`@Ub@IPUh@GLIPGRGRGPENABGTENEVETAFCJCPCXEb@CXKtACZALEn@?PAT?J?X?J?BB`@@BDb@Hd@Lb@BFLXR`@PVFJTZt@`AZ`@NPJN\\b@\\b@v@bAX`@b@h@r@|@FHl@v@BBfB~BX\\\\b@Zd@Zb@T\\Vf@R^HPHRL^DHPh@@BLd@b@tAPj@Tt@HV^hAFVJV@DXv@JX@DN^N^LVJTRb@P\\l@nAXj@l@lARd@@BNb@L`@?DFXBP@NBZBd@?BAj@Eh@?DG`@I`@ADMd@Qf@M`@CBOd@oAdD[z@m@|Ak@zASj@kA~CADc@jA}@bCi@rAO^CHUf@IPS`@S\\GJg@|@q@hAW`@EJCDCDKTMVCJEJEJELIVEJIXKf@A@Ib@ALCJS|AKz@E`@CNMn@Kf@Kd@ELMZM\\Sd@Yp@a@z@OXq@vAc@|@Sd@Yp@ELIVEJIVOp@Kb@Gd@Gd@Gb@Ed@?JCV?LAVAL?V?F?D?V?L?J@f@@R@RHvBBt@Bj@@\\PxD?NBp@B^DhA?BHhBNtDBf@H`BJxBFbABd@Dr@Bd@R~CDl@Dn@D\\Dn@Hl@@PD\\Hl@Hj@L~@T|AJl@BLF^BLH\\Nh@Nj@Rh@Th@Th@FLLXHNLVdArBl@jAVd@DLd@~@NXDJRf@JZDLFTDRH\\BLDZ@NDZ@NBZ@N@j@@j@Cj@AZALCZANGh@GZAFAFIh@Kj@Kj@QfAMv@EZANGh@El@Aj@AN?\\An@?l@?~A@n@?l@@l@Bj@Bl@Bj@BVBRFj@DZBNF\\@LLj@Lj@@DLd@HZDLRf@FNPb@JXVj@LVP`@DJp@zAb@|@l@tAP\\R`@FLFJJRHPHJNVPTFJTVDFRRVTDD^ZRP^X~@r@HFNJDBJH`Ap@HFt@f@^VRNf@\\hAv@p@f@ZRTRHH\\XPRHHNTFHLVFJJVDJDLHXDJFZFR@DBLJh@`@|B?BLl@\\dBJf@b@pCHf@Jh@Jv@DZBZDZBZBZ@ZBf@@Z?X@`A@x@@h@?v@@|E@pD?Z?N?F@lA@tA@h@@b@Bp@@j@Bh@Bv@@PFhABb@?L@`@?N?NANCNALKj@CRAHE\\AN?D?H?N?LB^B\\@N@P@T@X?^?n@?p@CvB?b@?V?J?N@N?N@N@H@PBZ@\\@L?L?NA^Cr@Az@Cn@Ab@Ab@Cr@Al@I|AAXEvBEbBOzEGhBMlAGh@O`AANAF?@G^G`@ET?DAFIh@GZGb@PFLBlBn@NDdDbAfEpAI`@]nB_@bCc@bCId@GZUvAEV?h@FlG@dA@|ABnCBhDCbFCrF?hA?PAj@CbAC^G\\G\\K\\Up@CFk@pAc@|@Yr@MXYr@Wt@WdAO~@K|@Eh@ANAh@CdAEtEStQ?DAr@CdBGXCfAI|AQzAUfBSfAKh@YbAOj@Ob@Q`@Ob@GJITSb@w@jBg@jAg@jAELMXQd@g@lASd@CPUj@_A|C_@bBO`BEb@Cj@ANCfAAH?J?XEdNAhC?PApBAbB?H@h@DbF@zA@bBDpF@`A@|AB~B?b@@f@?d@B~C?J@J@rA?D?@@dA?n@B`C?P@`A?LLjHBbC@f@MvDGf@G^Sn@Mb@}@lBgA`C_@x@_BpDABwA~DCHi@xBI^_@nB_AbFUjAk@xAcB|A]T_JnGOHsBtAcB`C}C|DSXIHeAtAwBnC}@r@oDrCC@OL_@XlCnD|FfI|GhJt@hAh@t@p@z@KPSZ[f@_@j@]b@OLONONc@b@SRSTi@h@UTSRGFKLSR}@|@c@d@ONGFe@f@OPQPu@|@QTQRMPGDILIHSTQV[^c@f@SXUVcAlACBSTEFORWXWZWZCBUTEFOPY\\k@p@Y\\k@r@STSVA@OPg@l@g@l@C@UXm@r@WXGJEFGFWXIJGHCBUXUVGJUTMPUXUVe@l@YZCBUZWZWZWZq@v@GFOPEFY\\i@p@k@p@WXk@p@s@|@CBUXOPQTSTe@h@Y\\Y\\WVm@r@uA`Bg@j@QTQTSTQTSTSVST}@dASVSVQRe@n@QTKJGHQT{@`ASTSVaAjAiAvAkAxAQTc@j@QRYb@fC~TBhAGdA[hBSPUBMLS`DRaDLMTCRQZiBFeACiAgC_UXc@PSb@k@PUjAyAhAwA`AkARWRUz@aAPUFIJKPUd@o@PSRWRW|@eARURWRUPURUPUPUf@k@tAaBl@s@VWX]X]d@i@RUPUNQTYBCr@}@j@q@VYj@q@h@q@X]DGNQFGp@w@V[V[V[T[BCX[d@m@TWTYLQTUFKTWTYBCFIHKVYFGDGFKVYl@s@TYBAf@m@f@m@NQ@ARWRUj@s@X]j@q@X]NQDGTUBCV[V[VYNSDGRUBCbAmATWRYb@g@Z_@PWRUHIHMFELQPSPUt@}@PQNQd@g@FGNOb@e@|@}@RSJMFGRSTUh@i@RURSb@c@NONONM\\c@^k@Zg@R[JQq@{@i@u@u@iAa@o@g@{@o@cAwD_GYe@cCwDyDmFk@u@q@}@}@iAcEgFqDmE}CuDoBiCsCuDkBgCm@{@kCoDe@k@]a@i@o@q@u@u@y@m@m@g@e@c@_@o@k@o@i@e@a@g@]c@[_Aq@{@k@o@_@y@e@k@[yAo@u@]kAe@mAg@g@Qo@Um@Sq@Qs@Qy@Sm@McAQiAQaDg@eHcA{Fu@uFw@cAQcAOaD_@iBU}HgAgFu@uImAuAU_AUyA_@q@SUIq@U}@[w@]m@WaAg@y@a@w@c@mAw@m@a@w@m@u@k@g@c@c@a@g@c@m@m@k@o@s@w@g@q@Y[i@u@[e@e@q@i@{@a@s@m@gASa@eAoBoBuDkC{EiAyBw@wAc@s@_@m@w@gAa@e@o@u@g@k@{@w@{@s@_@[e@_@e@[s@e@e@Wk@[a@Qc@Uy@]cAa@kFsBwCmAuDwAmEeBmAg@}@_@gFqByMiFaC_AcCaA_FoB}GoCcBo@g@Qi@Q}@Wi@Oi@Ok@Kk@K{@Ms@G}@Ic@Cm@Ce@Ao@?i@?o@@a@Bs@Bi@Dg@Fk@Fy@J}ARaC\\]DQ@Q@e@Do@Bw@@s@@q@A_AEeAG_BOcE]mAKiD[aHm@eGi@{Gm@oD]aHk@iFg@e@Em@Ik@I{@SaAWkDaAoGiB{FcBwEsAuF}ASGgEiAgCq@yBk@wA_@wDcAuA]_EeAcEgAg@K_@I]G[C[Eg@Eg@CYAo@?g@@g@Ba@B_@Dc@D]Fc@H_@Jq@Pu@R_EfAkDbAeBd@q@Pm@N_@FYFm@HO@A?c@@OBi@@o@?k@?m@Cs@Gi@Im@Ky@Sq@Sq@Ww@a@cCwAk@c@MKUOoEcDkEwCwDkC_EuCaCaC]a@g@y@_@o@_@w@c@kAe@_BIYMo@Ii@Ky@Gi@W}BIy@Gk@Km@Q}@Kc@So@K[Qc@Sc@Yk@MS_@k@}@cA[]kA_A_Au@gBuAgA{@_@]e@i@i@q@a@k@S]k@iAYo@Um@K[]mAWoAi@eDa@oCIi@Ge@YoBe@sCi@oDc@kBEUK]GU[sA_@eAm@sAoAkC{@aBiBcCc@k@QWWY}@cAmCcDiAuAu@cAmGqIOS_CwD{BuDaBsC_AgB{FqK{DkHwEyIo@iAcAmBWe@Q[kA{Bs@qAoAqCWm@KQOQu@g@YUQQQYKUSg@Q_@s@uAKSKQUWWSQKUESDWPc@`@u@r@o@h@mAt@kAf@sFxAs@PuAb@}@\\w@Zk@Xw@b@{@d@y@j@_At@_Av@s@p@s@t@k@p@c@j@[b@g@r@uDvFmAjBeBjC}EhHcAtAGHSV]b@s@v@aAfAqAnAqAlAsAhAmH|F}CdCgAx@qC|BsI|G}@r@iAt@u@f@gAh@sAj@uAd@i@NwAZuBZ}@F{@Dq@BeA?y@AuAGcAKgBYk@KcAWmA_@cA]UIgRmGkBs@[MAA]KSIu@[sAk@cBs@wAq@cBu@}@g@uEkCaC}AgBoAoAeAwAmA_CqBkCgCyEeFqCgDuCyDiAgBu@iAq@gA}@sAo@gAeBaD{A}C}@oBcA}BiAqC{@{Bk@_Bk@aBg@{AsAqEg@qBIYi@mBq@iCAw@mAaGOcAIw@C_@?}@B}C?_@AMAKAKGSGWMYQWYMKAG@IDOr@kAlEGTCFg@|AO`@g@pAi@|AqCbKGT{DtMc@pAo@dBIT[v@e@~@_@j@kHtLU\\wBpDYd@}@xAm@bAo@~@y@lAOLOTSVMLIFOHGAE?E@E@EBGJENAN@NKZWb@W`@S`@kDdF}A|Bq@z@i@l@KJ]\\QPqGbGgAjAkAtAo@z@i@t@OX_BhCwD~G_CbEgAnBi@`AsBxDuAbCe@dAIPa@bAaEfLw@vB{@rBqB`F{CfHMZi@lA]|@m@rBs@vBuDbKKVaAdCcCjGYr@Md@GVi@bD[lBkAvHiAzHYjBKr@{@hFq@|D{@dFsBvLMv@AD}AbJADMl@W`AKZk@~Ae@tA_BvEy@bCs@lBMXo@`ByBxFmC~GyAbE}@lCiAdDi@zAgArCs@bBcCtGc@hAaDpIq@fByCvHwCtHs@jBAD{AxDcDrImCfHa@hAaCvGq@lBc@lA}@fCoA`DnAaD|@gCb@mAp@mB`CwG`@iAlCgHbDsIzAyD@Er@kBvCuHxCwHp@gB`DqIb@iAbCuGr@cBfAsCh@{AhAeD|@mCxAcElC_HxByFn@aBLYr@mBx@cC~AwEd@uAj@_BJ[VaALm@@E|AcJ@ELw@rBwLz@eFp@}Dz@iFJs@XkBhA{HjAwHZmBh@cDFWLe@Xs@bCkG`AeCJWtDcKr@wBl@sB\\}@h@mAL[zCgHpBaFz@sBv@wB`EgL`@cAHQd@eAtAcCrByDh@aAfAoB~BcEvD_H~AiCNYh@u@n@{@jAuAfAkApGcGPQ\\]JKh@m@p@{@|A}BjDeFZUJOZa@RYLGHBH?FCJGDIDO?MAOEKIIIEGAE?E@E@EBICWQ[OMGQG]Cg@Mw@]_@QUSuBqBoLaL{BwBu@sAu@_BSc@i@gA_@m@Y]e@o@kEuFw@{@q@q@USa@[uBsAgC_B_@a@WU}@w@}AcB[]QWcCaEU_@_FwH_AkAeAuA_AaAgAy@iJ_GkD{BqD{BcCcBeBoAkAeAwBaCgAuA{@wAc@}@oOmZ{CiG_AuBgAeDo@oCYoAYgBQqAYyCsAk[OgDiAwWGqAa@mJ[cGUaGc@D_LdAgEf@uALsD^qBR_CTG@mANcBTsAToATmAXa@JkAZoBp@_FlBcHpD[PiB`A{DtBwBjAeB~@IF[NwAv@oFpC_Ah@{BnAiCjAo@TiAPuCf@qALaAHyD^cCf@wAj@EBa@TeEdC}A~@gBdAaDhByI`FyAp@qCrA}@d@_GlCMDgF~By@^eBz@aAb@[JMDSDc@DeGX{@HcA\\m@ZUe@mF_N}@qBaAgCsGoPu@gBsAoD_B{DQ_@AAKOQQQKeAe@kJiEsEsBwAk@qBeAsF{BQIOIa@Qc@Uy@]YMWSxBoGVy@jCqIbCiHpBsGLi@p@iCpAuFFSr@_Dt@yDj@qC`@eBn@gD`@eBZoA\\NNFV?`VdLjAxEXd@Sx@Mh@CLAH@JFJHFpFfC^PDMb@}AFQRHJDL?PEJENOVUZg@LWFIBBFA\\GHCRPbDxATJ~FpCp@?\\Dv@Vb@b@Vf@r@V^XPPLXn@^ZRd@Jb@AVERSRi@POPIVGJOVy@ZoARs@P_@VSTIREJURy@x@eDj@}BZoA@IbAd@cAe@DQ@e@Fe@VsAPw@MQKSEWBYNYNWLQvG_Xt@RLDZULQRmAHWxGeYrIlDFMXgAXgATcALu@L{ANwADa@FYHUJSTe@Tu@d@gBV_APi@HMFIPu@d@oBr@sCv@iDd@_BOKQSK[gBqF??GSgA_DYu@S}AOsAHAh@If@GhDm@zDa@h@Kl@KfB_@vC{@jEiArASz@Gz@CR?X?j@Bb@Fx@J`Cp@tKrDdDlAr@T~DnAZLLDhBh@~A\\JD~@^h@JxDj@|Cd@tMzAr@JfInArCZ~B\\jBV|Cj@tDz@\\JtEzAhA^r@TzItCxFfB~FrBZJnEvA`@NPFhMfE~CdAt@T~JjDxE~A^LxBr@zEbB~@Xb@NhEtAnDjAD@B@~Bt@B@D@tC|@^J`F|ALFLBd@PjBl@D@rA\\hAb@t@TfBj@x@VbAZl@R~Bv@tAd@pC|@dA^`B`@lDbAnEvAzEpAxA`@zCr@dCh@jAV`ATlAVTDh@Jh@J|@TRDrA^x@T\\JVHrA`@h@Rf@VVPLJTRTZfA`Bx@pAz@rAd@r@Vb@V\\XX|B~B^\\`@`@VVRTHJNRT\\zBrClA|AtAfBv@fAV\\R\\v@pA`AtAh@j@n@h@r@^FB`@P`@HhATt@@t@BhA@nA@n@@t@Gt@Mv@U|Ak@ZMj@S\\KXMpAe@tAc@HC`Bo@j@[h@[t@o@BCjAmAn@u@DGTk@PQd@g@^c@NO~@eAtA{AtA_BJKn@dAT\\HJFFHHHBFBJBh@N|ElAt@P@@L?Zw@e@_@_@]IIIMcDiF_@g@EGYa@KOs@gAOUPSHGIFQRIJoAxA]`@m@n@GH~@xANT@DKJuA~AuAzA_AdAON_@b@e@f@QPe@Rq@n@W\\u@t@]\\a@Z]T]Pq@ZcA\\GBkA`@mAf@c@N]JeA\\_Bl@g@Rk@Nw@Fi@B{@?s@Ao@A}@C]A]Ec@Ge@K]M_@Qc@Um@c@c@[e@e@o@aA{@wAYa@QWy@iAoAcBsAcBwBoCU[SSOQ_@c@a@c@_@]eB_BYWe@k@m@}@wA{BaBgCOWOUQWIIIIWU[UCAc@Ua@O]MsA]c@M_AYcBc@{A]u@OSEWG]GqFkA{@SsBc@i@OyA_@iEwAOGkEuAmDaA_Bg@gA]IC{Bs@ICGCGAeA]aCy@m@SyAc@eBk@c@Oy@Y{@WICwAc@YKgCy@g@Q]Km@W}@Y]M{Ae@cBi@_@MgCw@wAe@w@YwDmAuC_AgJuC_F_BYIy@[eEuA{Ag@KCiEyAc@Ou@UeKiDSI_@MqEwA{G{B}S_HUGsFgB]MiA[aBc@gDq@_C_@KC_BSuFw@}G}@wG}@gEk@{@K{@KiDa@e@Io@McADKE_B]iBi@ME[M_EoAs@UeDmAuKsDaCq@y@Kc@Gk@CY?S?{@B{@FsARkEhAwCz@gB^m@Ji@J{D`@iDl@g@Fi@HI@iFp@cCTeDPC@YBwALaAPw@NkAb@a@LcBf@oA`@eAZsAZsBf@y@NkBTeCVy@HcBNsTpBgF^eMfAu@F_B@cJD}D?_ABm@HcAT_Cj@qDz@qFpAq@Ny@HoA?yADaAF}O~A????|O_B`AGxAEnA?x@Ip@OpFqApD{@~Bk@bAUl@I~@C|D?bJE~AAt@GpFmUxBqJ~AmHlB_JjAmFpB_JhBiIVkAjFcV@EdDmOrCuMR_Ah@eCt@cDLo@jAoFnCgMzBcK^_BNm@@CjGoV|AaGvAsF`CuJxBwIxBkKdGoYpAkGp@wCl@kCzEkTf@sBXaA|BwHtEoOtE}Nt@aC`@qAxEsOYSwBaBs@g@kHqFkBuA[UaKmHECeMeJk@[e@i@g@}@aAqDGeADmAOiAa@{BUm@m@g@uAw@E@Oa@EKWKc@QOILa@Vq@Tc@HYFQGPIXUb@Wp@M`@NHb@PVJDJN`@DAtAv@l@f@Tl@`@zBNhAElAFdA`ApDf@|@d@h@j@ZdMdJDB`KlHZTjBtAjHpFr@f@vB`BXRDMhBeG~GmUbMgb@vAkELc@HUJSHOj@u@cAsBsBaDm@wAy@{A_AeB[m@sAwBkAeBs@_AkAuA_AgAeBoBsA{AoAkBu@mAcAyAkAsB{AeCsEkHcCeEoLkSmDeGoKuQ}@iBkAsCaBwDhCuCbEuDrEyDrBgB|BmBvBoBfByA~GeGfC{BvDcD~IyHnM_LbB{A`Ay@xI{HjAeApGqFjC_CtDeDVULKLMPOPOVUZYx@u@jAgA^[tAmAdA}@jFuETS`FkEVUJKdHsE`As@XWNO\\YpB{BHIdGqHtAeB|@mAt@}@`BgBdCoCd@e@rAsAZ[xDyDp@{@|BuC`D{DxAgBXW|@]z@Ip@HvAl@zA`Af@^pCvB`@Jj@J`Gd@J?j@@f@OZWvCuH`AmAtBuBtDoBzFwCzFuCd@WXOBAjDuAfBq@VKfGaCh@UfHqCt@Yt@[VI|@]n@W~Am@d@SdBq@pEcBLGjCaAZKv@[@OAKAQEMO_@KWIYKa@cAkNSgCU{Cg@kHQyBO}B[aECe@WgDWgDc@iGe@oGKuAC]c@eFSoCSyCIaAMsAm@sIAO{AmSWwD@k@D[DMBCLSHKBKFO?AUg@Sg@MYK]YaAScCSeCg@aGGo@Eq@O_BQkAMo@Oc@Ma@Uu@Ye@aBcDEGIQmAaCm@eA]s@qC}EmB_E}B_FCCsDuIUu@G_@Ca@AKe@}[Aa@?WA]Ee@Yw@mBgCsEmGkBeCsEaGaBqBeCwC_D}DqA}Ag@m@MOU[KOa@i@c@o@[u@Qc@CMOq@Ms@Gk@Ec@Ek@Cq@Ck@Ak@CyAAm@?GC}AEsAAe@?IAo@Ao@Ac@?IEaEnAPh@R~Aj@vAV|AMdAOeAN}ALwAW_Bk@i@SoAQD`E?H@b@@n@@n@?H@d@DrAB|A?F@l@BxA@j@Bj@Bp@Dj@Db@Fj@Lr@Np@BLPb@Zt@b@n@`@h@JNTZLNf@l@pA|A~C|DdCvC`BpBrE`GjBdCrElGlBfCXv@Dd@@\\?V@`@d@|[@JB`@F^Tt@rDtIBB|B~ElB~DpC|E\\r@l@dAlA`CHPDF`BbDXd@Tt@L`@Nb@Ln@PjAN~ADp@Fn@f@`GRdCRbCB`AFjAD~@Dt@Dh@Hr@VvDzAlS@Nl@rILrAH`ARxCRnCb@dFB\\JtAd@nGb@hGVfDVfDBd@Z`EN|BPxBf@jHTzCRfCbAjNJ`@HXJVN^DL@P@JANw@Z[JkC`AMFqEbBeBp@e@R_Bl@o@V}@\\WHu@Zu@XgHpCi@TgG`CWJgBp@kDtAC@YNe@V{FtC{FvCuDnBuBtBaAlAwCtH[Vg@Nk@AK?aGe@k@Ka@KqCwBg@_@{AaAwAm@q@I{@H}@\\YVyAfBaDzD}BtCq@z@yDxD[ZsArAe@d@eCnCaBfBu@|@}@lAuAdBeGpHIHqBzB]XONYVaAr@eHrEKJWTaFjEURkFtEeA|@uAlA_@ZkAfAy@t@[XWTQNQNMLMJWTuDdDkC~BqGpFkAdAyIzHaAx@cBzAoM~K_JxHwDbDgCzB_HdGgBxAwBnB}BlBsBfBsExDcEtDiCtCq@d@N`@r@fB|B`FzAvCFHzAvBdAzAhAhB|@dBjAjB~@pBtA|CjAvBlArBxAvBvAvBlA|BR`@~@hB|@xAr@dA|@`BFJz@`B`AfCv@hB~@~Br@~@jD|CnB`B~CbDrAxAp@bAR\\~@hBVf@~AfDhB|CdEdHINKRITMb@wAjEoHtVnHuVvAkELc@HUJSHOlB`D^p@^l@vE~HbCbE|BzDdEfHFHvA`C@B~JvPXb@~FzJjCjE~BdEzBzDFLzBzDBDLTbCfEx@vAdBzCjB`DLTbJlOPXbAbBv@pApDlGb@t@`FrIR^hAjBv@rAhApBx@xAPXvA`C?@t@pAZj@jBdD~F|JdBxCT`@xBxD`EbHVd@|FzJlBhDx@dBNXLVLVXj@v@~BbCxHrA~D\\~@r@bBHPdFzJl@jAaDxCIFcLtKa@b@SLMDOBO?OCOGOMMQIUE[?a@Hc@Lc@Pc@V_@d@i@j@e@x@m@j@g@bC{Ab@Yd@[`E_DrEkDfEuDz@_ApBoBvFkGpBeC`DeEdD{EhAgBnGmJfMaR~NyT~AkCdAgBjAmBZg@jAiBBG`BwBxD_EFGzK_MTWhAmAbDqDbDiDLQtD_Ep@k@v@o@bAu@zAeAvA_A~A}@rBgAtDmB`B}@nAw@`Au@|@}@z@cAp@aAt@sAt@_Bz@uB`BiEnAaDj@oAh@aAd@s@f@s@h@q@p@u@r@m@t@k@dAq@|Au@~@]`AWz@QhAQx@GdAC|@?lADrCPlBJhDPxMdAr@DdFTzCDxBArCW~AUnBYjCm@`DeA`Bs@PIhBaAfBmAfBuAjC{BzDcDdCuBdc@s^lL_KhDuCzBkBvCmClDoCdC{ApBcAhBw@~Bs@fBa@hEu@vAUrEw@bBYBAtCe@dDi@nB[|AYxBi@bBg@DAnBu@`I}DnFkClHoD|C}APIXM|E_CxFsCbFcCxDoBxX}MxQcJdKaFlFkC|GcDvAm@l@Up@Wp@Ud@OzAe@`Ba@`B]zDm@hBQzBO`CKfBCzTDxB?bK@t@@vF?xF?xA?dE@bEBlCAN?vOBxD?lB@xD?|UDhDSnHcAbCe@xHaChBs@tBcAdEoBxAu@hB_A`Bw@|BiAjJuEhBaAfAg@vAw@xBeA~Ay@rHsDdQ}InIcE|C}Ap@_@hCoAvdAkh@pj@sX`Ae@lAo@l@[z@c@dOoHxBiA`B_ArBoA|AgAxBeB~DqD~DsDb@_@fA{@`CeB~AaAdCsAzBcAjCeApAc@zBq@dJuB~FsAnBi@~Ai@NCd@SZOdAi@jEuBfReJh@[z@c@jEoC`As@tBaBv@s@jCaCvCgDbPeVVe@rFuIvMsSvRkZ|CyEb@q@hAaBd@q@b@m@d@m@f@i@f@e@h@e@j@_@l@_@n@[PI\\Op@Wp@Qp@Mr@Kr@Ir@Er@Ct@@t@@t@DjBJjBLt@Dt@FdG\\r@Fr@D|@Dh@Br@Dp@Br@@r@@r@?r@?r@Ar@Cz@CrA?zFe@dHw@pCUpCWzAOvBSpBQlCWlBKjAEvBKbBEzBGbDGhDGjCG|BE~EKnBG|CExAEtAEzAGr@Ex@It@Gz@KbASp@K~@WdAYr@Yp@St@[xAo@jDaBd@Up@[`Bu@n@[p@[p@[n@Yd@UdDaAf@Qd@QjAa@b@Od@Kb@Id@Cb@Ab@A`@A^AzAEJ?HCU_C[cDYoCIy@KkAK{@G]AKG]AQEWG]EYCMG[Mg@M_@AGO_@EOCIGMQg@Ui@[s@O]Ug@CGk@qAUg@i@gAMWCGS]IOS]_@k@[c@[c@[c@EC]c@]_@]]OOIIOMOMSQEE[WmB}AGE]Wk@e@]WGEc@]_@[ECmA_A_@Y]Uu@o@gA{@m@e@wB_BiM{JECeEcDA?[WuC_Ck@e@e@a@e@g@c@k@]g@g@_AQa@kDtCgBxAMJMJKJMHKHIHKHKHIF????HGJIJIHIJILIJKLKLKfByAjDuCP`@f@~@\\f@b@j@d@f@d@`@j@d@tC~BZV@?dEbDDBhMzJvB~Al@d@fAz@t@n@\\T^XlA~@DB^Zb@\\FD\\Vj@d@\\VFDlB|AZVDDRPNLNLHHNN\\\\\\^\\b@DBZb@Zb@Zb@^j@R\\HNR\\BFLVh@fATf@j@pABFTf@N\\Zr@Th@Pf@FLBHDNN^@FL^Lf@FZBLDXF\\DV@PF\\@JF\\Jz@JjAHx@XnCZbDT~Br@fGo@Tq@Rw@RqCr@gBf@g@LYHkAX}@VeBb@UFg@LC@[Hu@RGBWF_@JE@GBqAZEBGBWFe@Lm@NUFGBSDC@_@J_@JG@GB_ATWHg@LODWFOD[HIB_AVG@o@ROBWHE@GBE?QFGB_@H}@TMDe@JG@]F]BG?W?O?O?UCGA_@GUEUGE`@AJ?BAHCZA`ABfC@bA?BBv@BTBT@D@LFTBNDRBP@N@PAPANEh@Gr@CPCNCLEPCLEJEJAH?J@HDHHDHDH@LBJ@LBLBLBLDNDJD@?NHJHFDBBFJBBFLHNN\\LVT^FJHJ\\f@PXHJXd@BDBFFLFLFNFNNb@FPPd@FRNf@HTDNZfAZfARt@@DBF?J?JAJELGHGJIHKLIFKJIDBFBFFRDHBHNb@FNDLPj@LZJXHVDHBH@J?J@X?LB`@@b@Bb@@L@b@?R@VB\\@N@P@N@HBRD\\DXBPKDSDOFGBGBIBGD"
+        }
+    ]
+}

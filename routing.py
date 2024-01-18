@@ -112,6 +112,67 @@ def preprocess_jobs(jdf:pd.DataFrame, use_cache:bool=True)->Dict[str, Any]:
         "vroom_id_mapper": mapper
     }
 
+def preprocess_shipments(sdf:pd.DataFrame, use_cache:bool=True)->Dict[str, Any]:
+    """
+    Preprocess shipments aka pickup-delivery dataframe to vroom format
+    
+    Parameters
+    ----------
+    sdf : pd.DataFrame
+        Job dataframe
+    use_cache : bool, optional
+        Use cache to get geocode, by default True
+    
+    Returns
+    -------
+    Dict[str, Any]
+        Dictionary with 'errors' and 'shipments' keys
+    """
+    errors = {}
+    mapper = {}
+    shipments = []
+    for i, row in sdf.iterrows():
+        if 'service_time' not in row:
+            row['service_time'] = constants.DEFAULT_SERVICE_TIME
+        if 'skills' not in row:
+            row['skills'] = ",".join([str(i) for i in range(1, 5)])
+        if 'pickup_time' in row:
+            row['pickup_time'] = pd.to_datetime(row['pickup_time'])
+        if 'nb_passengers' not in row:
+            row['nb_passengers'] = 1
+        pickup_location = get_geocode(row.pickup_address, use_cache)
+        delivery_location = get_geocode(row.delivery_address, use_cache)
+        if pickup_location is None or delivery_location is None:
+            errors[row.job_id] = {
+                "vroom_id": i,
+                "error": "Failed to convert pickup or delivery address to geocode"
+            }
+            continue
+        mapper[i] = row.job_id
+        job = {
+            "amount": [row.nb_passengers],
+            "skills": helpers.parse_skills(row.skills),
+            "pickup": {
+                "id": i,
+                "service": row.service_time,
+                "location": pickup_location,
+                "time_windows": [
+                    [helpers.str_to_timestamp(str(row.pickup_time-timedelta(seconds=constants.MAX_WAIT_TIME))), helpers.str_to_timestamp(str(row.pickup_time))]
+                ]
+            },
+            "delivery": {
+                "id": i,
+                "service": row.service_time,
+                "location": delivery_location
+            }
+        }
+        shipments.append(job)
+    return {
+        "shipments": shipments,
+        "errors": errors,
+        "vroom_id_mapper": mapper
+    }
+
 def preprocess_vehicles(vdf:pd.DataFrame, use_cache:bool=True)->Dict[str, Any]:
     """
     Preprocess vehicles dataframe to vroom format
@@ -161,7 +222,7 @@ def preprocess_vehicles(vdf:pd.DataFrame, use_cache:bool=True)->Dict[str, Any]:
         "vroom_id_mapper": mapper
     }
 
-def preprocess(vdf:pd.DataFrame, jdf:pd.DataFrame, use_cache:bool=True, save:bool=False, session_id:Union[str, None]=None)->List[List[dict]]:
+def preprocess(vdf:pd.DataFrame, jdf:pd.DataFrame=None, sdf:pd.DataFrame=None, use_cache:bool=True, save:bool=False, session_id:Union[str, None]=None)->List[List[dict]]:
     """
     Optimize route using vroom
 
@@ -171,6 +232,8 @@ def preprocess(vdf:pd.DataFrame, jdf:pd.DataFrame, use_cache:bool=True, save:boo
         Vehicle dataframe
     jdf : pd.DataFrame
         Job dataframe
+    sdf : pd.DataFrame
+        Shipment dataframe
     
     Returns
     -------
@@ -178,25 +241,35 @@ def preprocess(vdf:pd.DataFrame, jdf:pd.DataFrame, use_cache:bool=True, save:boo
         Optimized route
     """
     veh_processed = preprocess_vehicles(vdf, use_cache)
-    job_processed = preprocess_jobs(jdf, use_cache)
+    if jdf is not None:
+        job_processed = preprocess_jobs(jdf, use_cache)
+    else:
+        job_processed = {"jobs": [], "errors": {}, "vroom_id_mapper": {}}
+    if sdf is not None:
+        shi_processed = preprocess_shipments(sdf, use_cache)
+    else:
+        shi_processed = {"shipments": [], "errors": {}, "vroom_id_mapper": {}}
     errors = {
         'vehicle': veh_processed['errors'],
-        'job': job_processed['errors']
+        'job': job_processed['errors'],
+        'shipment': shi_processed['errors']
     }
     mapper = {
         'vehicle': veh_processed['vroom_id_mapper'],
-        'job': job_processed['vroom_id_mapper']
+        'job': job_processed['vroom_id_mapper'],
+        'shipment': shi_processed['vroom_id_mapper']
     }
     if save:
         if session_id is None:
             session_id = str(int(datetime.timestamp(datetime.now())))
-        json.dump(veh_processed['vehicles'], open(os.path.join(constants.PREPROCESSED_STORE, f"{session_id}_vehicles.json"), "w"))
-        json.dump(job_processed['jobs'], open(os.path.join(constants.PREPROCESSED_STORE, f"{session_id}_jobs.json"), "w"))
-        json.dump(errors, open(os.path.join(constants.PREPROCESSED_STORE, f"{session_id}_errors.json"), "w"))
+        json.dump(veh_processed['vehicles'], open(os.path.join(constants.PREPROCESSED_STORE, f"{session_id}_vehicles.json"), "w"), indent=4)
+        json.dump(job_processed['jobs'], open(os.path.join(constants.PREPROCESSED_STORE, f"{session_id}_jobs.json"), "w"), indent=4)
+        json.dump(shi_processed['shipments'], open(os.path.join(constants.PREPROCESSED_STORE, f"{session_id}_shipments.json"), "w"), indent=4)
+        json.dump(errors, open(os.path.join(constants.PREPROCESSED_STORE, f"{session_id}_errors.json"), "w"), indent=4)
     
-    return veh_processed['vehicles'], job_processed['jobs'], errors, mapper
+    return veh_processed['vehicles'], job_processed['jobs'], shi_processed['shipments'], errors, mapper
 
-def optimize(vehicles:List[dict], jobs:List[dict], save:bool=False, session_id:Union[str, None]=None)->Union[dict, None]:
+def optimize(vehicles:List[dict], jobs:List[dict]=[], shipments:List[dict]=[], save:bool=False, session_id:Union[str, None]=None)->Union[dict, None]:
     """
     Find the optimal route using vroom
 
@@ -206,6 +279,8 @@ def optimize(vehicles:List[dict], jobs:List[dict], save:bool=False, session_id:U
         List of vehicles and their properties
     jobs : List[dict]
         List of jobs and their properties
+    shipments : List[dict]
+        List of shipments (pickup-delivery) and their properties
 
     Returns
     -------
@@ -215,7 +290,11 @@ def optimize(vehicles:List[dict], jobs:List[dict], save:bool=False, session_id:U
         If optimization failed
     """
     
-    data = {'vehicles': vehicles, 'jobs': jobs, 'options': {'g': True, 'geometry': True, 'format': 'json'}}
+    data = {'vehicles': vehicles, 'options': {'g': True, 'geometry': True, 'format': 'json'}}
+    if len(jobs) > 0:
+        data['jobs'] = jobs
+    if len(shipments) > 0:
+        data['shipments'] = shipments
 
     response = requests.post(vroom_url, json=data)
     if response.status_code == 200:
@@ -223,19 +302,19 @@ def optimize(vehicles:List[dict], jobs:List[dict], save:bool=False, session_id:U
         if save:
             if session_id is None:
                 session_id = str(int(datetime.timestamp(datetime.now())))
-            json.dump(solution, open(os.path.join(constants.SOLUTION_STORE, f"{session_id}_solution.json"), "w"))
-            json.dump(data, open(os.path.join(constants.SOLUTION_STORE, f"{session_id}_data.json"), "w"))
+            json.dump(solution, open(os.path.join(constants.SOLUTION_STORE, f"{session_id}_solution.json"), "w"), indent=4)
+            json.dump(data, open(os.path.join(constants.SOLUTION_STORE, f"{session_id}_data.json"), "w"), indent=4)
         return solution
     else:
         logger.error(f"Error: {response.text}")
         return None
 
-# if __name__ == "__main__":
-#     from pprint import pprint
-#     helpers.initialize_directories()
-#     vdf = pd.read_csv("data/vehicles.csv").dropna(subset=['skills'])
-#     jdf = pd.read_csv("data/jobs.csv").head(5)
+if __name__ == "__main__":
+    from pprint import pprint
+    helpers.initialize_directories()
+    vdf = pd.read_csv("data/vehicles.csv").dropna(subset=['skills'])
+    jdf = pd.read_csv("data/jobs.csv").head(5)
 
-#     vehicles, jobs, errors = preprocess(vdf, jdf, use_cache=True, save=False)    
-#     solution = optimize(vehicles[:4], jobs, save=True)
+    vehicles, jobs, shipments, errors, mapper = preprocess(vdf, sdf=jdf, use_cache=True, save=True)   
+    solution = optimize(vehicles, jobs=jobs, shipments=shipments, save=True)
 

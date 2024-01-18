@@ -12,6 +12,7 @@ from typing import List, Tuple, Any, Union, Dict
 from datetime import datetime
 from loguru import logger
 from tomark import tomark
+from pprint import pprint
 
 helpers.initialize_directories([constants.PREPROCESSED_STORE, constants.SOLUTION_STORE, constants.LOGS_STORE])
 logger.add(os.path.join(constants.LOGS_STORE, f"{datetime.now().strftime('%Y-%m-%d')}.log"), rotation="1 day", retention="7 days", level=constants.LOG_LEVEL)
@@ -103,9 +104,14 @@ def save_changes(df:pd.DataFrame, label:gr.Markdown) -> str:
     return f"Changes saved: {len(df)} rows added/updated"
 
 @logger.catch
-def preprocess_data(session_id:str, vdf:pd.DataFrame, jdf:pd.DataFrame, use_cache:bool=True, save:bool=False)->Tuple[List[dict], List[dict], Dict[str, List[str]]]:
+def preprocess_data(session_id:str, vdf:pd.DataFrame, tasks:pd.DataFrame, task_type='shipment', use_cache:bool=True, save:bool=False)->Tuple[List[dict], List[dict], Dict[str, List[str]]]:
     session_id = str(session_id).split(":")[1].strip()
-    DATA['vehicle_processed'], DATA['job_processed'], DATA['preprocess_errors'], DATA['id_mapper'] = routing.preprocess(vdf, jdf, use_cache, save, session_id)
+    if task_type=='shipment':
+        DATA['vehicle_processed'], _, DATA['job_processed'], DATA['preprocess_errors'], DATA['id_mapper'] = routing.preprocess(vdf, sdf=tasks, use_cache=use_cache, save=save, session_id=session_id)
+    elif task_type=='job':
+        DATA['vehicle_processed'], DATA['job_processed'], _, DATA['preprocess_errors'], DATA['id_mapper'] = routing.preprocess(vdf, jdf=tasks, use_cache=use_cache, save=save, session_id=session_id)
+    else:
+        raise ValueError(f"Invalid task_type: {task_type}. Expected 'shipment' or 'job'")
     nb_vehicles = len(DATA['vehicle_processed'])
     nb_jobs = len(DATA['job_processed'])
 
@@ -159,17 +165,24 @@ def format_unassigned(df:pd.DataFrame)->str:
     return text
 
 @logger.catch
-def optimize(session_id:str, vehicles:List[dict]=DATA.get('vehicle_processed'), jobs:List[dict]=DATA.get('job_processed'), save:bool=True)->Dict[str, Any]:
+def optimize(session_id:str, task_type:str='shipment', vehicles:List[dict]=DATA.get('vehicle_processed'), jobs:List[dict]=DATA.get('job_processed'), save:bool=True)->Dict[str, Any]:
     session_id = str(session_id).split(":")[1].strip()
     if vehicles is None:
         vehicles = DATA.get('vehicle_processed')
     if jobs is None:
         jobs = DATA.get('job_processed')
 
-    solution = routing.optimize(vehicles, jobs, save, session_id)
+    if task_type=='shipment':
+        solution = routing.optimize(vehicles, shipments=jobs, save=save, session_id=session_id)
+        recipe = 'cpdptw'
+    elif task_type=='job':
+        solution = routing.optimize(vehicles, jobs=jobs, save=save, session_id=session_id)
+        recipe = 'cvrp'
+    else:
+        raise ValueError(f"Invalid task_type: {task_type}. Expected 'shipment' or 'job'")
     DATA['solution'] = solution
     if solution is None:
-        return "Optimization failed", "Optimization failed", "Optimization failed", helpers.generate_generic_leafmap()
+        return "Optimization failed", "Optimization failed", helpers.generate_generic_leafmap()
     
     routes = dict()
     for route in solution['routes']:
@@ -181,12 +194,14 @@ def optimize(session_id:str, vehicles:List[dict]=DATA.get('vehicle_processed'), 
             "waiting_time": route['waiting_time'],
             "steps": route['steps']
         }
-    lfmap = helpers.generate_leafmap(list(routes.values()), id_mapper=DATA['id_mapper']['job'], jobs=DATA['job'], zoom=8, height="500px", width="500px")
+    lfmap = helpers.generate_leafmap(list(routes.values()), id_mapper=DATA['id_mapper'][task_type], jobs=DATA['job'], recipe=recipe, zoom=8, height="500px", width="500px")
 
     summary = solution['summary']
+    if recipe=='cpdptw':
+        summary['unassigned'] = int(summary['unassigned']/2)
+    
     summary['assigned'] = len(jobs) - summary['unassigned']
-
-    unassigned_ids = list(map(lambda x: DATA['id_mapper']['job'].get(x['id']), solution['unassigned']))
+    unassigned_ids = list(map(lambda x: DATA['id_mapper'][task_type].get(x['id']), solution['unassigned']))
     unassigned = DATA['job'].loc[DATA['job']['job_id'].isin(unassigned_ids)]
 
     return format_summary(summary), format_unassigned(unassigned), lfmap
