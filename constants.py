@@ -26,4 +26,7 @@ JOB_KEYS = ['id', 'service', 'delivery', 'location', 'skills', 'time_windows']
 
 START_STOP_ICON_URL = "images/start_stop-noun-12703.svg"
 
+VEHICLES_DF_FIELDS = ["available", "vehicle_id", "address", "capacity", "skills", "working_hours", "breaks"]
+JOBS_DF_FIELDS = ["job_id", "pickup_address", "delivery_address", "nb_passengers", "earliest_pickup", "latest_delivery", "service_time"]
+
 

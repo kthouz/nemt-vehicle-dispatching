@@ -1,1 +1,236 @@
-{"1740 Nicholasville Rd, Lexington, KY": [-84.51235422426745, 38.01869995], "2397 Paynes Depot Road, Georgetown, KY, USA": [-84.581628, 38.204014], "1000 South Limestone, Lexington, KY, USA": [-84.5093899, 38.0310772], "2101 Patchen Lake Ln, Lexington, KY 40505": [-84.44046, 38.041965], "3489 Lansdowne Dr, Lexington, KY 40517": [-84.5145723, 37.9900907], "601 E Main St, Lexington, KY 40508": [-84.48712696862745, 38.0380452], "4701 Hartland Pkwy, Lexington, KY 40515": [-84.482479, 37.96187], "900 Richmond Rd, Lexington, KY 40502": [-84.4643333, 38.0178905], "1600 Leestown Rd, Lexington, KY 40511": [-84.52653555882353, 38.06785488235294], "2173 Nicholasville Rd, Lexington, KY 40503": [-84.51711965789474, 38.00938686842105], "3469 Winchester Road, Lexington, KY, USA": [-84.3805024, 38.0380194], "1875 Lemons Mill Road, Georgetown, KY, USA": [-84.5331237, 38.1963592], "4985 Bethel Road, Lexington, KY, USA": [-84.5848191, 38.1422896], "Acorn Court, Madison County, KY, USA": [-84.3457194, 37.8506902], "4850 Old Frankfort Pike, Lexington, KY, USA": [-84.62332264605956, 38.100680249999996], "2613 Coronado Ridge, Lexington, KY, USA": [-84.55186184982517, 38.0769901], "Sugar Hill, Woodford County, KY, USA": [-84.6510454, 38.0878427], "4325 Bethel Road, Lexington, KY, USA": [-84.58118643573695, 38.12368015], "4200 Old Frankfort Pike, Lexington, KY, USA": [-84.60893006679184, 38.08801105], "Zanzibar Farm Airport, Bourbon County, KY, USA": [-84.3299336, 38.1297991], "5401 Todds Road, Lexington, KY, USA": [-84.35127020585598, 37.996358900000004], "1393 Bordeaux Drive, Lexington, KY, USA": [-84.55762212054672, 38.0467583], "102 Avenue Of Champions, Lexington, KY, USA": [-84.5037768888889, 38.04134077777778], "2700 Bryan Station Road, Lexington, KY, USA": [-84.42610950123661, 38.07034005], "Dillingham Lane, Jessamine County, KY, USA": [-84.464392, 37.882911], "1601 Muir Station Road, Lexington, KY, USA": [-84.36990509412686, 38.096374499999996], "Meadowridge Drive, Jessamine County, KY, USA": [-84.6143775, 37.9876856], "401 North Yarnallton Pike, Lexington, KY, USA": [-84.5842128, 38.1154876], "Delaney Ferry Road, Jessamine County, KY, USA": [-84.6426109, 37.9782286], "Enterprise Drive, Nicholasville, KY, USA": [-84.6011423, 37.8739215], "550 Iron Works Pike, Lexington, KY, USA": [-84.4167695, 38.1061615], "4768 Huffman Mill Pike, Lexington, KY, USA": [-84.43808366732071, 38.157850922301066], "2075 Laverne Court, Lexington, KY, USA": [-84.4780917, 38.0946722], "639 Iron Works Pike, Lexington, KY, USA": [-84.41133859719335, 38.11950015], "Palumbo Drive, Lexington, KY, USA": [-84.4434889, 38.0164291], "2875 Muir Station Road, Lexington, KY, USA": [-84.35526275535489, 38.0732628], "531 South Cleveland Road, Lexington, KY, USA": [-84.36814919654094, 37.9372647], "Woodcrest Court, Jessamine County, KY, USA": [-84.58726, 37.96748], "1958 Edgeworth Drive, Lexington, KY, USA": [-84.45300683674851, 38.0707546], "Arbee Drive, Nicholasville, KY, USA": [-84.612993, 37.884314], "3333 Bowman Mill Road, Lexington, KY, USA": [-84.59908526518223, 38.01660615], "WNVL-AM (Nicholasville), Nicholasville, KY, USA": [-84.5568844, 37.9050784], "Chandamere Way, Jessamine County, KY, USA": [-84.6549808, 37.9255355], "2785 Spindletop Way, Lexington, KY, USA": [-84.50470318966808, 38.12232485], "Bourbon County, KY, USA": [-84.2046611, 38.1944867], "325 Colony Boulevard, Lexington, KY, USA": [-84.48836690221805, 38.02116135], "2650 Equine Campus Road, Lexington, KY, USA": [-84.48456836107098, 38.118489749999995], "3503 Kearney Road, Lexington, KY, USA": [-84.54361431475903, 38.125000400000005], "Price Cemetery, Jessamine County, KY, USA": [-84.662106475, 37.9067667], "6000 Sulphur Well Road, Lexington, KY, USA": [-84.34225516607516, 37.97578105], "3275 Spy Coast Lane, Lexington, KY, USA": [-84.4891706, 38.1435539], "3115 Kearney Road, Lexington, KY, USA": [-84.5284352028505, 38.122586150000004], "Shearer Lane, Madison County, KY, USA": [-84.312582, 37.858578], "2560 Eastpoint Drive, Lexington, KY, USA": [-84.3291028258648, 38.032476450000004], "6420 Briar Hill Road, Lexington, KY, USA": [-84.2963517, 38.07985335], "3301 Leestown Road, Lexington, KY, USA": [-84.55996125434804, 38.10551845], "2525 Delong Road, Lexington, KY, USA": [-84.4560311, 37.9415554], "50 Winchester Road, Lexington, KY, USA": [-84.4261625, 38.0415182]}
+{
+    "1740 Nicholasville Rd, Lexington, KY": [
+        -84.51235422426745,
+        38.01869995
+    ],
+    "2397 Paynes Depot Road, Georgetown, KY, USA": [
+        -84.581628,
+        38.204014
+    ],
+    "1000 South Limestone, Lexington, KY, USA": [
+        -84.5093899,
+        38.0310772
+    ],
+    "2101 Patchen Lake Ln, Lexington, KY 40505": [
+        -84.44046,
+        38.041965
+    ],
+    "3489 Lansdowne Dr, Lexington, KY 40517": [
+        -84.5145723,
+        37.9900907
+    ],
+    "601 E Main St, Lexington, KY 40508": [
+        -84.48712696862745,
+        38.0380452
+    ],
+    "4701 Hartland Pkwy, Lexington, KY 40515": [
+        -84.482479,
+        37.96187
+    ],
+    "900 Richmond Rd, Lexington, KY 40502": [
+        -84.4643333,
+        38.0178905
+    ],
+    "1600 Leestown Rd, Lexington, KY 40511": [
+        -84.52653555882353,
+        38.06785488235294
+    ],
+    "2173 Nicholasville Rd, Lexington, KY 40503": [
+        -84.51711965789474,
+        38.00938686842105
+    ],
+    "3469 Winchester Road, Lexington, KY, USA": [
+        -84.3805024,
+        38.0380194
+    ],
+    "1875 Lemons Mill Road, Georgetown, KY, USA": [
+        -84.5331237,
+        38.1963592
+    ],
+    "4985 Bethel Road, Lexington, KY, USA": [
+        -84.5848191,
+        38.1422896
+    ],
+    "Acorn Court, Madison County, KY, USA": [
+        -84.3457194,
+        37.8506902
+    ],
+    "4850 Old Frankfort Pike, Lexington, KY, USA": [
+        -84.62332264605956,
+        38.100680249999996
+    ],
+    "2613 Coronado Ridge, Lexington, KY, USA": [
+        -84.55186184982517,
+        38.0769901
+    ],
+    "Sugar Hill, Woodford County, KY, USA": [
+        -84.6510454,
+        38.0878427
+    ],
+    "4325 Bethel Road, Lexington, KY, USA": [
+        -84.58118643573695,
+        38.12368015
+    ],
+    "4200 Old Frankfort Pike, Lexington, KY, USA": [
+        -84.60893006679184,
+        38.08801105
+    ],
+    "Zanzibar Farm Airport, Bourbon County, KY, USA": [
+        -84.3299336,
+        38.1297991
+    ],
+    "5401 Todds Road, Lexington, KY, USA": [
+        -84.35127020585598,
+        37.996358900000004
+    ],
+    "1393 Bordeaux Drive, Lexington, KY, USA": [
+        -84.55762212054672,
+        38.0467583
+    ],
+    "102 Avenue Of Champions, Lexington, KY, USA": [
+        -84.5037768888889,
+        38.04134077777778
+    ],
+    "2700 Bryan Station Road, Lexington, KY, USA": [
+        -84.42610950123661,
+        38.07034005
+    ],
+    "Dillingham Lane, Jessamine County, KY, USA": [
+        -84.464392,
+        37.882911
+    ],
+    "1601 Muir Station Road, Lexington, KY, USA": [
+        -84.36990509412686,
+        38.096374499999996
+    ],
+    "Meadowridge Drive, Jessamine County, KY, USA": [
+        -84.6143775,
+        37.9876856
+    ],
+    "401 North Yarnallton Pike, Lexington, KY, USA": [
+        -84.5842128,
+        38.1154876
+    ],
+    "Delaney Ferry Road, Jessamine County, KY, USA": [
+        -84.6426109,
+        37.9782286
+    ],
+    "Enterprise Drive, Nicholasville, KY, USA": [
+        -84.6011423,
+        37.8739215
+    ],
+    "550 Iron Works Pike, Lexington, KY, USA": [
+        -84.4167695,
+        38.1061615
+    ],
+    "4768 Huffman Mill Pike, Lexington, KY, USA": [
+        -84.43808366732071,
+        38.157850922301066
+    ],
+    "2075 Laverne Court, Lexington, KY, USA": [
+        -84.4780917,
+        38.0946722
+    ],
+    "639 Iron Works Pike, Lexington, KY, USA": [
+        -84.41133859719335,
+        38.11950015
+    ],
+    "Palumbo Drive, Lexington, KY, USA": [
+        -84.4434889,
+        38.0164291
+    ],
+    "2875 Muir Station Road, Lexington, KY, USA": [
+        -84.35526275535489,
+        38.0732628
+    ],
+    "531 South Cleveland Road, Lexington, KY, USA": [
+        -84.36814919654094,
+        37.9372647
+    ],
+    "Woodcrest Court, Jessamine County, KY, USA": [
+        -84.58726,
+        37.96748
+    ],
+    "1958 Edgeworth Drive, Lexington, KY, USA": [
+        -84.45300683674851,
+        38.0707546
+    ],
+    "Arbee Drive, Nicholasville, KY, USA": [
+        -84.612993,
+        37.884314
+    ],
+    "3333 Bowman Mill Road, Lexington, KY, USA": [
+        -84.59908526518223,
+        38.01660615
+    ],
+    "WNVL-AM (Nicholasville), Nicholasville, KY, USA": [
+        -84.5568844,
+        37.9050784
+    ],
+    "Chandamere Way, Jessamine County, KY, USA": [
+        -84.6549808,
+        37.9255355
+    ],
+    "2785 Spindletop Way, Lexington, KY, USA": [
+        -84.50470318966808,
+        38.12232485
+    ],
+    "Bourbon County, KY, USA": [
+        -84.2046611,
+        38.1944867
+    ],
+    "325 Colony Boulevard, Lexington, KY, USA": [
+        -84.48836690221805,
+        38.02116135
+    ],
+    "2650 Equine Campus Road, Lexington, KY, USA": [
+        -84.48456836107098,
+        38.118489749999995
+    ],
+    "3503 Kearney Road, Lexington, KY, USA": [
+        -84.54361431475903,
+        38.125000400000005
+    ],
+    "Price Cemetery, Jessamine County, KY, USA": [
+        -84.662106475,
+        37.9067667
+    ],
+    "6000 Sulphur Well Road, Lexington, KY, USA": [
+        -84.34225516607516,
+        37.97578105
+    ],
+    "3275 Spy Coast Lane, Lexington, KY, USA": [
+        -84.4891706,
+        38.1435539
+    ],
+    "3115 Kearney Road, Lexington, KY, USA": [
+        -84.5284352028505,
+        38.122586150000004
+    ],
+    "Shearer Lane, Madison County, KY, USA": [
+        -84.312582,
+        37.858578
+    ],
+    "2560 Eastpoint Drive, Lexington, KY, USA": [
+        -84.3291028258648,
+        38.032476450000004
+    ],
+    "6420 Briar Hill Road, Lexington, KY, USA": [
+        -84.2963517,
+        38.07985335
+    ],
+    "3301 Leestown Road, Lexington, KY, USA": [
+        -84.55996125434804,
+        38.10551845
+    ],
+    "2525 Delong Road, Lexington, KY, USA": [
+        -84.4560311,
+        37.9415554
+    ],
+    "50 Winchester Road, Lexington, KY, USA": [
+        -84.4261625,
+        38.0415182
+    ],
+    "Hickman Lily Mill (historical), Jessamine County, KY, USA": null,
+    "1307 Cane Run Road, Georgetown, KY, USA": null
+}

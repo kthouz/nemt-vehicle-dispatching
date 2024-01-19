@@ -19,7 +19,7 @@ logger.add(os.path.join(constants.LOGS_STORE, f"{datetime.now().strftime('%Y-%m-
 
 DATA = {
     # 'vehicle': pd.DataFrame(columns=["vehicle_id" ,"address", "capacity", "skills", "start_time", "end_time"]),
-    # 'job': pd.DataFrame(columns=["job_id", "pickup_address", "delivery_address", "nb_passengers", "pickup_time", "service_time"]),
+    # 'job': pd.DataFrame(columns=["job_id", "pickup_address", "delivery_address", "nb_passengers", "earliest_pickup", "service_time"]),
     'vehicle': pd.read_csv("data/vehicles.csv"),
     'job': pd.read_csv("data/jobs.csv"),
     'vehicle_processed': None,
@@ -158,7 +158,8 @@ def format_unassigned(df:pd.DataFrame)->str:
             'pickup_address': row['pickup_address'],
             'delivery_address': row['delivery_address'],
             'nb_passengers': row['nb_passengers'],
-            'pickup_time': row['pickup_time']
+            'earliest_pickup': row['earliest_pickup'],
+            'latest_delivery': row['latest_delivery']
         })
     text = f"**Unassigned jobs**"
     text += "\n" + tomark.Tomark.table(s)
@@ -194,7 +195,7 @@ def optimize(session_id:str, task_type:str='shipment', vehicles:List[dict]=DATA.
             "waiting_time": route['waiting_time'],
             "steps": route['steps']
         }
-    lfmap = helpers.generate_leafmap(list(routes.values()), id_mapper=DATA['id_mapper'][task_type], jobs=DATA['job'], recipe=recipe, zoom=8, height="500px", width="500px")
+    lfmap = helpers.generate_leafmap(list(routes.values()), id_mapper=DATA['id_mapper'][task_type], jobs=DATA['job'], unassigned=solution["unassigned"], recipe=recipe, zoom=8, height="500px", width="500px")
 
     summary = solution['summary']
     if recipe=='cpdptw':
@@ -222,7 +223,14 @@ def main():
             with gr.Row():
                 veh_label = gr.Markdown("### Vehicles")
             with gr.Row():
-                veh_output = gr.Dataframe(DATA.get('vehicle'), interactive=True, elem_id="vehicle-output")
+                veh_output = gr.Dataframe(
+                    DATA.get('vehicle'), 
+                    col_count=(len(constants.VEHICLES_DF_FIELDS), 'fixed'), 
+                    interactive=True, 
+                    elem_id="vehicle-output",
+                    datatype=["bool", "markdown"]
+                    # datatype=["bool", "str", "str", "number", "str", "str", "str"]
+                    )
             with gr.Row():
                 with gr.Column(scale=1):
                     veh_save_btn = gr.Button("Save Changes")
@@ -241,7 +249,7 @@ def main():
             with gr.Row():
                 job_label = gr.Markdown("### Jobs")
             with gr.Row():
-                job_output = gr.Dataframe(DATA.get('job'), interactive=True, elem_id="job-output")
+                job_output = gr.Dataframe(DATA.get('job'), col_count=(len(constants.JOBS_DF_FIELDS), 'fixed'), interactive=True, elem_id="job-output")
             with gr.Row():
                 with gr.Column(scale=1):
                     job_save_btn = gr.Button("Save Changes")

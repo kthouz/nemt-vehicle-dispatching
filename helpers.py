@@ -118,6 +118,28 @@ def timestamp_to_datetime(ts:int)->datetime:
     """
     return datetime.fromtimestamp(ts)
 
+def get_timestamp_interval(date:datetime.date, interval:str)->List[int]:
+    """
+    Get timestamp interval from date and interval
+
+    Parameters
+    ----------
+    date : datetime.date
+        Date
+    interval : str
+        Interval
+
+    Returns
+    -------
+    List[int]
+        Timestamp interval
+    """
+    start_time, end_time = interval.split("-")
+    start_time = datetime.strptime(start_time, "%H:%M")
+    end_time = datetime.strptime(end_time, "%H:%M")
+    start_datetime = datetime.combine(date, start_time.time())
+    end_datetime = datetime.combine(date, end_time.time())
+    return [start_datetime.timestamp(), end_datetime.timestamp()]
 
 def parse_skills(skills:str)->List[int]:
     """
@@ -201,7 +223,54 @@ def build_osrm_path(coords:List[Tuple[float,float]], base_url:str=constants.OSRM
     else:
         return ""
 
-def steps_to_geojson(steps_data:Dict[str, Any], id_mapper:Dict[str, Any], jobs:pd.DataFrame)->Dict[str, Any]:
+def geojson_unassigned(unassigned_data:List[Dict[str, Any]], id_mapper:Dict[str, Any], jobs:pd.DataFrame)->Dict[str, Any]:
+    """
+    Create GeoJSON from data
+    
+    Parameters
+    ----------
+    unassigned_data : Dict[str, Any]
+        Data to create GeoJSON from
+        
+    Returns
+    -------
+    Dict[str, Any]
+        GeoJSON
+    """
+    points = []
+    for i, job in enumerate(unassigned_data):
+        job_id = id_mapper.get(job.get("id"))
+        _type = job["type"]
+        if job_id:
+            if _type=="pickup":
+                address = jobs[jobs.job_id==job_id].pickup_address.values[0]
+            elif _type=="delivery":
+                address = jobs[jobs.job_id==job_id].delivery_address.values[0]
+            else:
+                address = f"No Address Provided"
+        else:
+            address = f"Unassigned::Unknown"
+        points.append({
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": job["location"]
+            },
+            "properties": {
+                "job_id": job_id,
+                "address": address
+            },
+            "route": None,
+        })
+
+    geojson = {
+        "type": "FeatureCollection",
+        "features": points,
+    }
+
+    return geojson
+
+def geojson_assigned(steps_data:Dict[str, Any], id_mapper:Dict[str, Any], jobs:pd.DataFrame)->Dict[str, Any]:
     """
     Create GeoJSON from data
     
@@ -248,7 +317,8 @@ def steps_to_geojson(steps_data:Dict[str, Any], id_mapper:Dict[str, Any], jobs:p
                 "waiting_time": int(np.ceil(step["waiting_time"]/60)),
                 "service": int(np.ceil(step["service"]/60)),
                 "load": step["load"][0],
-            }
+            },
+            "route": None,
         })
     coords = [step["location"][::-1] for step in steps_data["steps"]]
     linestring = {
@@ -268,7 +338,8 @@ def steps_to_geojson(steps_data:Dict[str, Any], id_mapper:Dict[str, Any], jobs:p
 
     geojson = {
         "type": "FeatureCollection",
-        "features": points + [linestring]
+        "features": points + [linestring],
+        "vehicle_id": steps_data["vehicle_id"]
     }
 
     return geojson
@@ -299,6 +370,13 @@ def format_route_popup(properties:Dict[str, Any])->str:
     """
     return html
 
+def format_unassigned_popup(properties:Dict[str, Any])->str:
+    html = f"""
+    <p><b>Job:</b> {properties['job_id']}</p>
+    <p><b>Address:</b> {properties['address']}</p>
+    """
+    return html
+
 def plot_vehicle_depots(m:leafmap.Map)->leafmap.Map:
     pass
 
@@ -309,33 +387,54 @@ def plot_unassigned_jobs(m:leafmap.Map)->leafmap.Map:
     pass
 
 
-def generate_leafmap(routes:List[Dict[str, Any]], id_mapper:Dict[str, Any], jobs:pd.DataFrame, recipe:str='cpdptw', zoom=8, height="500px", width="500px"):
+def generate_leafmap(routes:List[Dict[str, Any]], id_mapper:Dict[str, Any], jobs:pd.DataFrame, unassigned:List[Dict[str, Any]]=[], recipe:str='cpdptw', zoom=8, height="500px", width="500px"):
     assert recipe in ['cpdptw', 'cvrp'], f"Invalid recipe {recipe}. Valid recipes are 'cpdptw' and 'cvrp'"
     colors = cc.palette['glasbey_bw']
     m = leafmap.Map(zoom_start=zoom, height=height, width=width, tiles="OpenStreetMap")
     coordinates = []
-    geojsons = list(map(lambda x: steps_to_geojson(x, id_mapper, jobs), routes))
-    for i, geojson in enumerate(geojsons):
-        _color = colors[i%len(colors)]
+    assigned_geojsons = list(map(lambda x: geojson_assigned(x, id_mapper, jobs), routes))
+    unassigned_geojson = geojson_unassigned(unassigned, id_mapper, jobs)
+    feature_groups = []
+    layer_control = folium.LayerControl(collapsed=False)
+
+    fg = folium.FeatureGroup(name=f"Unassigned Jobs")
+    for point in unassigned_geojson['features']:
+        coordinates.append(point['geometry']['coordinates'][::-1])
+        popup = folium.Popup(format_unassigned_popup(point['properties']), max_width=300)
+        folium.RegularPolygonMarker(location=point['geometry']['coordinates'][::-1], popup=popup, color=colors[0], fill=True, fill_color=colors[0], fill_opacity=1, number_of_sides=3, radius=5).add_to(fg)
+    fg.add_to(m)
+    feature_groups.append(fg)
+    if len(routes)==0:
+        layer_control.add_to(m)
+        center = compute_center_coordinates(coordinates)
+        m.set_center(center[1], center[0], zoom)
+        return m.to_gradio()
+
+    for i, geojson in enumerate(assigned_geojsons):
+        fg = folium.FeatureGroup(name=f"Vehicle {geojson['vehicle_id']}")
+        _color = colors[(i+1)%len(colors)]
         for feature in geojson['features']:
             if feature['geometry']['type'] == 'LineString':
                 popup = folium.Popup(format_route_popup(feature['properties']), max_width=300)
                 if 'route' in feature:
-                    folium.PolyLine(locations=polyline.decode(feature['route']), color=_color, weight=2, popup=popup).add_to(m)
+                    folium.PolyLine(locations=polyline.decode(feature['route']), color=_color, weight=2, popup=popup).add_to(fg)
                 else:
-                    folium.PolyLine(locations=feature['geometry']['coordinates'], color=_color, weight=2).add_to(m)
+                    folium.PolyLine(locations=feature['geometry']['coordinates'], color=_color, weight=2).add_to(fg)
             elif feature['geometry']['type'] == 'Point':
                 coordinates.append(feature['geometry']['coordinates'][::-1])
                 properties = feature['properties']
                 popup = folium.Popup(format_step_popup(properties), max_width=300)
-                if properties['type'] in ('start', 'end', 'Start/End'):
+                if properties['type'].lower() in ('start', 'end', 'start/end'):
                     icon = folium.Icon(icon='home', color='lightgray')
-                    folium.Marker(location=feature['geometry']['coordinates'][::-1], popup=popup, icon=icon).add_to(m)
+                    folium.Marker(location=feature['geometry']['coordinates'][::-1], popup=popup, icon=icon).add_to(fg)
                 else:
 
-                    folium.CircleMarker(location=feature['geometry']['coordinates'][::-1], popup=popup, color=_color, fill=True, fill_color=_color, fill_opacity=1, radius=5).add_to(m)
+                    folium.CircleMarker(location=feature['geometry']['coordinates'][::-1], popup=popup, color=_color, fill=True, fill_color=_color, fill_opacity=1, radius=5).add_to(fg)
             else:
-                pass
+                raise Exception(f"Invalid geometry type {feature['geometry']['type']}. Supported: 'Point' or 'LineString'")
+        fg.add_to(m)
+        feature_groups.append(fg)
+    layer_control.add_to(m)
     center = compute_center_coordinates(coordinates)
     m.set_center(center[1], center[0], zoom)
     return m.to_gradio()
@@ -347,6 +446,5 @@ def generate_generic_leafmap(center:Tuple[float, float]=[44.58, -103.46], zoom:i
 
     """
     m = leafmap.Map(center=center, zoom_start=zoom, height=height, width=width, tiles="OpenStreetMap")
-    # folium.Marker(center, popup="Center").add_to(m)
     return m.to_gradio()
 
