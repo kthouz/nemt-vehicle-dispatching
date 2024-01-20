@@ -205,7 +205,7 @@ def format_unassigned(df:pd.DataFrame)->str:
 def format_route(vehicle:str, route:List[Dict[str, Any]], jobs:pd.DataFrame, vehicles:pd.DataFrame, task_type:str='shipment')->str:
     rdf = pd.DataFrame(route)
     rdf['distance (mile)'] = (rdf['distance']*0.000621371).astype(int)
-    rdf['arrival'] = pd.to_datetime(rdf['arrival'], unit='s').dt.strftime('%Y-%m-%d %H:%M:%S')
+    rdf['arrival'] = pd.to_datetime(rdf['arrival'], unit='s', utc=True).dt.strftime('%Y-%m-%d %H:%M:%S')
     rdf['waiting_time (min)'] = (rdf['waiting_time']/60).astype(int)
     rdf['step'] = range(0, len(rdf))
     rdf['address'] = rdf[['id', 'type']].apply(lambda x: helpers.get_job_address(vehicle, x['id'], x['type'], jobs, vehicles, DATA['id_mapper'][task_type]), axis=1)
@@ -264,7 +264,7 @@ def optimize(session_id:str, task_type:str='shipment', vehicles:List[dict]=DATA.
 
 
 with gr.Blocks() as demo:
-    gr.Markdown("## Vehicle Routing")
+    gr.Markdown("## Vehicle Routing: Prototype")
     session_id = gr.Markdown(f"session: {str(int(datetime.timestamp(datetime.now())))}")
     with gr.Tab("Vehicles"):
         with gr.Row():
@@ -338,10 +338,13 @@ with gr.Blocks() as demo:
                 with gr.Row():
                     with gr.Column(scale=1):
                         vehicle_picker = gr.Dropdown(DATA['vehicle_scheduled'], label="Select a vehicle", elem_id="vehicle-picker", interactive=True)
-                    with gr.Column(scale=6):
+                    with gr.Column(scale=1):
                         dummy_markdown = gr.Markdown("")
                 with gr.Row():
                     vehicle_route = gr.Markdown("")
+    with gr.Tab("Billing"):
+        gr.Markdown("### Billing: In development")
+        pass
                 
     veh_submit_btn.click(
         fn=upload_file,
@@ -389,7 +392,7 @@ with gr.Blocks() as demo:
 
 logger.info("Starting demo server...")
 demo.launch(
-    share=False,
+    share=True,
     server_name=os.getenv("SERVER_NAME", "127.0.0.1"),
     server_port=int(os.getenv("SERVER_PORT", "7860")),
 )

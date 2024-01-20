@@ -1,3 +1,9 @@
+---
+title: nemt-kthouz-prototype
+app_file: app.py
+sdk: gradio
+sdk_version: 4.15.0
+---
 # nemt-vehicle-dispatching
 
 This project aims at optimizing the matching between ride requests and cars. 

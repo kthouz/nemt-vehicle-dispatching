@@ -5,8 +5,8 @@ load_dotenv(".env")
 OPENROUTESERVICE_API_KEY = os.getenv('OPENROUTESERVICE_API_KEY')
 OPENROUTESERVICE_BASE_URL = os.getenv('OPENROUTESERVICE_API_URL')
 
-VROOM_BASE_URL = os.getenv('VROOM_SERVER_URL')
-OSRM_BASE_URL = os.getenv('OSRM_SERVER_URL')
+VROOM_BASE_URL = os.getenv('VROOM_SERVER_URL','http://solver.vroom-project.org')
+OSRM_BASE_URL = os.getenv('OSRM_SERVER_URL','https://router.project-osrm.org')
 
 ALLOW_POOLING = False
 DEFAULT_VEHICLE_SIZE = 4
