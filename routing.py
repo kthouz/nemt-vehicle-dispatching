@@ -18,7 +18,6 @@ vroom_url = constants.VROOM_BASE_URL
 
 logger = helpers.init_logger(__name__, level=constants.LOG_LEVEL)
 
-address_cache = helpers.AddressCache()
 
 class LocationsMatrix:
     """
@@ -55,7 +54,7 @@ class LocationsMatrix:
         i = 0
         for location in locations:
             lookup[location] = i
-            geocode = get_geocode(location, self.use_cache)
+            geocode = helpers.get_geocode(location, self.use_cache)
             if geocode is not None:
                 coords.append(geocode)
                 i += 1
@@ -116,46 +115,6 @@ class LocationsMatrix:
             logger.error(f"Failed to get distance for {source} and {destination}")
             logger.error(traceback.format_exc())
             return None
-        
-def get_geocode(address:str, use_cache:bool=True)->dict:
-    """
-    Get geocode for address's longitude and latitude
-    Note: This function uses OpenStreetMap's Nominatim API. So care to optimize for the rate limit or use a different API preferably local
-
-    Parameters
-    ----------
-    address : str
-        Address to get geocode for
-    
-    Returns
-    -------
-    dict
-        Geocode for address
-    """
-    if use_cache:
-        if address_cache.get(address):
-            return address_cache.get(address)
-    print(f"looking up a new address: {address}")
-    url = "https://nominatim.openstreetmap.org/search"
-    params = {
-        "format": "json",
-        "q": address
-    }
-    headers = {
-        "User-Agent": "NEMTOptimalRoutePlanner/0.0"
-    }
-    response = requests.get(url, params=params, headers=headers)
-    if response.status_code == 200:
-        if len(response.json()) > 0:
-            geocode = [float(response.json()[0].get('lon')), float(response.json()[0].get('lat'))]
-            if use_cache:
-                address_cache.update(address, geocode)
-            return geocode
-        return None
-    else:
-        address_cache.update(address, None)
-        logger.error(f"Failed to get geocode for {address}:\n{response.text}")
-        return None
 
 def preprocess_jobs(jdf:pd.DataFrame, use_cache:bool=True)->Dict[str, Any]:
     """
@@ -187,7 +146,7 @@ def preprocess_jobs(jdf:pd.DataFrame, use_cache:bool=True)->Dict[str, Any]:
             row['latest_delivery'] = pd.to_datetime(row['latest_delivery'])
         if 'nb_passengers' not in row:
             row['nb_passengers'] = 1
-        location = get_geocode(row.pickup_address, use_cache)
+        location = helpers.get_geocode(row.pickup_address, use_cache)
         if location is None:
             errors[row.job_id] = {
                 "vroom_id": i,
@@ -248,8 +207,8 @@ def preprocess_shipments(sdf:pd.DataFrame, use_cache:bool=True, matrix:List[List
             row['latest_delivery'] = pd.to_datetime(row['latest_delivery'])
         if 'nb_passengers' not in row:
             row['nb_passengers'] = 1
-        pickup_location = get_geocode(row.pickup_address, use_cache)
-        delivery_location = get_geocode(row.delivery_address, use_cache)
+        pickup_location = helpers.get_geocode(row.pickup_address, use_cache)
+        delivery_location = helpers.get_geocode(row.delivery_address, use_cache)
         duration = matrix.get_duration(row.pickup_address, row.delivery_address)
         estimated_pickup_time = row.latest_delivery - timedelta(seconds=int(duration))
         if pickup_location is None or delivery_location is None:
@@ -310,8 +269,8 @@ def preprocess_vehicles(vdf:pd.DataFrame, use_cache:bool=True, date:datetime.dat
     vehicles = []
     for i, row in vdf.iterrows():
         time_window = helpers.get_timestamp_interval(date, row.working_hours)
-        start_location = get_geocode(row.address, use_cache)
-        end_location = get_geocode(row.address, use_cache)
+        start_location = helpers.get_geocode(row.address, use_cache)
+        end_location = helpers.get_geocode(row.address, use_cache)
         if start_location is None or end_location is None:
             errors[row.vehicle_id] = {
                 "vroom_id": i,

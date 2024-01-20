@@ -44,6 +44,46 @@ class AddressCache:
         if mode=='hard':
             self.save()
 
+address_cache = AddressCache()
+def get_geocode(address:str, use_cache:bool=True)->dict:
+    """
+    Get geocode for address's longitude and latitude
+    Note: This function uses OpenStreetMap's Nominatim API. So care to optimize for the rate limit or use a different API preferably local
+
+    Parameters
+    ----------
+    address : str
+        Address to get geocode for
+    
+    Returns
+    -------
+    dict
+        Geocode for address
+    """
+    if use_cache:
+        if address_cache.get(address):
+            return address_cache.get(address)
+    print(f"looking up a new address: {address}")
+    url = "https://nominatim.openstreetmap.org/search"
+    params = {
+        "format": "json",
+        "q": address
+    }
+    headers = {
+        "User-Agent": "NEMTOptimalRoutePlanner/0.0"
+    }
+    response = requests.get(url, params=params, headers=headers)
+    if response.status_code == 200:
+        if len(response.json()) > 0:
+            geocode = [float(response.json()[0].get('lon')), float(response.json()[0].get('lat'))]
+            if use_cache:
+                address_cache.update(address, geocode)
+            return geocode
+        return None
+    else:
+        address_cache.update(address, None)
+        return None
+    
 def initialize_directories(directories:List[str]=[constants.PREPROCESSED_STORE, constants.SOLUTION_STORE, constants.LOGS_STORE])->None:
     print("Initializing directories")
     for directory in directories:
@@ -223,13 +263,13 @@ def build_osrm_path(coords:List[Tuple[float,float]], base_url:str=constants.OSRM
     else:
         return ""
 
-def geojson_unassigned(unassigned_data:List[Dict[str, Any]], id_mapper:Dict[str, Any], jobs:pd.DataFrame)->Dict[str, Any]:
+def geojson_unassigned(unassigned_data:pd.DataFrame)->Dict[str, Any]:
     """
     Create GeoJSON from data
     
     Parameters
     ----------
-    unassigned_data : Dict[str, Any]
+    unassigned_data : pd.DataFrame
         Data to create GeoJSON from
         
     Returns
@@ -238,31 +278,37 @@ def geojson_unassigned(unassigned_data:List[Dict[str, Any]], id_mapper:Dict[str,
         GeoJSON
     """
     points = []
-    for i, job in enumerate(unassigned_data):
-        job_id = id_mapper.get(job.get("id"))
-        _type = job["type"]
-        if job_id:
-            if _type=="pickup":
-                address = jobs[jobs.job_id==job_id].pickup_address.values[0]
-            elif _type=="delivery":
-                address = jobs[jobs.job_id==job_id].delivery_address.values[0]
-            else:
-                address = f"No Address Provided"
-        else:
-            address = f"Unassigned::Unknown"
+    for i, row in unassigned_data.iterrows():
         points.append({
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": job["location"]
+                "coordinates": get_geocode(row["pickup_address"], use_cache=True)
             },
             "properties": {
-                "job_id": job_id,
-                "address": address
+                "type": "pickup",
+                "job_id": row["job_id"],
+                "address": row["pickup_address"],
+                "load": row["nb_passengers"],
+                "arrival": row["earliest_pickup"],
             },
             "route": None,
         })
-
+        points.append({
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": get_geocode(row["delivery_address"], use_cache=True)
+            },
+            "properties": {
+                "type": "delivery",
+                "job_id": row["job_id"],
+                "address": row["delivery_address"],
+                "load": row["nb_passengers"],
+                "arrival": row["latest_delivery"],
+            },
+            "route": None,
+        })
     geojson = {
         "type": "FeatureCollection",
         "features": points,
@@ -377,10 +423,24 @@ def format_route_popup(properties:Dict[str, Any])->str:
     return html
 
 def format_unassigned_popup(properties:Dict[str, Any])->str:
-    html = f"""
-    <p><b>Job:</b> {properties['job_id']}</p>
-    <p><b>Address:</b> {properties['address']}</p>
-    """
+    if properties['type'].lower()=='pickup':
+        html = f"""
+        <p><b>Job:</b> {properties['job_id']}</p>
+        <p><b>Type:</b> {properties['type']}</p>
+        <p><b>Address:</b> {properties['address']}</p>
+        <p><b>Requested Pickup:</b> {properties['arrival']}</p>
+        <p><b>Load:</b> {properties['load']}</p>
+        """
+    elif properties['type'].lower()=='delivery':
+        html = f"""
+        <p><b>Job:</b> {properties['job_id']}</p>
+        <p><b>Type:</b> {properties['type']}</p>
+        <p><b>Address:</b> {properties['address']}</p>
+        <p><b>Requested Delivery:</b> {properties['arrival']}</p>
+        <p><b>Load:</b> {properties['load']}</p>
+        """
+    else:
+        raise Exception(f"Invalid type {properties['type']}. Valid types are 'pickup' and 'delivery'")
     return html
 
 def plot_vehicle_depots(m:leafmap.Map)->leafmap.Map:
@@ -399,7 +459,7 @@ def generate_leafmap(routes:List[Dict[str, Any]], id_mapper:Dict[str, Any], jobs
     m = leafmap.Map(zoom_start=zoom, height=height, width=width, tiles="OpenStreetMap")
     coordinates = []
     assigned_geojsons = list(map(lambda x: geojson_assigned(x, id_mapper, jobs, vehicles), routes))
-    unassigned_geojson = geojson_unassigned(unassigned, id_mapper, jobs)
+    unassigned_geojson = geojson_unassigned(unassigned)
     feature_groups = []
     layer_control = folium.LayerControl(collapsed=False)
 
@@ -407,7 +467,12 @@ def generate_leafmap(routes:List[Dict[str, Any]], id_mapper:Dict[str, Any], jobs
     for point in unassigned_geojson['features']:
         coordinates.append(point['geometry']['coordinates'][::-1])
         popup = folium.Popup(format_unassigned_popup(point['properties']), max_width=300)
-        folium.RegularPolygonMarker(location=point['geometry']['coordinates'][::-1], popup=popup, color=colors[0], fill=True, fill_color=colors[0], fill_opacity=1, number_of_sides=3, radius=5).add_to(fg)
+        if point['properties']['type'].lower()=='delivery':
+            folium.RegularPolygonMarker(location=point['geometry']['coordinates'][::-1], popup=popup, color=colors[0], fill=True, fill_color=colors[0], fill_opacity=1, number_of_sides=3, radius=5).add_to(fg)
+        elif point['properties']['type'].lower()=='pickup':
+            folium.RegularPolygonMarker(location=point['geometry']['coordinates'][::-1], popup=popup, color=colors[1], fill=True, fill_color=colors[1], fill_opacity=1, number_of_sides=5, radius=5).add_to(fg)
+        else:
+            raise Exception(f"Invalid type {point['properties']['type']}. Valid types are 'pickup' and 'delivery'")
     fg.add_to(m)
     feature_groups.append(fg)
     if len(routes)==0:
@@ -418,7 +483,7 @@ def generate_leafmap(routes:List[Dict[str, Any]], id_mapper:Dict[str, Any], jobs
 
     for i, geojson in enumerate(assigned_geojsons):
         fg = folium.FeatureGroup(name=f"Vehicle {geojson['vehicle_id']}")
-        _color = colors[(i+1)%len(colors)]
+        _color = colors[(i+2)%len(colors)]
         nb_steps = len(geojson['features'])-1
         step_counter = 0
         for feature in geojson['features']:

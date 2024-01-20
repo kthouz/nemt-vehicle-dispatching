@@ -194,8 +194,8 @@ def format_unassigned(df:pd.DataFrame)->str:
             'job_id': row['job_id'],
             'pickup_address': row['pickup_address'],
             'delivery_address': row['delivery_address'],
-            'nb_passengers': row['nb_passengers'],
-            'earliest_pickup': row['earliest_pickup'],
+            # 'nb_passengers': row['nb_passengers'],
+            # 'earliest_pickup': row['earliest_pickup'],
             'latest_delivery': row['latest_delivery']
         })
     text = f"**Unassigned jobs**"
@@ -205,13 +205,13 @@ def format_unassigned(df:pd.DataFrame)->str:
 def format_route(vehicle:str, route:List[Dict[str, Any]], jobs:pd.DataFrame, vehicles:pd.DataFrame, task_type:str='shipment')->str:
     rdf = pd.DataFrame(route)
     rdf['distance (mile)'] = (rdf['distance']*0.000621371).astype(int)
-    rdf['arrival'] = pd.to_datetime(rdf['arrival'], unit='s', utc=True).dt.strftime('%Y-%m-%d %H:%M:%S')
+    rdf['arrival'] = rdf['arrival'].apply(lambda x: helpers.timestamp_to_datetime(x))
     rdf['waiting_time (min)'] = (rdf['waiting_time']/60).astype(int)
     rdf['step'] = range(0, len(rdf))
     rdf['address'] = rdf[['id', 'type']].apply(lambda x: helpers.get_job_address(vehicle, x['id'], x['type'], jobs, vehicles, DATA['id_mapper'][task_type]), axis=1)
     rdf = rdf[['step', 'address', 'type', 'arrival', 'waiting_time (min)', 'distance (mile)']].fillna('').to_dict(orient='records')
     mrdf = tomark.Tomark.table(rdf)
-    text = f"**Vehicle {vehicle}**"
+    text = f"**Vehicle {vehicle}: {int((len(rdf)-2)/2)} trips**"
     text += "\n" + mrdf
     return text
 
@@ -248,16 +248,20 @@ def optimize(session_id:str, task_type:str='shipment', vehicles:List[dict]=DATA.
         }
         DATA['vehicle_scheduled'].append(_id)
         DATA['routes'][_id] = format_route(_id, route['steps'], jobs=DATA['job_selected'], vehicles=DATA['vehicle_selected'], task_type=task_type)
+    
+    unassigned_ids = list(map(lambda x: DATA['id_mapper'][task_type].get(x['id']), solution['unassigned']))
+    unassigned = DATA['job_selected'].loc[DATA['job_selected']['job_id'].isin(unassigned_ids)]
+    print("ckpt 0:", unassigned)
 
-    lfmap = helpers.generate_leafmap(list(routes.values()), id_mapper=DATA['id_mapper'][task_type], jobs=DATA['job_selected'], vehicles=DATA['vehicle_selected'], unassigned=solution["unassigned"], recipe=recipe, zoom=10, height="500px", width="500px")
+    lfmap = helpers.generate_leafmap(list(routes.values()), id_mapper=DATA['id_mapper'][task_type], jobs=DATA['job_selected'], vehicles=DATA['vehicle_selected'], unassigned=unassigned, recipe=recipe, zoom=10, height="500px", width="500px")
 
     summary = solution['summary']
     if recipe=='cpdptw':
         summary['unassigned'] = int(summary['unassigned']/2)
     
     summary['assigned'] = len(jobs) - summary['unassigned']
-    unassigned_ids = list(map(lambda x: DATA['id_mapper'][task_type].get(x['id']), solution['unassigned']))
-    unassigned = DATA['job_selected'].loc[DATA['job_selected']['job_id'].isin(unassigned_ids)]
+
+    
 
     veh_dropdown = gr.Dropdown(DATA['vehicle_scheduled'], label="Select a vehicle", elem_id="vehicle-picker", interactive=True)
     return format_summary(summary), format_unassigned(unassigned), lfmap, veh_dropdown
