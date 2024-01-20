@@ -15,6 +15,10 @@ Our ask is to match vehicles to as many riders as possible. Some constraints are
 ## Solution
 The problem is approached as a Capacitated Pickup-Delivery Problem with Time Windows. [OSRM](https://project-osrm.org/) and [VROOM](http://vroom-project.org/) were used in the backend respectively for distance/duration calculations and routing optimization.
 
+## Caveat
+[ ] All rides are considered carpoolable. In the future, we need to respect ride criteria being car-poolable or not
+[ ] All vehicles are considered not having any break. Any day they available, they will be ready to work 8AM to 5PM
+
 ## Resources
 - Generating pdf files: [bbbike.org](https://extract.bbbike.org/) and [geofabrik](https://download.geofabrik.de/north-america/us.html)
 - [osrm setup with docker](https://github.com/Project-OSRM/osrm-backend?tab=readme-ov-file#using-docker)
