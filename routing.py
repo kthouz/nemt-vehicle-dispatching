@@ -335,7 +335,7 @@ def preprocess_vehicles(vdf:pd.DataFrame, use_cache:bool=True, date:datetime.dat
         "vroom_id_mapper": mapper
     }
 
-def preprocess(vdf:pd.DataFrame, jdf:pd.DataFrame=None, sdf:pd.DataFrame=None, use_cache:bool=True, save:bool=False, session_id:Union[str, None]=None)->List[List[dict]]:
+def preprocess(vdf:pd.DataFrame, tasks:pd.DataFrame=None, task_type:str='shipment', use_cache:bool=True, save:bool=False, session_id:Union[str, None]=None)->List[List[dict]]:
     """
     Optimize route using vroom
 
@@ -343,35 +343,24 @@ def preprocess(vdf:pd.DataFrame, jdf:pd.DataFrame=None, sdf:pd.DataFrame=None, u
     ----------
     vdf : pd.DataFrame
         Vehicle dataframe
-    jdf : pd.DataFrame
-        Job dataframe
-    sdf : pd.DataFrame
-        Shipment dataframe
+    tasks : pd.DataFrame
+        Job/Shipment dataframe
+    task_type : str, optional
+        Type of task, by default 'shipment'. Can be either 'job' or 'shipment'
     
     Returns
     -------
     dict
         Optimized route
     """
-    
-    dates = []
-    if jdf is not None:
-        print("-- Processing jobs --")
-        job_processed = preprocess_jobs(jdf, use_cache)
-        dates.append(pd.to_datetime(jdf['earliest_pickup']).min().date())
+    assert task_type in ('job', 'shipment'), "task_type must be either 'job' or 'shipment'"
+    if task_type == 'job':
+        raise NotImplementedError("Job optimization is not implemented yet. Only pickup-delivery (aka shipment) optimization is supported")
     else:
-        job_processed = {"jobs": [], "errors": {}, "vroom_id_mapper": {}}
-    if sdf is not None:
         print("-- Processing shipments --")
-        shi_processed = preprocess_shipments(sdf, use_cache)
-        dates.append(pd.to_datetime(sdf['earliest_pickup']).min().date())
-    else:
-        shi_processed = {"shipments": [], "errors": {}, "vroom_id_mapper": {}}
-    
-    if len(dates) > 0:
-        date = min(dates)
-    else:
-        date = datetime.today().date()
+        job_processed = {"jobs": [], "errors": {}, "vroom_id_mapper": {}}
+        shi_processed = preprocess_shipments(tasks, use_cache)
+        date = pd.to_datetime(tasks['earliest_pickup']).min().date()
     
     print("-- Processing vehicles --")
     veh_processed = preprocess_vehicles(vdf, use_cache, date)

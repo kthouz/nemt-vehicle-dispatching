@@ -270,7 +270,26 @@ def geojson_unassigned(unassigned_data:List[Dict[str, Any]], id_mapper:Dict[str,
 
     return geojson
 
-def geojson_assigned(steps_data:Dict[str, Any], id_mapper:Dict[str, Any], jobs:pd.DataFrame)->Dict[str, Any]:
+def get_job_address(veh_id:str, job_id:str, _type:str, jobs:pd.DataFrame, vehicles, id_mapper:Dict[str, Any])->str:
+
+    if _type.lower() in ('start', 'end', 'start/end'):
+        vdf = vehicles[vehicles['vehicle_id']==veh_id]['address']
+        if vdf.shape[0]==0:
+            return f"Start/End::{veh_id}"
+        else:
+            return vdf.values[0]
+
+    job_id = id_mapper.get(job_id)
+    if job_id:
+        if _type=="pickup":
+            return jobs[jobs.job_id==job_id].pickup_address.values[0]
+        elif _type=="delivery":
+            return jobs[jobs.job_id==job_id].delivery_address.values[0]
+        else:
+            return f"No Address Provided"
+    raise Exception(f"Job ID {job_id} not found in id_mapper")
+
+def geojson_assigned(steps_data:Dict[str, Any], id_mapper:Dict[str, Any], jobs:pd.DataFrame, vehicles:pd.DataFrame)->Dict[str, Any]:
     """
     Create GeoJSON from data
     
@@ -290,16 +309,7 @@ def geojson_assigned(steps_data:Dict[str, Any], id_mapper:Dict[str, Any], jobs:p
         _type = step["type"]
         if _type in ('start', 'end'):
             _type = "Start/End"
-        job_id = id_mapper.get(step.get("id"))
-        if job_id:
-            if _type=="pickup":
-                address = jobs[jobs.job_id==job_id].pickup_address.values[0]
-            elif _type=="delivery":
-                address = jobs[jobs.job_id==job_id].delivery_address.values[0]
-            else:
-                address = f"No Address Provided"
-        else:
-            address = f"Start/End::{steps_data['vehicle_id']}"
+        address = get_job_address(steps_data['vehicle_id'], step.get("id"), _type, jobs, vehicles, id_mapper)
         
         points.append({
             "type": "Feature",
@@ -344,11 +354,7 @@ def geojson_assigned(steps_data:Dict[str, Any], id_mapper:Dict[str, Any], jobs:p
 
     return geojson
 
-def format_step_popup(properties:Dict[str, Any])->str:
-    if properties['address'].startswith("Start/End"):
-        step = f'0,{properties["step"]}'
-    else:
-        step = properties['step']
+def format_step_popup(step, properties:Dict[str, Any])->str:
     html = f"""
     <p><b>Step:</b> {step}</p>
     <p><b>Address:</b> {properties['address']}</p>
@@ -387,12 +393,12 @@ def plot_unassigned_jobs(m:leafmap.Map)->leafmap.Map:
     pass
 
 
-def generate_leafmap(routes:List[Dict[str, Any]], id_mapper:Dict[str, Any], jobs:pd.DataFrame, unassigned:List[Dict[str, Any]]=[], recipe:str='cpdptw', zoom=8, height="500px", width="500px"):
+def generate_leafmap(routes:List[Dict[str, Any]], id_mapper:Dict[str, Any], jobs:pd.DataFrame, vehicles:pd.DataFrame, unassigned:List[Dict[str, Any]]=[], recipe:str='cpdptw', zoom=8, height="500px", width="500px"):
     assert recipe in ['cpdptw', 'cvrp'], f"Invalid recipe {recipe}. Valid recipes are 'cpdptw' and 'cvrp'"
     colors = cc.palette['glasbey_bw']
     m = leafmap.Map(zoom_start=zoom, height=height, width=width, tiles="OpenStreetMap")
     coordinates = []
-    assigned_geojsons = list(map(lambda x: geojson_assigned(x, id_mapper, jobs), routes))
+    assigned_geojsons = list(map(lambda x: geojson_assigned(x, id_mapper, jobs, vehicles), routes))
     unassigned_geojson = geojson_unassigned(unassigned, id_mapper, jobs)
     feature_groups = []
     layer_control = folium.LayerControl(collapsed=False)
@@ -413,6 +419,8 @@ def generate_leafmap(routes:List[Dict[str, Any]], id_mapper:Dict[str, Any], jobs
     for i, geojson in enumerate(assigned_geojsons):
         fg = folium.FeatureGroup(name=f"Vehicle {geojson['vehicle_id']}")
         _color = colors[(i+1)%len(colors)]
+        nb_steps = len(geojson['features'])-1
+        step_counter = 0
         for feature in geojson['features']:
             if feature['geometry']['type'] == 'LineString':
                 popup = folium.Popup(format_route_popup(feature['properties']), max_width=300)
@@ -421,9 +429,12 @@ def generate_leafmap(routes:List[Dict[str, Any]], id_mapper:Dict[str, Any], jobs
                 else:
                     folium.PolyLine(locations=feature['geometry']['coordinates'], color=_color, weight=2).add_to(fg)
             elif feature['geometry']['type'] == 'Point':
+                if step_counter==nb_steps:
+                    step_counter = f"0,{step_counter}"
                 coordinates.append(feature['geometry']['coordinates'][::-1])
                 properties = feature['properties']
-                popup = folium.Popup(format_step_popup(properties), max_width=300)
+                popup = folium.Popup(format_step_popup(step_counter, properties), max_width=300)
+                step_counter += 1
                 if properties['type'].lower() in ('start', 'end', 'start/end'):
                     icon = folium.Icon(icon='home', color='lightgray')
                     folium.Marker(location=feature['geometry']['coordinates'][::-1], popup=popup, icon=icon).add_to(fg)

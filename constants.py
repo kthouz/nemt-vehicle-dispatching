@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-load_dotenv()
+load_dotenv(".env")
 
 OPENROUTESERVICE_API_KEY = os.getenv('OPENROUTESERVICE_API_KEY')
 OPENROUTESERVICE_BASE_URL = os.getenv('OPENROUTESERVICE_API_URL')
