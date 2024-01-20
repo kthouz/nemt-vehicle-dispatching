@@ -22,3 +22,7 @@ The problem is approached as a Capacitated Pickup-Delivery Problem with Time Win
 
 ## How to setup
 
+1. First setup OSRM and VROOM
+   1. Ensure you are in the root directory
+   2. Run `bash install.sh` and follow instructions
+2. Run the app with `gradio app.py`
