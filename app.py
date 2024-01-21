@@ -204,6 +204,8 @@ def format_unassigned(df:pd.DataFrame)->str:
 
 def format_route(vehicle:str, route:List[Dict[str, Any]], jobs:pd.DataFrame, vehicles:pd.DataFrame, task_type:str='shipment')->str:
     rdf = pd.DataFrame(route)
+    total_waiting_time = round(rdf['waiting_time'].sum()/3600, 2)
+    total_distance = round(rdf.tail(1)['distance'].values[0]*0.000621371, 2)
     rdf['distance (mile)'] = (rdf['distance']*0.000621371).astype(int)
     rdf['arrival'] = rdf['arrival'].apply(lambda x: helpers.timestamp_to_datetime(x))
     rdf['waiting_time (min)'] = (rdf['waiting_time']/60).astype(int)
@@ -211,7 +213,8 @@ def format_route(vehicle:str, route:List[Dict[str, Any]], jobs:pd.DataFrame, veh
     rdf['address'] = rdf[['id', 'type']].apply(lambda x: helpers.get_job_address(vehicle, x['id'], x['type'], jobs, vehicles, DATA['id_mapper'][task_type]), axis=1)
     rdf = rdf[['step', 'address', 'type', 'arrival', 'waiting_time (min)', 'distance (mile)']].fillna('').to_dict(orient='records')
     mrdf = tomark.Tomark.table(rdf)
-    text = f"**Vehicle {vehicle}: {int((len(rdf)-2)/2)} trips**"
+    total_duration = round((rdf[-1]['arrival'] - rdf[0]['arrival']).total_seconds()/3600,2)
+    text = f"- {int((len(rdf)-2)/2)} tasks between {rdf[0]['arrival']} and {rdf[-1]['arrival']} (hrs): {total_duration}\n - Total waiting time (hrs): {total_waiting_time}\n- Total distance (mile) {total_distance}"
     text += "\n" + mrdf
     return text
 
@@ -398,6 +401,6 @@ logger.info("Starting demo server...")
 demo.launch(
     share=True,
     server_name=os.getenv("SERVER_NAME", "127.0.0.1"),
-    server_port=int(os.getenv("SERVER_PORT", "7860")),
+    server_port=int(os.getenv("SERVER_PORT", "7861")),
 )
 logger.info("Demo server stopped.")

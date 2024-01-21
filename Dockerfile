@@ -22,10 +22,11 @@ WORKDIR /app
 
 # Install the requirements using pip
 RUN pip install -r requirements.txt
-ENV PYTHONUNBUFFERED=1 	GRADIO_ALLOW_FLAGGING=never 	GRADIO_NUM_PORTS=1 	GRADIO_SERVER_NAME=0.0.0.0     GRADIO_SERVER_PORT=7860
+RUN pip install --upgrade gradio
 
 # Expose port 7860
 EXPOSE 7860
 
 # Run the application using flask
-CMD ["gradio", "app.py", "--port", "7860"]
+# CMD ["gradio", "app.py", "--port", "7860"]
+CMD ["python", "app.py"]
