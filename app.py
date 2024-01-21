@@ -254,7 +254,6 @@ def optimize(session_id:str, task_type:str='shipment', vehicles:List[dict]=DATA.
     
     unassigned_ids = list(map(lambda x: DATA['id_mapper'][task_type].get(x['id']), solution['unassigned']))
     unassigned = DATA['job_selected'].loc[DATA['job_selected']['job_id'].isin(unassigned_ids)]
-    print("ckpt 0:", unassigned)
 
     lfmap = helpers.generate_leafmap(list(routes.values()), id_mapper=DATA['id_mapper'][task_type], jobs=DATA['job_selected'], vehicles=DATA['vehicle_selected'], unassigned=unassigned, recipe=recipe, zoom=10, height="500px", width="500px")
 
